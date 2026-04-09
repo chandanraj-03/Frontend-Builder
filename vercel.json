@@ -3,11 +3,9 @@
 
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
-  "installCommand": "pip install -r requirements.txt",
 
   "functions": {
     "api/index.py": {
-      "runtime": "python3.11",
       "maxDuration": 60
     }
   },
@@ -18,16 +16,8 @@
       "dest": "/api/index.py"
     },
     {
-      "src": "/ws/(.*)",
-      "dest": "/api/index.py"
-    },
-    {
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-
-  "env": {
-    "PYTHONPATH": "."
-  }
+  ]
 }
