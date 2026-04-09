@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Survey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item active"><a href="share-survey.html">Share Survey</a></li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Shareable Survey Link Generator</h2>
+            <p>Generate a shareable link to your survey and share it with others.</p>
+            <form>
+                <label><input type="checkbox" id="includeName"> Include name in URL?</label>
+                <br>
+                <button class="btn btn-primary" id="generateLinkButton">Generate Link</button>
+            </form>
+        </section>
+        <section class="section">
+            <h2>Generated Shareable Link:</h2>
+            <p id="link"></p>
+        </section>
+        <section class="section">
+            <h2>Share on Social Media:</h2>
+            <button class="btn btn-primary" id="facebookButton">Facebook</button>
+            <button class="btn btn-primary" id="twitterButton">Twitter</button>
+            <button class="btn btn-primary" id="linkedinButton">LinkedIn</button>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item active"><a href="share-survey.html">Share Survey</a></li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Generate random survey link
+            var surveyId = '1234567890';
+            var link = window.location.href + '?survey=' + surveyId;
+            $('#link').text(link);
+
+            // Copy generated link to clipboard on button click
+            $('#generateLinkButton').click(function() {
+                navigator.clipboard.writeText(link).then(function() {
+                    alert('Link copied to clipboard!');
+                });
+            });
+
+            // Share on social media on button click
+            $('#facebookButton').click(function() {
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + link, '_blank');
+            });
+            $('#twitterButton').click(function() {
+                window.open('https://twitter.com/intent/tweet?url=' + link, '_blank');
+            });
+            $('#linkedinButton').click(function() {
+                window.open('https://www.linkedin.com/shareArticle?url=' + link, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

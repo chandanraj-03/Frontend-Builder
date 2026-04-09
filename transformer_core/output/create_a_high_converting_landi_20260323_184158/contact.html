@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact FlowSaaS | Get Support & Sales Information</title>
+    <meta name="description" content="Contact FlowSaaS for sales inquiries, technical support, or partnership opportunities. Our team is ready to help you automate your workflows.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" id="mainHeader">
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="FlowSaaS Home">
+                    <span class="logo-text">FlowSaaS</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primaryMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                    <li><a href="thank-you.html" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="contact-hero" aria-labelledby="contactHeroHeading">
+            <div class="container">
+                <h1 id="contactHeroHeading">Get in Touch with FlowSaaS</h1>
+                <p class="hero-subtext">Whether you have questions about our platform, need technical support, or want to discuss enterprise solutions, our team is here to help.</p>
+                <div class="response-indicators">
+                    <div class="indicator">
+                        <span class="indicator-icon" aria-hidden="true">💬</span>
+                        <div class="indicator-content">
+                            <span class="indicator-title">Sales Inquiries</span>
+                            <span class="indicator-detail">Response within 2 hours</span>
+                        </div>
+                    </div>
+                    <div class="indicator">
+                        <span class="indicator-icon" aria-hidden="true">🛠️</span>
+                        <div class="indicator-content">
+                            <span class="indicator-title">Technical Support</span>
+                            <span class="indicator-detail">Average response: 15 minutes</span>
+                        </div>
+                    </div>
+                    <div class="indicator">
+                        <span class="indicator-icon" aria-hidden="true">📞</span>
+                        <div class="indicator-content">
+                            <span class="indicator-title">Phone Support</span>
+                            <span class="indicator-detail">Mon-Fri, 9AM-6PM EST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-options" aria-labelledby="optionsHeading">
+            <div class="container">
+                <h2 id="optionsHeading" class="visually-hidden">Contact Options</h2>
+                <div class="options-grid">
+                    <div class="contact-form-section">
+                        <div class="form-header">
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and our team will get back to you promptly.</p>
+                        </div>
+                        <form id="progressiveContactForm" action="thank-you.html" method="get" novalidate>
+                            <div class="form-step active" id="step1">
+                                <div class="form-group">
+                                    <label for="contactName">Full Name *</label>
+                                    <input type="text" id="contactName" name="contactName" required placeholder="Your full name" aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Work Email *</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" required placeholder="name@company.com" aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactCompany">Company</label>
+                                    <input type="text" id="contactCompany" name="contactCompany" placeholder="Your company (optional)">
+                                </div>
+                                <button type="button" class="btn btn-primary btn-next" data-next="step2">Continue</button>
+                            </div>
+
+                            <div class="form-step" id="step2">
+                                <div class="form-group">
+                                    <label for="contactType">What can we help you with? *</label>
+                                    <select id="contactType" name="contactType" required aria-required="true">
+                                        <option value="" disabled selected>Select an option</option>
+                                        <option value="sales">Sales Inquiry & Pricing</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="demo">Schedule a Demo</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPlan">Interested Plan</label>
+                                    <select id="contactPlan" name="contactPlan">
+                                        <option value="" selected>Not sure yet</option>
+                                        <option value="starter">Starter ($29/mo)</option>
+                                        <option value="pro">Pro ($89/mo)</option>
+                                        <option value="enterprise">Enterprise (Custom)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactTeamSize">Team Size</label>
+                                    <select id="contactTeamSize" name="contactTeamSize">
+                                        <option value="" selected>Select team size</option>
+                                        <option value="1-10">1-10 people</option>
+                                        <option value="11-50">11-50 people</option>
+                                        <option value="51-200">51-200 people</option>
+                                        <option value="200+">200+ people</option>
+                                    </select>
+                                </div>
+                                <div class="form-step-buttons">
+                                    <button type="button" class="btn btn-outline btn-prev" data-prev="step1">Back</button>
+                                    <button type="button" class="btn btn-primary btn-next" data-next="step3">Continue</button>
+                                </div>
+                            </div>
+
+                            <div class="form-step" id="step3">
+                                <div class="form-group">
+                                    <label for="contactMessage">Your Message *</label>
+                                    <textarea id="contactMessage" name="contactMessage" required placeholder="Please describe how we can help you..." rows="5" aria-required="true"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPriority">Priority Level</label>
+                                    <select id="contactPriority" name="contactPriority">
+                                        <option value="normal" selected>Normal</option>
+                                        <option value="high">High (Urgent)</option>
+                                        <option value="low">Low (General Inquiry)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="contactConsent" name="contactConsent" required aria-required="true">
+                                    <label for="contactConsent">I agree to receive communications from FlowSaaS. I can unsubscribe at any time.</label>
+                                </div>
+                                <div class="form-step-buttons">
+                                    <button type="button" class="btn btn-outline btn-prev" data-prev="step2">Back</button>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="form-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 33%"></div>
+                            </div>
+                            <div class="progress-steps">
+                                <span class="progress-step active">1. Contact Info</span>
+                                <span class="progress-step">2. Details</span>
+                                <span class="progress-step">3. Message</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <div class="info-card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-method">
+                                <span class="method-icon" aria-hidden="true">📧</span>
+                                <div class="method-content">
+                                    <span class="method-title">Email</span>
+                                    <a href="mailto:support@flowsaas.com" class="method-detail">support@flowsaas.com</a>
+                                    <span class="method-note">For technical support</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="method-icon" aria-hidden="true">📧</span>
+                                <div class="method-content">
+                                    <span class="method-title">Sales</span>
+                                    <a href="mailto:sales@flowsaas.com" class="method-detail">sales@flowsaas.com</a>
+                                    <span class="method-note">For pricing and demos</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="method-icon" aria-hidden="true">📞</span>
+                                <div class="method-content">
+                                    <span class="method-title">Phone</span>
+                                    <a href="tel:+18885551234" class="method-detail">+1 (888) 555-1234</a>
+                                    <span class="method-note">Mon-Fri, 9AM-6PM EST</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="method-icon" aria-hidden="true">📍</span>
+                                <div class="method-content">
+                                    <span class="method-title">Office</span>
+                                    <address class="method-detail">
+                                        123 Automation Drive<br>
+                                        San Francisco, CA 94107<br>
+                                        United States
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-links">
+                            <h3>Helpful Resources</h3>
+                            <ul class="resource-list">
+                                <li><a href="https://help.flowsaas.com" target="_blank">📚 Knowledge Base & Documentation</a></li>
+                                <li><a href="https://status.flowsaas.com" target="_blank">🟢 System Status Page</a></li>
+                                <li><a href="features.html">🎥 Video Tutorials</a></li>
+                                <li><a href="pricing.html">💰 Pricing Calculator</a></li>
+                                <li><a href="case-studies.html">📊 ROI Case Studies</a></li>
+                                <li><a href="#">📄 API Documentation</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="support-hours">
+                            <h3>Support Hours</h3>
+                            <div class="hours-grid">
+                                <div class="hour-block">
+                                    <span class="day">Monday - Friday</span>
+                                    <span class="time">9:00 AM - 6:00 PM EST</span>
+                                </div>
+                                <div class="hour-block">
+                                    <span class="day">Saturday</span>
+                                    <span class="time">10:00 AM - 2:00 PM EST</span>
+                                </div>
+                                <div class="hour-block">
+                                    <span class="day">Sunday</span>
+                                    <span class="time">Emergency Support Only</span>
+                                </div>
+                            </div>
+                            <p class="hours-note">24/7 emergency support available for Enterprise customers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="live-chat-widget" aria-label="Live Chat Support">
+            <div class="container">
+                <div class="chat-header">
+                    <h3>Live Chat Support</h3>
+                    <div class="chat-status">
+                        <span class="status-indicator online"></span>
+                        <span class="status-text">Online • Typically replies in under 2 minutes</span>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-window" id="chatWindow">
+                        <div class="chat-message bot">
+                            <div class="message-avatar" aria-hidden="true">FS</div>
+                            <div class="message-content">
+                                <p>Hello! I'm FlowSaaS Support Bot. How can I help you today?</p>
+                                <span class="message-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" class="chat-input" id="chatInput" placeholder="Type your message here..." aria-label="Chat message input">
+                        <button class="chat-send" id="chatSend" aria-label="Send message">➤</button>
+                    </div>
+                    <div class="quick-replies">
+                        <button class="quick-reply" data-reply="I need technical support">I need technical support</button>
+                        <button class="quick-reply" data-reply="I have a billing question">I have a billing question</button>
+                        <button class="quick-reply" data-reply="I want to schedule a demo">I want to schedule a demo</button>
+                    </div>
+                </div>
+                <p class="chat-note">Live chat is available during support hours. For complex issues, our team may follow up via email.</p>
+            </div>
+        </section>
+
+        <section class="contact-cta" aria-labelledby="finalCtaHeading">
+            <div class="container">
+                <h2 id="finalCtaHeading">Prefer to Start Immediately?</h2>
+                <p>Begin your 14-day free trial now. No credit card required, full platform access.</p>
+                <div class="cta-group">
+                    <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+                    <a href="features.html" class="btn btn-outline">Explore Features</a>
+                </div>
+                <p class="cta-note">Get started in minutes. Cancel anytime during your trial.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="FlowSaaS Home">FlowSaaS</a>
+                    <p>Intelligent workflow automation for modern teams. Build faster, scale smarter.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> FlowSaaS Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><span aria-hidden="true">𝕏</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                    <a href="#" aria-label="GitHub"><span aria-hidden="true">gh</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

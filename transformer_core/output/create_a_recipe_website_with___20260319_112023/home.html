@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Discover Your Next Favorite Recipe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1512917774080-6722c5c2e7b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG9yZWFufDh9fFx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #ff6b6b, #ffa0a0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px rgba(255, 107, 107, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(255, 107, 107, 0.7); }
+            100% { text-shadow: 0 0 10px rgba(255, 107, 107, 0.5); }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 180, 219, 0.3);
+            cursor: pointer;
+            animation: glow 3s infinite alternate;
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(0, 180, 219, 0.5); }
+            100% { box-shadow: 0 0 25px rgba(0, 180, 219, 0.8); }
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 180, 219, 0.6);
+        }
+        
+        .section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+            border-radius: 3px;
+        }
+        
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background: linear-gradient(to bottom, #4a6faa, #3a5d98);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-img-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            background: #e0e0e0;
+            font-size: 3rem;
+            color: #999;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+        
+        .card-desc {
+            color: #7f8c8d;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn-card {
+            display: block;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .btn-card:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        
+        .btn-quick {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(to right, #4ecdc4, #3a9d8a);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+        }
+        
+        .btn-quick:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.6);
+        }
+        
+        .btn-quick:active {
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(to right, #4ecdc4, #ff6b6b);
+            margin-right: 1rem;
+            border-radius: 2px;
+        }
+        
+        .section-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: #e8f0ff;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-icon i {
+            color: white;
+            font-size: 1.4rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .feature-desc {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .footer-copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+            z-index: -1;
+        }
+        
+        .food-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-container {
+                flex-direction: column;
+            }
+            
+            .feature-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Delicious Recipes for Every Occasion</h1>
+            <p class="hero-subtitle">Discover thousands of chef-approved recipes, from quick weeknight dinners to special occasion feasts. Get inspired with our collection of fresh, healthy, and flavorful dishes.</p>
+            <a href="#recipes" class="btn-primary">Browse Recipes</a>
+        </div>
+    </header>
+
+    <section class="section" id="recipes">
+        <h2 class="section-title">Popular Recipes</h2>
+        <div class="section-grid">
+            <div class="card">
+                <div class="card-img">
+                    <span>🍅</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Spicy Tomato Basil Pasta</h3>
+                    <p class="card-desc">A vibrant Italian pasta dish with fresh tomatoes, basil, and chili flakes. Perfect for summer evenings.</p>
+                    <a href="#" class="btn-card">View Recipe</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <span>🍗</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Garlic Herb Chicken</h3>
+                    <p class="card-desc">Juicy chicken breasts marinated in garlic, herbs, and olive oil. Ready in 25 minutes!</p>
+                    <a href="#" class="btn-card">View Recipe</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <span>🍣</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Miso Soup with Tofu</h3>
+                    <p class="card-desc">A nourishing Japanese soup with silken tofu, mushrooms, and fresh vegetables. Vegan-friendly!</p>
+                    <a href="#" class="btn-card">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <h2 class="section-title">Why FoodieHub?</h2>
+        <div class="section-features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i>✨</i>
+                </div>
+                <h3 class="feature-title">Easy Recipe Finder</h3>
+                <p class="feature-desc">Search by ingredient, dietary needs, or cooking time. Our AI finds the perfect recipe for you instantly.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i>⏱️</i>
+                </div>
+                <h3 class="feature-title">Quick & Efficient</h3>
+                <p class="feature-desc">All recipes include clear, step-by-step instructions with time estimates. Save hours of planning and cooking time!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i>🥗</i>
+                </div>
+                <h3 class="feature-title">Nutrition Focused</h3>
+                <p class="feature-desc">Get detailed nutritional information for every recipe. Cook with confidence knowing what you're eating!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="quick-start">
+        <h2 class="section-title">Get Started in Minutes</h2>
+        <div class="button-container">
+            <button class="btn-quick">Create Your First Recipe</button>
+            <button class="btn-quick">Join Our Community</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Recipes</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </div>
+        <p class="footer-copyright">© 2023 FoodieHub. All rights reserved. | Designed with <span style="color: #ff6b6b;">❤️</span> for food lovers</p>
+    </footer>
+    
+    <script>
+        // Add smooth scroll to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add animation on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const heroTitle = document.querySelector('h1');
+            if (heroTitle) {
+                heroTitle.style.animation = 'pulse 3s infinite';
+            }
+            
+            // Add animation to recipe cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s, transform 0.5s';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fontawesome/free@5.15.3/dist/js/fontawesome.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item"><a href="analytics.html">Analytics</a></li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                        <li class="nav-item"><a href="share-survey.html">Share Survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Drag-and-drop question builder interface</h2>
+            <p>Build your survey with ease using our drag-and-drop interface.</p>
+            <img src="images/interface.png" alt="Interface Image">
+            <div class="question-builder-container">
+                <h3>Question 1: What is your name?</h3>
+                <input type="text" id="q1-input" aria-label="Enter your name">
+                <button class="btn btn-primary">Add Question</button>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Question types selector</h2>
+            <p>Choose from a variety of question types to suit your needs.</p>
+            <ul>
+                <li><a href="#" class="question-type-btn">Multiple Choice</a></li>
+                <li><a href="#" class="question-type-btn">Checkboxes</a></li>
+                <li><a href="#" class="question-type-btn">Radio Buttons</a></li>
+                <li><a href="#" class="question-type-btn">Text Input</a></li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Required/optional field toggle</h2>
+            <p>Toggle the required or optional status of your fields.</p>
+            <div class="field-toggle-container">
+                <label class="required-field">Is this question required?</label>
+                <input type="checkbox" id="req-checkbox" aria-label="Toggle required status">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item"><a href="analytics.html">Analytics</a></li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                        <li class="nav-item"><a href="share-survey.html">Share Survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

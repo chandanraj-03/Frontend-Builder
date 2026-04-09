@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        h1 {
+            color: #2c5e2c;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #2c5e2c;
+            margin-top: 25px;
+            padding-left: 10px;
+            border-left: 4px solid #4a90e2;
+        }
+        .navigation {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #2c5e2c;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background: #e9f5e9;
+            transition: background 0.3s;
+        }
+        .navigation a:hover {
+            background: #c5e1c5;
+        }
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .item-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+        .item-card:hover {
+            transform: translateY(-3px);
+        }
+        .item-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c5e2c;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .quantity-btn {
+            background: #e9f5e9;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 2px;
+        }
+        .add-item {
+            background: #4a90e2;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .add-item:hover {
+            background: #2c5e2c;
+        }
+        .export-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .export-btn {
+            padding: 12px 25px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .export-btn:hover {
+            background: #2c5e2c;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .empty-state p {
+            color: #666;
+        }
+        .total-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+        }
+        .total {
+            font-weight: bold;
+            color: #2c5e2c;
+        }
+        .unit {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopping List Manager</h1>
+        <p>Organize your groceries with our easy-to-use shopping list tool</p>
+    </header>
+    
+    <div class="navigation">
+        <div>
+            <a href="meal-planner.html">Meal Planner</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="index.html">Home</a>
+        </div>
+        <div>
+            <a href="shopping-list.html">Shopping List</a>
+        </div>
+    </div>
+    
+    <section id="item-list">
+        <h2>Current Shopping List</h2>
+        
+        <div class="item-list">
+            <!-- Item 1 -->
+            <div class="item-card">
+                <div class="item-name">Organic Apples (10 lb bag)</div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="minus-apple">-</button>
+                    <input type="number" class="quantity-input" value="2" min="1" max="10">
+                    <button class="quantity-btn" id="plus-apple">+</button>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="item-card">
+                <div class="item-name">Whole Milk (1 gallon)</div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="minus-milk">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1" max="5">
+                    <button class="quantity-btn" id="plus-milk">+</button>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="item-card">
+                <div class="item-name">Whole Wheat Bread (1 loaf)</div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="minus-bread">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1" max="3">
+                    <button class="quantity-btn" id="plus-bread">+</button>
+                </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="item-card">
+                <div class="item-name">Eggs (Dozen)</div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="minus-eggs">-</button>
+                    <input type="number" class="quantity-input" value="2" min="1" max="6">
+                    <button class="quantity-btn" id="plus-eggs">+</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="total-section">
+            <div class="total">Total Items: <span id="total-items">4</span></div>
+            <div class="unit">| Total Quantity: <span id="total-quantity">7</span></div>
+        </div>
+        
+        <div class="empty-state" id="empty-state" style="display:none;">
+            <p>Your shopping list is empty! Add items to get started.</p>
+            <button class="add-item" id="add-item-btn">Add New Item</button>
+        </div>
+    </section>
+    
+    <div class="export-options">
+        <button class="export-btn" id="export-pdf">Export as PDF</button>
+        <button class="export-btn" id="export-csv">Export as CSV</button>
+        <button class="export-btn" id="export-print">Print List</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize counters
+            const totalItems = document.getElementById('total-items');
+            const totalQuantity = document.getElementById('total-quantity');
+            const emptyState = document.getElementById('empty-state');
+            
+            // Initial values
+            totalItems.textContent = 4;
+            totalQuantity.textContent = 7;
+            
+            // Add item button functionality
+            const addItemBtn = document.getElementById('add-item-btn');
+            if (addItemBtn) {
+                addItemBtn.addEventListener('click', function() {
+                    // Create a new item card
+                    const newItemCard = document.createElement('div');
+                    newItemCard.className = 'item-card';
+                    
+                    const itemName = document.createElement('div');
+                    itemName.className = 'item-name';
+                    itemName.textContent = 'New Item';
+                    
+                    const quantityControls = document.createElement('div');
+                    quantityControls.className = 'quantity-controls';
+                    
+                    const minusBtn = document.createElement('button');
+                    minusBtn.className = 'quantity-btn';
+                    minusBtn.textContent = '-';
+                    
+                    const quantityInput = document.createElement('input');
+                    quantityInput.className = 'quantity-input';
+                    quantityInput.type = 'number';
+                    quantityInput.value = '1';
+                    quantityInput.min = '1';
+                    quantityInput.max = '10';
+                    
+                    const plusBtn = document.createElement('button');
+                    plusBtn.className = 'quantity-btn';
+                    plusBtn.textContent = '+';
+                    
+                    quantityControls.appendChild(minusBtn);
+                    quantityControls.appendChild(quantityInput);
+                    quantityControls.appendChild(plusBtn);
+                    
+                    newItemCard.appendChild(itemName);
+                    newItemCard.appendChild(quantityControls);
+                    
+                    // Add to item list
+                    const itemList = document.querySelector('.item-list');
+                    if (itemList) {
+                        itemList.appendChild(newItemCard);
+                    }
+                    
+                    // Update counters
+                    totalItems.textContent = parseInt(totalItems.textContent) + 1;
+                    totalQuantity.textContent = parseInt(totalQuantity.textContent) + 1;
+                    
+                    // Hide empty state
+                    emptyState.style.display = 'none';
+                });
+            }
+            
+            // Quantity control functionality
+            const quantityControls = document.querySelectorAll('.quantity-controls');
+            quantityControls.forEach(control => {
+                const minusBtn = control.querySelector('.quantity-btn');
+                const plusBtn = control.querySelector('.quantity-btn');
+                const input = control.querySelector('.quantity-input');
+                
+                minusBtn.addEventListener('click', () => {
+                    let value = parseInt(input.value) - 1;
+                    if (value >= 1) {
+                        input.value = value;
+                        // Update totals
+                        totalQuantity.textContent = parseInt(totalQuantity.textContent) - 1;
+                    }
+                });
+                
+                plusBtn.addEventListener('click', () => {
+                    let value = parseInt(input.value) + 1;
+                    if (value <= 10) {
+                        input.value = value;
+                        // Update totals
+                        totalQuantity.textContent = parseInt(totalQuantity.textContent) + 1;
+                    }
+                });
+            });
+            
+            // Export buttons (simulated)
+            document.getElementById('export-pdf').addEventListener('click', () => {
+                alert('PDF export initiated!');
+            });
+            
+            document.getElementById('export-csv').addEventListener('click', () => {
+                alert('CSV export initiated!');
+            });
+            
+            document.getElementById('export-print').addEventListener('click', () => {
+                window.print();
+            });
+            
+            // Empty state handling
+            document.querySelectorAll('.item-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    // Example: Delete item
+                    if (this.closest('.item-card')) {
+                        this.remove();
+                        // Update counters
+                        totalItems.textContent = parseInt(totalItems.textContent) - 1;
+                        totalQuantity.textContent = parseInt(totalQuantity.textContent) - 1;
+                        
+                        if (parseInt(totalItems.textContent) === 0) {
+                            emptyState.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

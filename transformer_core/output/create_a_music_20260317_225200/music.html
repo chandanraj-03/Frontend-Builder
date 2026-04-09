@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Wave | Music</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-primary">
+        <nav aria-label="Main navigation">
+            <div class="align-center">
+                <h1>Aurora Wave</h1>
+                <ul>
+                    <li><a href="index.html" class="btn">Home</a></li>
+                    <li><a href="music.html" class="btn">Music</a></li>
+                    <li><a href="tour.html" class="btn">Tour</a></li>
+                    <li><a href="videos.html" class="btn">Videos</a></li>
+                    <li><a href="store.html" class="btn">Store</a></li>
+                    <li><a href="community.html" class="btn">Community</a></li>
+                    <li><a href="press.html" class="btn">Press</a></li>
+                    <li><a href="admin.html" class="btn">Admin</a></li>
+                    <li><a href="checkout.html" class="btn">Checkout</a></li>
+                    <li><a href="profile.html" class="btn">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-secondary align-center">
+            <h2>Discography</h2>
+            <p>Explore our complete collection of albums, EPs, and singles</p>
+        </section>
+
+        <section class="discography_grid">
+            <div class="card">
+                <div class="album-artwork-display">
+                    <img src="images/midnight-serenade.jpg" alt="Midnight Serenade album cover with moonlit cityscape" class="album-cover">
+                    <div class="album-info-overlay">
+                        <h3>Midnight Serenade</h3>
+                        <p>2023 • Full Album • 12 Tracks</p>
+                    </div>
+                </div>
+                <div class="card-title">Midnight Serenade</div>
+                <p>Our latest full-length album featuring atmospheric synth-pop and introspective lyrics</p>
+                <a href="#" class="btn btn-primary">Stream Now</a>
+                <a href="#" class="btn btn-secondary">Download</a>
+            </div>
+
+            <div class="card">
+                <div class="album-artwork-display">
+                    <img src="images/electronic-dreams.jpg" alt="Electronic Dreams EP with neon aesthetics" class="album-cover">
+                    <div class="album-info-overlay">
+                        <h3>Electronic Dreams</h3>
+                        <p>2022 • EP • 6 Tracks</p>
+                    </div>
+                </div>
+                <div class="card-title">Electronic Dreams EP</div>
+                <p>Debut EP showcasing our electronic influences and production style</p>
+                <a href="#" class="btn btn-primary">Stream Now</a>
+                <a href="#" class="btn btn-secondary">Download</a>
+            </div>
+
+            <div class="card">
+                <div class="album-artwork-display">
+                    <img src="images/acoustic-sessions.jpg" alt="Acoustic Sessions intimate studio performance" class="album-cover">
+                    <div class="album-info-overlay">
+                        <h3>Acoustic Sessions</h3>
+                        <p>2022 • Live Album • 8 Tracks</p>
+                    </div>
+                </div>
+                <div class="card-title">Acoustic Sessions</div>
+                <p>Intimate studio recordings of fan favorites in stripped-down arrangements</p>
+                <a href="#" class="btn btn-primary">Stream Now</a>
+                <a href="#" class="btn btn-secondary">Download</a>
+            </div>
+
+            <div class="card">
+                <div class="album-artwork-display">
+                    <img src="images/remix-collection.jpg" alt="Remix Collection featuring various artists" class="album-cover">
+                    <div class="album-info-overlay">
+                        <h3>Remix Collection</h3>
+                        <p>2023 • Compilation • 12 Tracks</p>
+                    </div>
+                </div>
+                <div class="card-title">Remix Collection</div>
+                <p>International artists reinterpret our tracks across various electronic genres</p>
+                <a href="#" class="btn btn-primary">Stream Now</a>
+                <a href="#" class="btn btn-secondary">Download</a>
+            </div>
+
+            <div class="card">
+                <div class="album-artwork-display">
+                    <img src="images/live-concert.jpg" alt="Live at Royal Hall concert recording" class="album-cover">
+                    <div class="album-info-overlay">
+                        <h3>Live at Royal Hall</h3>
+                        <p>2023 • Live Album • 15 Tracks</p>
+                    </div>
+                </div>
+                <div class="card-title">Live at Royal Hall</div>
+                <p>Complete recording of our sold-out 2023 tour finale performance</p>
+                <a href="#" class="btn btn-primary">Stream Now</a>
+                <a href="#" class="btn btn-secondary">Download</a>
+            </div>
+
+            <div class="card">
+                <div class="album-artwork-display">
+                    <img src="images/b-sides.jpg" alt="B-Sides and Rarities collection artwork" class="album-cover">
+                    <div class="album-info-overlay">
+                        <h3>B-Sides & Rarities</h3>
+                        <p>2023 • Compilation • 10 Tracks</p>
+                    </div>
+                </div>
+                <div class="card-title">B-Sides & Rarities</div>
+                <p>Collection of unreleased tracks, demos, and alternate versions</p>
+                <a href="#" class="btn btn-primary">Stream Now</a>
+                <a href="#" class="btn btn-secondary">Download</a>
+            </div>
+        </section>
+
+        <section class="audio-player-container bg-card">
+            <h2>Featured Track: Starlight Dreams</h2>
+            <div class="custom_audio_player_with_visualizer">
+                <audio controls>
+                    <source src="audio/starlight-dreams.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <canvas id="visualizer" width="400" height="100" aria-label="Audio visualizer display"></canvas>
+            </div>
+            <p>From "Midnight Serenade" - featuring ethereal synths and haunting vocals</p>
+        </section>
+
+        <section class="track_listings">
+            <h2>Midnight Serenade Track List</h2>
+            <div class="card">
+                <ol>
+                    <li>
+                        <span>Starlight Dreams</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Starlight Dreams">Play Sample</button>
+                        <span>4:32</span>
+                    </li>
+                    <li>
+                        <span>Midnight Drive</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Midnight Drive">Play Sample</button>
+                        <span>3:45</span>
+                    </li>
+                    <li>
+                        <span>Electric Pulse</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Electric Pulse">Play Sample</button>
+                        <span>5:12</span>
+                    </li>
+                    <li>
+                        <span>Neon Reflections</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Neon Reflections">Play Sample</button>
+                        <span>4:08</span>
+                    </li>
+                    <li>
+                        <span>City Lights Fade</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of City Lights Fade">Play Sample</button>
+                        <span>4:55</span>
+                    </li>
+                    <li>
+                        <span>Synthwave Memories</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Synthwave Memories">Play Sample</button>
+                        <span>3:37</span>
+                    </li>
+                    <li>
+                        <span>Digital Heartbeat</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Digital Heartbeat">Play Sample</button>
+                        <span>4:20</span>
+                    </li>
+                    <li>
+                        <span>Afterglow</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Afterglow">Play Sample</button>
+                        <span>5:03</span>
+                    </li>
+                    <li>
+                        <span>Echo Chamber</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Echo Chamber">Play Sample</button>
+                        <span>4:15</span>
+                    </li>
+                    <li>
+                        <span>Dream Sequence</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Dream Sequence">Play Sample</button>
+                        <span>6:22</span>
+                    </li>
+                    <li>
+                        <span>Morning Light</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Morning Light">Play Sample</button>
+                        <span>3:58</span>
+                    </li>
+                    <li>
+                        <span>Final Transmission</span>
+                        <button class="btn btn-secondary" aria-label="Play sample of Final Transmission">Play Sample</button>
+                        <span>5:40</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="download_links bg-accent">
+            <h2>Download Options</h2>
+            <div class="card">
+                <h3>Digital Formats</h3>
+                <ul>
+                    <li><a href="#" class="btn">MP3 - High Quality</a></li>
+                    <li><a href="#" class="btn">FLAC - Lossless</a></li>
+                    <li><a href="#" class="btn">WAV - Studio Quality</a></li>
+                    <li><a href="#" class="btn">ALAC - Apple Lossless</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Physical Media</h3>
+                <ul>
+                    <li><a href="#" class="btn">Vinyl LP</a></li>
+                    <li><a href="#" class="btn">CD</a></li>
+                    <li><a href="#" class="btn">Cassette Tape</a></li>
+                    <li><a href="#" class="btn">Deluxe Box Set</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary">
+        <div class="align-center">
+            <p>&copy; 2023 Aurora Wave. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <address>
+                Email: <a href="mailto:info@aurorawave.com">info@aurorawave.com</a><br>
+                Management: <a href="mailto:management@aurorawave.com">management@aurorawave.com</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

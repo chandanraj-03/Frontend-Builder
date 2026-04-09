@@ -1,0 +1,16 @@
+.landing-page-wrapper {
+    min-height: 100vh;
+    background-color: #eef2ff;
+    background-image:
+        radial-gradient(circle at 10% 60%, rgba(139, 92, 246, 0.09), transparent 55%),
+        radial-gradient(circle at 90% 20%, rgba(6, 182, 212, 0.08), transparent 55%);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 
+                 "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", 
+                 sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.landing-page-wrapper ::selection {
+    background-color: #e0e7ff; 
+    color: #312e81; 
+}

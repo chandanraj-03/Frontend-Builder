@@ -1,0 +1,223 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #f8f9fa;
+  --text-color: #2c3e50;
+  --surface-card-color: #ffffff;
+  --spacing-large: 24px;
+  --spacing-medium: 16px;
+  --spacing-small: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+table.response-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.response-data-table th, table.response-data-table td {
+  padding: var(--spacing-medium);
+  border: 1px solid #ddd;
+}
+
+table.response-data-table th {
+  background-color: var(--surface-card-color);
+}
+
+.download-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: var(--spacing-medium) var(--spacing-large);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.download-button:hover {
+  background-color: #337ab7;
+}
+
+.social-media-sharing-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.social-media-sharing-buttons button {
+  background-color: var(--surface-card-color);
+  color: var(--primary-color);
+  padding: var(--spacing-small) var(--spacing-large);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.social-media-sharing-buttons button:hover {
+  background-color: #ccc;
+}
+
+.csv-export-settings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.csv-export-settings input[type="checkbox"] {
+  accent-color: var(--accent-color);
+}
+
+.navigation-controls {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-controls li {
+  margin-right: var(--spacing-medium);
+}
+
+.navigation-controls a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navigation-controls a:hover {
+  color: #337ab7;
+}
+
+.bar-charts-for-questions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.bar-charts-for-questions svg {
+  width: 100%;
+  height: auto;
+}
+
+.pie-charts-for-question-types {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.pie-charts-for-question-types svg {
+  width: 100%;
+  height: auto;
+}
+
+.survey-link-generator {
+  padding: var(--spacing-large) var(--spacing-medium);
+  background-color: var(--surface-card-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.survey-link-generator:hover {
+  background-color: #ccc;
+}
+
+.question-types-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.question-types-selector button {
+  background-color: var(--surface-card-color);
+  color: var(--primary-color);
+  padding: var(--spacing-small) var(--spacing-large);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.question-types-selector button:hover {
+  background-color: #ccc;
+}
+
+.drag-and-drop-question-builder-interface {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.survey-preview-area {
+  padding: var(--spacing-large) var(--spacing-medium);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.survey-preview-area:hover {
+  background-color: #ccc;
+}
+
+.data-table-for-responses {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-for-responses th, .data-table-for-responses td {
+  padding: var(--spacing-medium);
+  border: 1px solid #ddd;
+}
+
+.link-copy-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: var(--spacing-medium) var(--spacing-large);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.link-copy-button:hover {
+  background-color: #337ab7;
+}
+
+.required-optional-field-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.required-optional-field-toggle button {
+  background-color: var(--surface-card-color);
+  color: var(--primary-color);
+  padding: var(--spacing-small) var(--spacing-large);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.required-optional-field-toggle button:hover {
+  background-color: #ccc;
+}
+
+.builder-interface-link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium);
+}
+
+.builder-interface-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.builder-interface-link a:hover {
+  color: #337ab7;
+}

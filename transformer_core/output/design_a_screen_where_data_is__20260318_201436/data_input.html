@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input - Table Tennis Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="brand">
+            <h1>Table Tennis Analytics</h1>
+            <p>Performance Tracking & Analysis Dashboard</p>
+        </div>
+        <nav class="dashboard-navigation-menu">
+            <ul>
+                <li><a href="dashboard.html" class="btn btn-outline">Dashboard</a></li>
+                <li><a href="data_input.html" class="btn btn-primary">Data Input</a></li>
+                <li><a href="data_management.html" class="btn btn-outline">Data Management</a></li>
+                <li><a href="detailed_analysis.html" class="btn btn-outline">Detailed Analysis</a></li>
+                <li><a href="settings.html" class="btn btn-outline">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Input Your Table Tennis Performance Data</h2>
+            <p>Upload match statistics, training session results, or manually enter detailed performance metrics to track your progress and identify areas for improvement.</p>
+        </section>
+
+        <div class="data-input-layout">
+            <section class="main-content">
+                <article class="file-upload-component">
+                    <h3>Upload Match Data Files</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-instructions">
+                            <p><strong>Drag and drop your data files here or click to browse</strong></p>
+                            <p>Supported formats: CSV, Excel (.xlsx), JSON</p>
+                            <p>Maximum file size: 50MB</p>
+                        </div>
+                        <input type="file" id="fileInput" accept=".csv,.xlsx,.json" multiple class="form-control">
+                        <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Select Files</button>
+                    </div>
+                    
+                    <div class="upload-progress-indicator" id="progressIndicator" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-text">Processing: <span id="progressPercent">0%</span></p>
+                        <p class="file-name" id="currentFileName"></p>
+                    </div>
+
+                    <div class="sample-data-template-download">
+                        <h4>Need a Template?</h4>
+                        <p>Download our sample data templates to ensure proper formatting:</p>
+                        <div class="template-options">
+                            <a href="#" class="btn btn-outline">CSV Template</a>
+                            <a href="#" class="btn btn-outline">Excel Template</a>
+                            <a href="#" class="btn btn-outline">JSON Template</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="manual-data-entry-form">
+                    <h3>Manual Data Entry</h3>
+                    <form id="manualEntryForm">
+                        <div class="form-group">
+                            <label class="form-label">Match Date</label>
+                            <input type="date" class="form-control" required value="2024-10-26">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Match Type</label>
+                            <select class="form-control" required>
+                                <option value="">Select match type</option>
+                                <option value="tournament" selected>Tournament Match</option>
+                                <option value="league">League Match</option>
+                                <option value="training">Training Session</option>
+                                <option value="friendly">Friendly Match</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Opponent Name</label>
+                            <input type="text" class="form-control" placeholder="Enter opponent's name" value="Alex Chen">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Match Result</label>
+                            <div class="result-inputs">
+                                <input type="number" class="form-control" placeholder="Your games" min="0" max="7" value="3">
+                                <span> - </span>
+                                <input type="number" class="form-control" placeholder="Opponent games" min="0" max="7" value="1">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Match Duration (minutes)</label>
+                            <input type="number" class="form-control" min="1" max="120" value="28">
+                        </div>
+
+                        <h4>Serve Statistics</h4>
+                        <div class="form-group">
+                            <label class="form-label">Total Serves</label>
+                            <input type="number" class="form-control" min="0" value="45">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Serve Success Rate (%)</label>
+                            <input type="number" class="form-control" min="0" max="100" value="84">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Ace Serves</label>
+                            <input type="number" class="form-control" min="0" value="3">
+                        </div>
+
+                        <h4>Stroke Performance</h4>
+                        <div class="stroke-stats">
+                            <div class="form-group">
+                                <label class="form-label">Forehand Loop Success Rate (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" value="78">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Backhand Drive Success Rate (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" value="72">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Forehand Smash Success Rate (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" value="65">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Backhand Flip Success Rate (%)</label>
+                                <input type="number" class="form-control" min="0" max="100" value="58">
+                            </div>
+                        </div>
+
+                        <h4>Additional Metrics</h4>
+                        <div class="form-group">
+                            <label class="form-label">Unforced Errors</label>
+                            <input type="number" class="form-control" min="0" value="7">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Forced Errors by Opponent</label>
+                            <input type="number" class="form-control" min="0" value="12">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Net/Cord Balls (Luck)</label>
+                            <input type="number" class="form-control" min="0" value="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Match Notes</label>
+                            <textarea class="form-control" rows="4" placeholder="Add any additional notes about the match...">Strong performance on backhand side. Need to work on serve return against heavy backspin.</textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save Match Data</button>
+                        <button type="reset" class="btn btn-outline">Clear Form</button>
+                    </form>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <article class="data-validation-feedback">
+                    <h3>Data Quality Check</h3>
+                    <div class="validation-results">
+                        <div class="validation-item valid">
+                            <span class="status-icon">✓</span>
+                            <span>File format validation passed</span>
+                        </div>
+                        <div class="validation-item valid">
+                            <span class="status-icon">✓</span>
+                            <span>Required fields complete</span>
+                        </div>
+                        <div class="validation-item warning">
+                            <span class="status-icon">⚠</span>
+                            <span>Check serve success rate consistency</span>
+                        </div>
+                        <div class="validation-item valid">
+                            <span class="status-icon">✓</span>
+                            <span>Date range within expected bounds</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="recent-uploads">
+                    <h3>Recently Uploaded Files</h3>
+                    <div class="upload-history">
+                        <div class="upload-item">
+                            <div class="file-info">
+                                <strong>match_data_102524.csv</strong>
+                                <span>Oct 25, 2024 - 45.2 KB</span>
+                            </div>
+                            <span class="status success">Processed</span>
+                        </div>
+                        <div class="upload-item">
+                            <div class="file-info">
+                                <strong>training_session_102224.xlsx</strong>
+                                <span>Oct 22, 2024 - 28.7 KB</span>
+                            </div>
+                            <span class="status success">Processed</span>
+                        </div>
+                        <div class="upload-item">
+                            <div class="file-info">
+                                <strong>tournament_101824.json</strong>
+                                <span>Oct 18, 2024 - 67.1 KB</span>
+                            </div>
+                            <span class="status success">Processed</span>
+                        </div>
+                        <div class="upload-item">
+                            <div class="file-info">
+                                <strong>practice_matches_101524.csv</strong>
+                                <span>Oct 15, 2024 - 32.8 KB</span>
+                            </div>
+                            <span class="status success">Processed</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="upload-tips">
+                    <h3>Data Upload Tips</h3>
+                    <ul>
+                        <li>Ensure date format: YYYY-MM-DD for consistency</li>
+                        <li>Include opponent rating if available for better analysis</li>
+                        <li>Record match conditions (table type, ball brand, etc.)</li>
+                        <li>Note any equipment changes during the match</li>
+                        <li>Include video timestamps if recording available</li>
+                    </ul>
+                </article>
+
+                <article class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <a href="data_management.html" class="btn btn-secondary">Manage Existing Data</a>
+                    <a href="dashboard.html" class="btn btn-outline">View Dashboard</a>
+                    <a href="detailed_analysis.html" class="btn btn-outline">Run Analysis</a>
+                </article>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Table Tennis Analytics</h5>
+                <p>Advanced performance tracking and strategic analysis for competitive table tennis players.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Data Management</h5>
+                <ul>
+                    <li><a href="data_input.html">Data Input</a></li>
+                    <li><a href="data_management.html">Data Management</a></li>
+                    <li><a href="dashboard.html">Performance Dashboard</a></li>
+                    <li><a href="detailed_analysis.html">Advanced Analysis</a></li>
+                    <li><a href="settings.html">Data Settings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Support & Resources</h5>
+                <p>Email: support@ttanalytics.com</p>
+                <p>Data Format Help: formats@ttanalytics.com</p>
+                <p>Upload Assistance Available: Mon-Fri 9AM-6PM EST</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Table Tennis Analytics Pro. All match data is stored securely and used only for performance analysis.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data_input.js"></script>
+</body>
+</html>

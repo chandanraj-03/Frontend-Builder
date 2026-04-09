@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Table Tennis Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="brand">
+            <h1>Table Tennis Analytics</h1>
+            <p>Performance Tracking & Analysis Dashboard</p>
+        </div>
+        <nav class="dashboard-navigation-menu">
+            <ul>
+                <li><a href="dashboard.html" class="btn btn-outline">Dashboard</a></li>
+                <li><a href="data_input.html" class="btn btn-outline">Data Input</a></li>
+                <li><a href="data_management.html" class="btn btn-outline">Data Management</a></li>
+                <li><a href="detailed_analysis.html" class="btn btn-outline">Detailed Analysis</a></li>
+                <li><a href="settings.html" class="btn btn-primary">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Application Settings & Preferences</h2>
+            <p>Customize your analytics experience, configure visualization options, and manage your user profile and data preferences.</p>
+        </section>
+
+        <div class="settings-layout">
+            <section class="main-content">
+                <article class="user-profile-settings">
+                    <h3>User Profile & Account</h3>
+                    <div class="profile-section">
+                        <div class="profile-header">
+                            <div class="avatar">TT</div>
+                            <div class="profile-info">
+                                <h4>Table Tennis Player</h4>
+                                <p>Member since: February 15, 2024</p>
+                                <p>Account type: <strong>Premium Analytics</strong></p>
+                            </div>
+                        </div>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label class="form-label">Display Name</label>
+                                <input type="text" class="form-control" value="Competitive Player" placeholder="Enter your display name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" value="player@example.com" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Playing Style</label>
+                                <select class="form-control">
+                                    <option>All-round attacker</option>
+                                    <option selected>Offensive looper</option>
+                                    <option>Defensive chopper</option>
+                                    <option>Counter-driver</option>
+                                    <option>Modern defender</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Primary Grip Style</label>
+                                <select class="form-control">
+                                    <option selected>Shakehand</option>
+                                    <option>Penhold</option>
+                                    <option>Seemiller</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Current Rating (USATT/ITTF)</label>
+                                <input type="number" class="form-control" value="2100" min="0" max="3000" placeholder="Enter your rating">
+                            </div>
+                            <button class="btn btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                </article>
+
+                <article class="chart-color-scheme-selector">
+                    <h3>Visualization & Chart Settings</h3>
+                    <div class="color-scheme-options">
+                        <h4>Chart Color Scheme</h4>
+                        <div class="scheme-grid">
+                            <label class="color-scheme-option active">
+                                <input type="radio" name="colorScheme" checked>
+                                <div class="scheme-preview" style="background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b, #ef4444, #8b5cf6);"></div>
+                                <span>Professional Default</span>
+                            </label>
+                            <label class="color-scheme-option">
+                                <input type="radio" name="colorScheme">
+                                <div class="scheme-preview" style="background: linear-gradient(90deg, #1e40af, #047857, #b45309, #b91c1c, #5b21b6);"></div>
+                                <span>High Contrast</span>
+                            </label>
+                            <label class="color-scheme-option">
+                                <input type="radio" name="colorScheme">
+                                <div class="scheme-preview" style="background: linear-gradient(90deg, #0ea5e9, #22c55e, #eab308, #ec4899, #8b5cf6);"></div>
+                                <span>Vibrant</span>
+                            </label>
+                            <label class="color-scheme-option">
+                                <input type="radio" name="colorScheme">
+                                <div class="scheme-preview" style="background: linear-gradient(90deg, #6366f1, #14b8a6, #f59e0b, #ef4444, #8b5cf6);"></div>
+                                <span>Colorblind Friendly</span>
+                            </label>
+                            <label class="color-scheme-option">
+                                <input type="radio" name="colorScheme">
+                                <div class="scheme-preview" style="background: linear-gradient(90deg, #6b7280, #9ca3af, #d1d5db, #4b5563, #1f2937);"></div>
+                                <span>Monochrome</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="chart-settings">
+                        <h4>Chart Display Preferences</h4>
+                        <div class="form-group">
+                            <label class="form-label">Default Chart Type</label>
+                            <select class="form-control">
+                                <option>Bar charts</option>
+                                <option selected>Line charts for trends</option>
+                                <option>Pie/donut charts</option>
+                                <option>Scatter plots</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Animation Speed</label>
+                            <select class="form-control">
+                                <option>No animations</option>
+                                <option>Slow</option>
+                                <option selected>Normal</option>
+                                <option>Fast</option>
+                            </select>
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Show data labels on charts</label>
+                            <label><input type="checkbox" checked> Show grid lines</label>
+                            <label><input type="checkbox"> Smooth line curves</label>
+                            <label><input type="checkbox" checked> Show legends by default</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Apply Visualization Settings</button>
+                </article>
+
+                <article class="data-refresh-settings">
+                    <h3>Data & Refresh Settings</h3>
+                    <div class="refresh-options">
+                        <h4>Automatic Data Refresh</h4>
+                        <div class="form-group">
+                            <label class="form-label">Dashboard Refresh Interval</label>
+                            <select class="form-control">
+                                <option>Manual refresh only</option>
+                                <option>Every 30 minutes</option>
+                                <option selected>Every 15 minutes</option>
+                                <option>Every 5 minutes</option>
+                                <option>Every minute (high traffic)</option>
+                            </select>
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Auto-refresh when new data is uploaded</label>
+                            <label><input type="checkbox"> Notify when refresh occurs</label>
+                            <label><input type="checkbox" checked> Cache data for offline viewing</label>
+                        </div>
+                    </div>
+                    <div class="data-management">
+                        <h4>Data Retention & Storage</h4>
+                        <div class="form-group">
+                            <label class="form-label">Auto-delete incomplete data after</label>
+                            <select class="form-control">
+                                <option>30 days</option>
+                                <option selected>90 days</option>
+                                <option>180 days</option>
+                                <option>1 year</option>
+                                <option>Never delete</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Maximum file upload size</label>
+                            <select class="form-control">
+                                <option>10 MB</option>
+                                <option selected>50 MB</option>
+                                <option>100 MB</option>
+                                <option>500 MB</option>
+                                <option>1 GB</option>
+                            </select>
+                        </div>
+                        <div class="storage-info">
+                            <p>Current storage usage: <strong>4.7 MB of 1 GB (0.5%)</strong></p>
+                            <div class="storage-bar">
+                                <div class="storage-fill" style="width: 0.5%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Save Data Settings</button>
+                </article>
+
+                <article class="accessibility-options">
+                    <h3>Accessibility & Display Settings</h3>
+                    <div class="accessibility-panel">
+                        <h4>Visual Accessibility</h4>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> High contrast mode</label>
+                            <label><input type="checkbox"> Reduced motion</label>
+                            <label><input type="checkbox" checked> Larger text sizes</label>
+                            <label><input type="checkbox"> Colorblind-friendly charts</label>
+                            <label><input type="checkbox"> Simplified layouts</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Default Font Size</label>
+                            <select class="form-control">
+                                <option>Small</option>
+                                <option selected>Medium</option>
+                                <option>Large</option>
+                                <option>Extra Large</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Screen Reader Support</label>
+                            <select class="form-control">
+                                <option selected>Standard</option>
+                                <option>Enhanced</option>
+                                <option>Minimal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="keyboard-shortcuts">
+                        <h4>Keyboard Shortcuts</h4>
+                        <div class="shortcut-list">
+                            <div class="shortcut-item">
+                                <kbd>Ctrl + D</kbd>
+                                <span>Go to Dashboard</span>
+                            </div>
+                            <div class="shortcut-item">
+                                <kbd>Ctrl + I</kbd>
+                                <span>Open Data Input</span>
+                            </div>
+                            <div class="shortcut-item">
+                                <kbd>Ctrl + F</kbd>
+                                <span>Search data</span>
+                            </div>
+                            <div class="shortcut-item">
+                                <kbd>Ctrl + E</kbd>
+                                <span>Export current view</span>
+                            </div>
+                            <div class="shortcut-item">
+                                <kbd>Ctrl + S</kbd>
+                                <span>Save settings</span>
+                            </div>
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Enable keyboard shortcuts</label>
+                            <label><input type="checkbox"> Show shortcut hints</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Apply Accessibility Settings</button>
+                </article>
+
+                <article class="export-preferences">
+                    <h3>Export & Sharing Preferences</h3>
+                    <div class="export-settings">
+                        <h4>Default Export Settings</h4>
+                        <div class="form-group">
+                            <label class="form-label">Default Export Format</label>
+                            <select class="form-control">
+                                <option selected>CSV</option>
+                                <option>Excel (.xlsx)</option>
+                                <option>JSON</option>
+                                <option>PDF</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Default Date Format</label>
+                            <select class="form-control">
+                                <option>YYYY-MM-DD</option>
+                                <option selected>MM/DD/YYYY</option>
+                                <option>DD/MM/YYYY</option>
+                                <option>Month D, YYYY</option>
+                            </select>
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Include metadata in exports</label>
+                            <label><input type="checkbox"> Compress exported files</label>
+                            <label><input type="checkbox" checked> Include chart images in reports</label>
+                            <label><input type="checkbox"> Watermark shared reports</label>
+                        </div>
+                    </div>
+                    <div class="sharing-settings">
+                        <h4>Data Sharing & Privacy</h4>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> Allow anonymous data for research</label>
+                            <label><input type="checkbox" checked> Share with my coach automatically</label>
+                            <label><input type="checkbox"> Make performance trends public</label>
+                            <label><input type="checkbox"> Allow comparison with similar players</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Coach Email for Sharing</label>
+                            <input type="email" class="form-control" value="coach@example.com" placeholder="Enter coach's email">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Save Export Preferences</button>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <article class="settings-navigation">
+                    <h3>Settings Categories</h3>
+                    <nav class="settings-nav">
+                        <a href="#profile" class="active">Profile & Account</a>
+                        <a href="#visualization">Visualization</a>
+                        <a href="#data">Data Settings</a>
+                        <a href="#accessibility">Accessibility</a>
+                        <a href="#export">Export & Sharing</a>
+                        <a href="#notifications">Notifications</a>
+                        <a href="#security">Security</a>
+                        <a href="#integrations">Integrations</a>
+                    </nav>
+                </article>
+
+                <article class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary">Reset to Defaults</button>
+                        <button class="btn btn-outline">Export All Settings</button>
+                        <button class="btn btn-outline">Import Settings</button>
+                        <button class="btn btn-accent">Save All Changes</button>
+                    </div>
+                </article>
+
+                <article class="recent-changes">
+                    <h3>Recent Setting Changes</h3>
+                    <div class="change-log">
+                        <div class="change-item">
+                            <strong>Today, 10:30 AM</strong>
+                            <p>Updated chart color scheme to Professional Default</p>
+                        </div>
+                        <div class="change-item">
+                            <strong>Oct 25, 2024</strong>
+                            <p>Changed refresh interval to 15 minutes</p>
+                        </div>
+                        <div class="change-item">
+                            <strong>Oct 22, 2024</strong>
+                            <p>Enabled larger text sizes for accessibility</p>
+                        </div>
+                        <div class="change-item">
+                            <strong>Oct 18, 2024</strong>
+                            <p>Added coach email for automatic sharing</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="account-info">
+                    <h3>Account Information</h3>
+                    <div class="account-details">
+                        <p><strong>Subscription:</strong> Premium Analytics</p>
+                        <p><strong>Renewal Date:</strong> February 15, 2025</p>
+                        <p><strong>Data Points:</strong> 47 matches, 32 sessions</p>
+                        <p><strong>Last Login:</strong> Today, 09:45 AM</p>
+                        <p><strong>Account ID:</strong> TT-PLAYER-2100-48B2</p>
+                    </div>
+                    <div class="account-actions">
+                        <a href="#" class="btn btn-outline">Upgrade Plan</a>
+                        <a href="#" class="btn btn-outline">Download All Data</a>
+                    </div>
+                </article>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Table Tennis Analytics</h5>
+                <p>Advanced performance tracking and strategic analysis for competitive table tennis players.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Settings & Preferences</h5>
+                <ul>
+                    <li><a href="settings.html">Profile Settings</a></li>
+                    <li><a href="settings.html">Visualization Options</a></li>
+                    <li><a href="settings.html">Data Preferences</a></li>
+                    <li><a href="settings.html">Accessibility</a></li>
+                    <li><a href="settings.html">Export Settings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Support & Resources</h5>
+                <p>Email: support@ttanalytics.com</p>
+                <p>Settings Help: config@ttanalytics.com</p>
+                <p>Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Table Tennis Analytics Pro. All settings are stored securely and can be exported at any time.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management - Table Tennis Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="brand">
+            <h1>Table Tennis Analytics</h1>
+            <p>Performance Tracking & Analysis Dashboard</p>
+        </div>
+        <nav class="dashboard-navigation-menu">
+            <ul>
+                <li><a href="dashboard.html" class="btn btn-outline">Dashboard</a></li>
+                <li><a href="data_input.html" class="btn btn-outline">Data Input</a></li>
+                <li><a href="data_management.html" class="btn btn-primary">Data Management</a></li>
+                <li><a href="detailed_analysis.html" class="btn btn-outline">Detailed Analysis</a></li>
+                <li><a href="settings.html" class="btn btn-outline">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Manage Your Table Tennis Performance Data</h2>
+            <p>View, edit, filter, and export your complete match history and training session data. Currently managing 47 matches and 32 training sessions across 8 months.</p>
+        </section>
+
+        <div class="data-management-layout">
+            <section class="main-content">
+                <article class="search-and-filter-controls">
+                    <div class="search-section">
+                        <input type="text" class="form-control" placeholder="Search matches by opponent, date, or notes..." style="flex: 1;">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                    <div class="filter-group">
+                        <label>Date Range:</label>
+                        <select class="form-control">
+                            <option>All dates</option>
+                            <option selected>Last 30 days</option>
+                            <option>Last 90 days</option>
+                            <option>Last 6 months</option>
+                            <option>Custom range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Match Type:</label>
+                        <select class="form-control">
+                            <option>All types</option>
+                            <option>Tournament</option>
+                            <option>League</option>
+                            <option selected>Training</option>
+                            <option>Friendly</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Result:</label>
+                        <select class="form-control">
+                            <option>All results</option>
+                            <option>Wins only</option>
+                            <option>Losses only</option>
+                            <option>Close matches (3-2)</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary">Apply Filters</button>
+                    <button class="btn btn-outline">Clear All</button>
+                </article>
+
+                <article class="dataset-statistics-overview">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Total Matches</h4>
+                            <p class="stat-number">47</p>
+                            <p class="stat-detail">32 wins, 15 losses</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Win Rate</h4>
+                            <p class="stat-number">68%</p>
+                            <p class="stat-detail">+6% from last period</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Avg. Points/Game</h4>
+                            <p class="stat-number">8.4</p>
+                            <p class="stat-detail">Consistent performance</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Data Coverage</h4>
+                            <p class="stat-number">8 months</p>
+                            <p class="stat-detail">Since Feb 2024</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Total Sessions</h4>
+                            <p class="stat-number">79</p>
+                            <p class="stat-detail">47 matches + 32 training</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Data Quality</h4>
+                            <p class="stat-number">94%</p>
+                            <p class="stat-detail">Complete records</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="datatable-with-records">
+                    <h3>Match & Session Records</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Opponent/Session</th>
+                                <th>Type</th>
+                                <th>Result</th>
+                                <th>Duration</th>
+                                <th>Serve %</th>
+                                <th>Forehand %</th>
+                                <th>Backhand %</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-10-26</td>
+                                <td>Alex Chen</td>
+                                <td>Tournament</td>
+                                <td class="win">3-1 Win</td>
+                                <td>28 min</td>
+                                <td>84%</td>
+                                <td>78%</td>
+                                <td>72%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-25</td>
+                                <td>Backhand Focus Training</td>
+                                <td>Training</td>
+                                <td class="training">Session</td>
+                                <td>45 min</td>
+                                <td>91%</td>
+                                <td>82%</td>
+                                <td>75%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-22</td>
+                                <td>Maria Rodriguez</td>
+                                <td>League</td>
+                                <td class="loss">2-3 Loss</td>
+                                <td>35 min</td>
+                                <td>76%</td>
+                                <td>65%</td>
+                                <td>68%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-20</td>
+                                <td>Serve Practice Session</td>
+                                <td>Training</td>
+                                <td class="training">Session</td>
+                                <td>60 min</td>
+                                <td>88%</td>
+                                <td>85%</td>
+                                <td>79%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-18</td>
+                                <td>Tournament Group Stage</td>
+                                <td>Tournament</td>
+                                <td class="win">4-0 Win</td>
+                                <td>42 min</td>
+                                <td>89%</td>
+                                <td>81%</td>
+                                <td>77%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-15</td>
+                                <td>Jamie Wilson</td>
+                                <td>Friendly</td>
+                                <td class="win">3-2 Win</td>
+                                <td>38 min</td>
+                                <td>82%</td>
+                                <td>74%</td>
+                                <td>71%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-12</td>
+                                <td>Footwork Drills</td>
+                                <td>Training</td>
+                                <td class="training">Session</td>
+                                <td>50 min</td>
+                                <td>N/A</td>
+                                <td>78%</td>
+                                <td>73%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-10</td>
+                                <td>Robert Kim</td>
+                                <td>League</td>
+                                <td class="loss">1-3 Loss</td>
+                                <td>31 min</td>
+                                <td>71%</td>
+                                <td>62%</td>
+                                <td>59%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-08</td>
+                                <td>Multi-ball Training</td>
+                                <td>Training</td>
+                                <td class="training">Session</td>
+                                <td>55 min</td>
+                                <td>86%</td>
+                                <td>83%</td>
+                                <td>76%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-05</td>
+                                <td>Sarah Johnson</td>
+                                <td>Tournament</td>
+                                <td class="win">3-0 Win</td>
+                                <td>27 min</td>
+                                <td>90%</td>
+                                <td>85%</td>
+                                <td>80%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-03</td>
+                                <td>Match Simulation</td>
+                                <td>Training</td>
+                                <td class="training">Session</td>
+                                <td>65 min</td>
+                                <td>84%</td>
+                                <td>79%</td>
+                                <td>74%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2024-09-28</td>
+                                <td>David Miller</td>
+                                <td>Friendly</td>
+                                <td class="win">3-1 Win</td>
+                                <td>33 min</td>
+                                <td>87%</td>
+                                <td>80%</td>
+                                <td>78%</td>
+                                <td class="edit-delete-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <p>Showing 12 of 47 records</p>
+                        <div class="pagination">
+                            <button class="btn btn-outline">Previous</button>
+                            <span>Page 1 of 4</span>
+                            <button class="btn btn-outline">Next</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="data-export-options">
+                    <h3>Export Data</h3>
+                    <p>Download your complete dataset or selected records for external analysis or backup.</p>
+                    <div class="export-format-options">
+                        <button class="btn btn-accent">Export All as CSV</button>
+                        <button class="btn btn-accent">Export All as Excel</button>
+                        <button class="btn btn-accent">Export All as JSON</button>
+                        <button class="btn btn-outline">Export Selected Only</button>
+                    </div>
+                    <div class="export-settings">
+                        <h4>Export Settings</h4>
+                        <div class="form-group">
+                            <label class="form-label">Date Range:</label>
+                            <select class="form-control">
+                                <option>All data</option>
+                                <option>Last 30 days</option>
+                                <option>Last 90 days</option>
+                                <option selected>Custom range</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Include Fields:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" checked> Basic match info</label>
+                                <label><input type="checkbox" checked> Stroke statistics</label>
+                                <label><input type="checkbox" checked> Serve analysis</label>
+                                <label><input type="checkbox"> Video timestamps</label>
+                                <label><input type="checkbox" checked> Match notes</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Generate Export</button>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <article class="bulk-actions">
+                    <h3>Bulk Operations</h3>
+                    <div class="bulk-action-buttons">
+                        <button class="btn btn-secondary">Select All Visible</button>
+                        <button class="btn btn-outline">Deselect All</button>
+                        <button class="btn btn-outline" style="color: #dc2626;">Delete Selected</button>
+                    </div>
+                    <p class="small-text">Currently selected: 0 records</p>
+                </article>
+
+                <article class="data-quality-check">
+                    <h3>Data Quality Report</h3>
+                    <div class="quality-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Complete Records:</span>
+                            <span class="metric-value">94%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Missing Serve Data:</span>
+                            <span class="metric-value">3 records</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Incomplete Sessions:</span>
+                            <span class="metric-value">2 records</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Date Errors:</span>
+                            <span class="metric-value">0 records</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Run Quality Check</button>
+                </article>
+
+                <article class="recent-edits">
+                    <h3>Recent Edits</h3>
+                    <div class="edit-history">
+                        <div class="edit-item">
+                            <strong>Oct 26, 2024</strong>
+                            <p>Updated serve % for Alex Chen match</p>
+                            <span class="edit-time">2 hours ago</span>
+                        </div>
+                        <div class="edit-item">
+                            <strong>Oct 25, 2024</strong>
+                            <p>Added notes to training session</p>
+                            <span class="edit-time">1 day ago</span>
+                        </div>
+                        <div class="edit-item">
+                            <strong>Oct 22, 2024</strong>
+                            <p>Corrected opponent name</p>
+                            <span class="edit-time">4 days ago</span>
+                        </div>
+                        <div class="edit-item">
+                            <strong>Oct 20, 2024</strong>
+                            <p>Fixed duration for serve practice</p>
+                            <span class="edit-time">6 days ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="backup-info">
+                    <h3>Data Backup</h3>
+                    <p>Last automatic backup: <strong>Today, 02:00 AM</strong></p>
+                    <p>Backup size: <strong>4.7 MB</strong></p>
+                    <button class="btn btn-outline">Create Manual Backup</button>
+                    <button class="btn btn-outline">Restore from Backup</button>
+                </article>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Table Tennis Analytics</h5>
+                <p>Advanced performance tracking and strategic analysis for competitive table tennis players.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Data Management</h5>
+                <ul>
+                    <li><a href="data_management.html">Record Management</a></li>
+                    <li><a href="data_input.html">Add New Data</a></li>
+                    <li><a href="data_management.html">Export Data</a></li>
+                    <li><a href="data_management.html">Quality Reports</a></li>
+                    <li><a href="settings.html">Data Settings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Support & Resources</h5>
+                <p>Email: support@ttanalytics.com</p>
+                <p>Data Management Help: data@ttanalytics.com</p>
+                <p>Backup Assistance Available 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Table Tennis Analytics Pro. All data is stored securely with automatic daily backups.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data_management.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Categories | Tech Insights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo" aria-label="Tech Insights Homepage">
+                    <h1><i class="fas fa-microchip"></i> Tech Insights</h1>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="navigation_menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="categories.html" class="btn">Category List</a></li>
+                    <li class="dropdown">
+                        <a href="author.html" aria-haspopup="true">Author Profile <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="author.html#mia">Mia Rodriguez</a></li>
+                            <li><a href="author.html#alex">Alex Chen</a></li>
+                            <li><a href="author.html#jordan">Jordan Lee</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Page</a></li>
+                    <li><a href="contact.html">Contact Page</a></li>
+                    <li><a href="archive.html">Archive Page</a></li>
+                    <li><a href="tags.html">Tags Page</a></li>
+                    <li><a href="404.html">404 Error Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb_trail" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Browse Categories</li>
+            </ol>
+        </nav>
+
+        <header class="page-header">
+            <h1>Browse Content by Category</h1>
+            <p>Explore our comprehensive library of technology articles, tutorials, and insights organized by topic</p>
+        </header>
+
+        <div class="content-layout">
+            <aside class="filters-sidebar">
+                <section class="category_filter">
+                    <h3>Filter Categories</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> Artificial Intelligence</label>
+                        <label><input type="checkbox" checked> Web Development</label>
+                        <label><input type="checkbox" checked> Cybersecurity</label>
+                        <label><input type="checkbox" checked> Hardware & Gadgets</label>
+                        <label><input type="checkbox" checked> DevOps & Cloud</label>
+                        <label><input type="checkbox" checked> Green Tech</label>
+                        <label><input type="checkbox" checked> Industry News</label>
+                    </div>
+                </section>
+
+                <section class="tag_cloud">
+                    <h3>Popular Topics</h3>
+                    <div class="cloud">
+                        <a href="tags.html#machinelearning" class="tag">Machine Learning</a>
+                        <a href="tags.html#javascript" class="tag">JavaScript</a>
+                        <a href="tags.html#python" class="tag">Python</a>
+                        <a href="tags.html#cloud" class="tag">Cloud Computing</a>
+                        <a href="tags.html#security" class="tag">Security</a>
+                        <a href="tags.html#iot" class="tag">IoT</a>
+                        <a href="tags.html#blockchain" class="tag">Blockchain</a>
+                        <a href="tags.html#ar" class="tag">Augmented Reality</a>
+                    </div>
+                </section>
+
+                <section class="sort-options">
+                    <h3>Sort By</h3>
+                    <select class="category_filter">
+                        <option value="popularity">Most Popular</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="alphabetical">Alphabetical</option>
+                    </select>
+                </section>
+            </aside>
+
+            <div class="main-content">
+                <section class="category_list">
+                    <h2>All Categories</h2>
+                    <div class="categories-grid">
+                        <article class="category-card" id="ai">
+                            <div class="category-content">
+                                <h3>Artificial Intelligence</h3>
+                                <p class="category-description">Explore machine learning, neural networks, natural language processing, and the ethical implications of AI technology.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">48 articles</span>
+                                    <span class="updated">Updated weekly</span>
+                                </div>
+                                <a href="#ai-posts" class="btn btn-secondary">Browse AI Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/ai-category.jpg" alt="Abstract representation of artificial intelligence and neural networks" loading="lazy">
+                            </div>
+                        </article>
+
+                        <article class="category-card" id="web">
+                            <div class="category-content">
+                                <h3>Web Development</h3>
+                                <p class="category-description">Frontend and backend development, frameworks, performance optimization, and modern web standards.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">112 articles</span>
+                                    <span class="updated">Updated daily</span>
+                                </div>
+                                <a href="#web-posts" class="btn btn-secondary">Browse Web Dev Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/web-category.jpg" alt="Code editor showing web development code" loading="lazy">
+                            </div>
+                        </article>
+
+                        <article class="category-card" id="cyber">
+                            <div class="category-content">
+                                <h3>Cybersecurity</h3>
+                                <p class="category-description">Security best practices, threat analysis, penetration testing, and protecting digital assets in modern environments.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">76 articles</span>
+                                    <span class="updated">Updated weekly</span>
+                                </div>
+                                <a href="#cyber-posts" class="btn btn-secondary">Browse Security Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/cyber-category.jpg" alt="Digital lock and security shield icon" loading="lazy">
+                            </div>
+                        </article>
+
+                        <article class="category-card" id="hardware">
+                            <div class="category-content">
+                                <h3>Hardware & Gadgets</h3>
+                                <p class="category-description">Reviews, teardowns, and analysis of the latest computing hardware, consumer electronics, and emerging gadget technologies.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">89 articles</span>
+                                    <span class="updated">Updated monthly</span>
+                                </div>
+                                <a href="#hardware-posts" class="btn btn-secondary">Browse Hardware Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/hardware-category.jpg" alt="Collection of modern computer hardware components" loading="lazy">
+                            </div>
+                        </article>
+
+                        <article class="category-card" id="ops">
+                            <div class="category-content">
+                                <h3>DevOps & Cloud</h3>
+                                <p class="category-description">Infrastructure as code, containerization, CI/CD pipelines, and cloud platform strategies for modern development.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">54 articles</span>
+                                    <span class="updated">Updated bi-weekly</span>
+                                </div>
+                                <a href="#ops-posts" class="btn btn-secondary">Browse DevOps Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/devops-category.jpg" alt="Cloud infrastructure and deployment diagram" loading="lazy">
+                            </div>
+                        </article>
+
+                        <article class="category-card" id="green">
+                            <div class="category-content">
+                                <h3>Green Tech</h3>
+                                <p class="category-description">Sustainable technology, energy-efficient computing, renewable energy integration, and eco-friendly innovation.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">23 articles</span>
+                                    <span class="updated">Updated monthly</span>
+                                </div>
+                                <a href="#green-posts" class="btn btn-secondary">Browse Green Tech Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/green-category.jpg" alt="Wind turbines and solar panels representing green energy" loading="lazy">
+                            </div>
+                        </article>
+
+                        <article class="category-card" id="industry">
+                            <div class="category-content">
+                                <h3>Industry News</h3>
+                                <p class="category-description">Breaking news, mergers and acquisitions, startup funding rounds, and major announcements in the tech industry.</p>
+                                <div class="category-stats">
+                                    <span class="post-count">167 articles</span>
+                                    <span class="updated">Updated daily</span>
+                                </div>
+                                <a href="#industry-posts" class="btn btn-secondary">Browse News Articles</a>
+                            </div>
+                            <div class="category-image">
+                                <img src="images/news-category.jpg" alt="Breaking news headline on digital screen" loading="lazy">
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="posts_by_category" id="cyber-posts">
+                    <h2>Latest in Cybersecurity</h2>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <h3><a href="post.html">Implementing Zero-Trust Architecture for Remote Teams</a></h3>
+                            <p>A comprehensive guide to transitioning from traditional perimeter-based security to a Zero-Trust model for distributed workforces.</p>
+                            <div class="post-meta">
+                                <span class="author">Mia Rodriguez</span>
+                                <span class="date">Feb 28, 2024</span>
+                                <span class="read-time">15 min read</span>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <h3><a href="post.html">The 2024 Guide to Multi-Factor Authentication Best Practices</a></h3>
+                            <p>Compare the latest MFA methods from biometrics to hardware security keys and FIDO2 standards for optimal security.</p>
+                            <div class="post-meta">
+                                <span class="author">Alex Chen</span>
+                                <span class="date">Feb 22, 2024</span>
+                                <span class="read-time">12 min read</span>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <h3><a href="post.html">Critical Vulnerability Found in Popular VPN Software</a></h3>
+                            <p>Security researchers disclose a zero-day vulnerability affecting millions of VPN users worldwide. Patch immediately.</p>
+                            <div class="post-meta">
+                                <span class="author">Jordan Lee</span>
+                                <span class="date">Feb 18, 2024</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <h3><a href="post.html">Building a Personal VPN Server on Raspberry Pi</a></h3>
+                            <p>A complete tutorial on setting up WireGuard for secure browsing anywhere, with performance benchmarks against commercial services.</p>
+                            <div class="post-meta">
+                                <span class="author">Sam Rivera</span>
+                                <span class="date">Feb 15, 2024</span>
+                                <span class="read-time">20 min read</span>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <h3><a href="post.html">The Rise of AI-Powered Cyber Attacks: What You Need to Know</a></h3>
+                            <p>How machine learning is being weaponized for sophisticated phishing campaigns and automated vulnerability discovery.</p>
+                            <div class="post-meta">
+                                <span class="author">David Kim</span>
+                                <span class="date">Feb 12, 2024</span>
+                                <span class="read-time">14 min read</span>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <h3><a href="post.html">Securing IoT Devices in Smart Home Environments</a></h3>
+                            <p>Practical steps to protect your connected home from common vulnerabilities and unauthorized access attempts.</p>
+                            <div class="post-meta">
+                                <span class="author">Sarah Jenkins</span>
+                                <span class="date">Feb 8, 2024</span>
+                                <span class="read-time">10 min read</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <nav class="pagination" aria-label="Cybersecurity posts pagination">
+                        <span class="page-info">Showing 1-6 of 76 articles</span>
+                        <div class="page-controls">
+                            <button class="btn btn-secondary" disabled aria-label="Previous page"><i class="fas fa-chevron-left"></i></button>
+                            <button class="btn btn-primary active" aria-label="Page 1">1</button>
+                            <button class="btn btn-secondary" aria-label="Page 2">2</button>
+                            <button class="btn btn-secondary" aria-label="Page 3">3</button>
+                            <button class="btn btn-secondary" aria-label="Next page"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-microchip"></i> Tech Insights</h3>
+                    <p class="about_content">Providing in-depth, actionable tech analysis since 2018. Our mission is to demystify the technologies shaping our future.</p>
+                    <div class="author_social_links">
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Subscribe to our YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <极速赛车公众号app>
+                        <li><a href="author.html">Our Writers</a></li>
+                        <li><a href="contact.html">Contact & Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact_information">
+                        <div class="contact_item"><i class="fas fa-envelope"></i> <a href="mailto:info@techinsights.example">info@techinsights.example</a></div>
+                        <div class="contact_item"><i class="fas fa-map-marker-alt"></i> 123 Tech Lane, San Francisco, CA</div>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Tech Insights. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

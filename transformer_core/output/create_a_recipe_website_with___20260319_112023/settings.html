@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Cooking Collective</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="search.html">search</a></li>
+                <li><a href="recipe-detail.html">recipe-detail</a></li>
+                <li><a href="meal-planner.html">meal-planner</a></li>
+                <li><a href="shopping-list.html">shopping-list</a></li>
+                <li><a href="community.html">community</a></li>
+                <li><a href="user-profile.html">user-profile</a></li>
+                <li><a href="settings.html" class="active">settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cooking-mode">
+            <h2>Cooking Mode</h2>
+            <div class="toggle-option">
+                <input type="radio" id="standard-mode" name="cooking-mode" value="standard" checked>
+                <label for="standard-mode">Standard Mode</label>
+            </div>
+            <div class="toggle-option">
+                <input type="radio" id="advanced-mode" name="cooking-mode" value="advanced">
+                <label for="advanced-mode">Advanced Mode</label>
+            </div>
+            <p class="description">Standard mode provides basic instructions and ingredient lists. Advanced mode includes detailed step-by-step guidance, cooking temperatures, and advanced techniques.</p>
+        </section>
+
+        <section id="unit-conversion">
+            <h2>Unit Conversion</h2>
+            <div class="toggle-option">
+                <input type="radio" id="metric-units" name="units" value="metric" checked>
+                <label for="metric-units">Metric Units</label>
+            </div>
+            <div class="toggle-option">
+                <input type="radio" id="imperial-units" name="units" value="imperial">
+                <label for="imperial-units">Imperial Units</label>
+            </div>
+            <p class="description">Choose your preferred measurement system. Note: Imperial units are displayed as ounces and cups, while metric uses grams and milliliters.</p>
+        </section>
+
+        <section id="notifications">
+            <h2>Notification Settings</h2>
+            <div class="toggle-option">
+                <input type="checkbox" id="recipe-alerts" checked>
+                <label for="recipe-alerts">Recipe Alerts (when you add a new recipe to your favorites)</label>
+            </div>
+            <div class="toggle-option">
+                <input type="checkbox" id="email-notifications" checked>
+                <label for="email-notifications">Email Notifications</label>
+            </div>
+            <div class="toggle-option">
+                <input type="checkbox" id="push-notifications" checked>
+                <label for="push-notifications">Push Notifications</label>
+            </div>
+            <p class="description">Adjust how you receive updates about new recipes, favorites, and cooking reminders.</p>
+        </section>
+
+        <button id="save-settings" class="save-button">Save Settings</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Cooking Collective. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

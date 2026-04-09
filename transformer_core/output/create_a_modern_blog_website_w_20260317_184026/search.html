@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results for "Zero Trust" | Tech Insights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo" aria-label="Tech Insights Homepage">
+                    <h1><i class="fas fa-microchip"></i> Tech Insights</h1>
+                </a>
+                <div class="search_bar_with_autocomplete">
+                    <form role="search" aria-label="Site-wide search">
+                        <input type="search" name="query" value="Zero Trust" placeholder="Search articles, tutorials, and news..." aria-label="Search input" class="autocomplete-suggestion">
+                        <div class="autocomplete-suggestions">
+                            <div class="suggestion">Zero Trust Architecture</div>
+                            <div class="suggestion">Zero Trust Network</div>
+                            <div class="suggestion">Zero Trust Security Model</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="navigation_menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="search.html" class="btn">Search Results</a></li>
+                    <li class="dropdown">
+                        <a href="categories.html" aria-haspopup="true">Category List <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="categories.html#ai">AI & Machine Learning</a></li>
+                            <li><a href="categories.html#web">Web Dev</a></li>
+                            <li><a href="categories.html#cyber">Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Author Profile</a></li>
+                    <li><a href="about.html">About Page</a></li>
+                    <li><a href="contact.html">Contact Page</a></li>
+                    <li><a href="archive.html">Archive Page</a></li>
+                    <li><a href="tags.html">Tags Page</a></li>
+                    <li><a href="404.html">404 Error Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb_trail" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Search Results for "Zero Trust"</li>
+            </ol>
+        </nav>
+
+        <div class="search-header">
+            <h1>Search Results for "Zero Trust"</h1>
+            <p>Found 24 results matching your query</p>
+        </div>
+
+        <div class="content-layout">
+            <aside class="filters-sidebar">
+                <section class="category_filtering">
+                    <h3>Filter by Category</h3>
+                    <ul class="category_list">
+                        <li><a href="#" class="category active">Cybersecurity <span class="count">(18)</span></a></li>
+                        <li><a href="#" class="category">Network Security <span class="count">(12)</span></a></li>
+                        <li><a href="#" class="category">Cloud Computing <span class="count">(8)</span></a></li>
+                        <li><a href="#" class="category">Enterprise IT <span class="count">(6)</span></a></li>
+                        <li><a href="#" class="category">Remote Work <span class="count">(5)</span></a></li>
+                        <li><a href="#" class="category">Compliance <span class="count">(4)</span></a></li>
+                    </ul>
+                </section>
+
+                <section class="tag_filtering">
+                    <h3>Filter by Tags</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag active">Zero Trust <span class="count">(24)</span></a>
+                        <a href="#" class="tag">MFA <span class="count">(15)</span></a>
+                        <a href="#" class="tag">Network Segmentation <span class="count">(12)</span></a>
+                        <a href="#" class="tag">Identity Management <span class="count">(10)</span></a>
+                        <a href="#" class="tag">Cloud Security <span class="count">(8)</span></a>
+                        <a href="#" class="tag">VPN Alternatives <span class="count">(6)</span></a>
+                        <a href="#" class="tag">SASE <span class="count">(5)</span></a>
+                        <a href="#" class="tag">Compliance <span class="count">(4)</span></a>
+                    </div>
+                </section>
+
+                <section class="date_filtering">
+                    <h3>Publication Date</h3>
+                    <select class="category_filter">
+                        <option value="all">Any Time</option>
+                        <option value="day">Past 24 Hours</option>
+                        <option value="week">Past Week</option>
+                        <option value="month" selected>Past Month</option>
+                        <option value="year">Past Year</option>
+                    </select>
+                </section>
+
+                <section class="content_type">
+                    <h3>Content Type</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> Articles</label>
+                        <label><input type="checkbox" checked> Tutorials</label>
+                        <label><input type="checkbox"> News</label>
+                        <label><input type="checkbox"> Case Studies</label>
+                    </div>
+                </section>
+            </aside>
+
+            <div class="search-results-main">
+                <div class="results-controls">
+                    <div class="sort_options">
+                        <label for="sort-by">Sort by:</label>
+                        <select id="sort-by" class="category_filter">
+                            <option value="relevance">Relevance</option>
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                    <div class="view-options">
+                        <button class="btn btn-secondary active" aria-label="List view"><i class="fas fa-list"></i></button>
+                        <button class="btn btn-secondary" aria-label="Grid view"><i class="fas fa-th"></i></button>
+                    </div>
+                </div>
+
+                <div class="search_results_list">
+                    <article class="search-result">
+                        <h2><a href="post.html">Implementing a Zero-Trust Architecture for Modern Remote Teams</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Cybersecurity</span> • 
+                            <span class="author">By Mia Rodriguez</span> • 
+                            <span class="date">February 28, 2024</span> • 
+                            <span class="reading-time">15 min read</span>
+                        </div>
+                        <p>A comprehensive guide to transitioning from traditional perimeter-based security to a Zero-Trust model. Learn step-by-step implementation strategies, recommended tools, and real-world case studies for securing remote workforces.</p>
+                        <div class="result-tags">
+                            <span class="tag">Zero Trust</span>
+                            <span class="tag">Remote Work</span>
+                            <span class="tag">MFA</span>
+                            <span class="tag">Network Segmentation</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">Microsoft's Zero-Trust Implementation: A Deep Dive into Azure AD Conditional Access</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Cloud Computing</span> • 
+                            <span class="author">By Alex Chen</span> • 
+                            <span class="date">February 20, 2024</span> • 
+                            <span class="reading-time">12 min read</span>
+                        </div>
+                        <p>Explore how Microsoft has implemented Zero-Trust principles across its Azure ecosystem. This article provides practical configuration examples for Conditional Access policies, identity protection, and device compliance checks.</p>
+                        <div class="result-tags">
+                            <span class="tag">Azure</span>
+                            <span class="tag">Microsoft 365</span>
+                            <span class="tag">Cloud Security</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">BeyondCorp vs Traditional VPN: Why Google Abandoned the Corporate Network</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Enterprise IT</span> • 
+                            <span class="author">By Jordan Lee</span> • 
+                            <span class="date">February 15, 2024</span> • 
+                            <span class="reading-time">18 min read</span>
+                        </div>
+                        <p>An analysis of Google's BeyondCorp architecture, the pioneering Zero-Trust implementation that eliminated VPNs for internal access. Learn how this model improves security while enhancing user experience and productivity.</p>
+                        <div class="result-tags">
+                            <span class="tag">Google</span>
+                            <span class="tag">BeyondCorp</span>
+                            <span class="tag">VPN Alternatives</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">Zero-Trust for Small Businesses: Affordable Implementation Strategies</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Cybersecurity</span> • 
+                            <span class="author">By Sam Rivera</span> • 
+                            <span class="date">February 10, 2024</span> • 
+                            <span class="reading-time">10 min read</span>
+                        </div>
+                        <p>Zero-Trust isn't just for enterprises. This guide shows small businesses how to implement core Zero-Trust principles using cost-effective tools and open-source solutions without breaking the budget.</p>
+                        <div class="result-tags">
+                            <span class="tag">SMB</span>
+                            <span class="tag">Budget Security</span>
+                            <span class="tag">Open Source</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">The Role of SASE in Modern Zero-Trust Architectures</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Network Security</span> • 
+                            <span class="author">By David Kim</span> • 
+                            <span class="date">February 5, 2024</span> • 
+                            <span class="reading-time">14 min read</span>
+                        </div>
+                        <p>Secure Access Service Edge (SASE) combines network security functions with WAN capabilities to support the dynamic secure access needs of organizations. Learn how SASE complements and enhances Zero-Trust security models.</p>
+                        <div class="result-tags">
+                            <span class="tag">SASE</span>
+                            <span class="tag">Network Security</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">Case Study: How a Healthcare Provider Achieved HIPAA Compliance with Zero-Trust</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Compliance</span> • 
+                            <span class="author">By Sarah Jenkins</span> • 
+                            <span class="date">January 28, 2024</span> • 
+                            <span class="reading-time">20 min read</span>
+                        </div>
+                        <p>A detailed case study of a regional healthcare provider that implemented Zero-Trust architecture to meet strict HIPAA requirements while enabling telemedicine and remote patient data access.</p>
+                        <div class="result-tags">
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">HIPAA</span>
+                            <span class="tag">Compliance</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">Zero-Trust Networking: Micro-Segmentation Best Practices</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Network Security</span> • 
+                            <span class="author">By Mike Thompson</span> • 
+                            <span class="date">January 22, 2024</span> • 
+                            <span class="reading-time">16 min read</span>
+                        </div>
+                        <p>Micro-segmentation is a cornerstone of Zero-Trust networking. This technical guide covers implementation strategies using tools from VMware, Cisco, and cloud providers to create granular security zones.</p>
+                        <div class="result-tags">
+                            <span class="tag">Micro-segmentation</span>
+                            <span class="tag">Network Security</span>
+                            <span class="tag">VMware</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+
+                    <article class="search-result">
+                        <h2><a href="post.html">Measuring the ROI of Zero-Trust Security Implementations</a></h2>
+                        <div class="result-meta">
+                            <span class="category">Enterprise IT</span> • 
+                            <span class="author">By Lisa Wang</span> • 
+                            <span class="date">January 15, 2024</span> • 
+                            <span class="reading-time">12 min read</span>
+                        </div>
+                        <p>How to calculate and justify the investment in Zero-Trust architecture. This article provides frameworks for measuring reduced breach costs, improved productivity, and compliance benefits to build your business case.</p>
+                        <div class="result-tags">
+                            <span class="tag">ROI</span>
+                            <span class="tag">Business Case</span>
+                            <span class="tag">Enterprise</span>
+                            <span class="tag">Zero Trust</span>
+                        </div>
+                    </article>
+                </div>
+
+                <nav class="pagination" aria-label="Search results pagination">
+                    <span class="page-info">Showing 1-8 of 24 results</span>
+                    <div class="page-controls">
+                        <button class="btn btn-secondary" disabled aria-label="Previous page"><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-primary active" aria-label="Page 1">1</button>
+                        <button class="btn btn-secondary" aria-label="Page 2">2</button>
+                        <button class="btn btn-secondary" aria-label="Page 3">3</button>
+                        <button class="btn btn-secondary" aria-label="Next page"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-microchip"></i> Tech Insights</h3>
+                    <p class="about_content">Providing in-depth, actionable tech analysis since 2018. Our mission is to demystify the technologies shaping our future.</p>
+                    <div class="author_social_links">
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Subscribe to our YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="author.html">Our Writers</a></li>
+                        <li><a href="contact.html">Contact & Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact_information">
+                        <div class="contact_item"><i class="fas fa-envelope"></i> <a href="mailto:info@techinsights.example">info@techinsights.example</a></div>
+                        <div class="contact_item"><i class="fas fa-map-marker-alt"></i> 123 Tech Lane, San Francisco, CA</div>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Tech Insights. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

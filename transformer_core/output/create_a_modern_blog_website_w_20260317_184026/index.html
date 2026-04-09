@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Insights | Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo" aria-label="Tech Insights Homepage">
+                    <h1><i class="fas fa-microchip"></i> Tech Insights</h1>
+                </a>
+                <div class="search_bar">
+                    <form role="search" aria-label="Site-wide search">
+                        <input type="search" name="query" placeholder="Search articles, tutorials, and news..." aria-label="Search input" class="autocomplete-suggestion">
+                        <button type="submit" class="btn btn-primary" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="category_filtering">
+                        <label for="filter-cat">Filter by:</label>
+                        <select id="filter-cat" class="category_filter">
+                            <option value="all">All Categories</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="web">Web Development</option>
+                            <option value="cyber">Cybersecurity</option>
+                            <option value="hardware">Hardware</option>
+                            <option value="gadgets">Gadgets</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="navigation_menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" class="btn">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li class="dropdown">
+                        <a href="categories.html" aria-haspopup="true">Category List <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="categories.html#ai">AI & Machine Learning</a></li>
+                            <li><a href="categories.html#web">Web Dev</a></li>
+                            <li><a href="categories.html#cyber">Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Author Profile</a></li>
+                    <li><a href="about.html">About Page</a></li>
+                    <li><a href="contact.html">Contact Page</a></li>
+                    <li><a href="archive.html">Archive Page</a></li>
+                    <li><a href="tags.html">Tags Page</a></li>
+                    <li><a href="404.html">404 Error Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero_section" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h2 id="hero-heading">The Future of Technology is Being Written Today</h2>
+                <p class="hero-subtext">Dive deep into expert analysis, hands-on tutorials, and breaking news from the frontiers of AI, quantum computing, and sustainable tech. Stay ahead of the curve.</p>
+                <a href="post.html" class="btn btn-accent" aria-label="Read our featured article on AI ethics">Explore Our Featured Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image" role="img" aria-label="Abstract visualization of data networks and AI">
+                <!-- Background image would be set via CSS -->
+            </div>
+        </section>
+
+        <div class="content-layout">
+            <div class="main-content">
+                <section class="featured_posts_grid" aria-labelledby="featured-posts">
+                    <h2 id="featured-posts">Featured Posts & Guides</h2>
+                    <div class="grid-container">
+                        <article class="featured-card">
+                            <img src="images/ai-ethics.jpg" alt="Illustration of a human hand and a robotic hand touching over a circuit board" loading="lazy">
+                            <div class="card-content">
+                                <span class="category">Artificial Intelligence</span>
+                                <h3><a href="post.html">Navigating the Ethical Maze of Generative AI</a></h3>
+                                <p>As tools like ChatGPT become ubiquitous, we examine the pressing questions of bias, copyright, and accountability in AI-generated content.</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                                    <span><i class="far fa-comment"></i> 42 Comments</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="images/rust-web.jpg" alt="Code snippet showing Rust language syntax next to a web browser icon" loading="lazy">
+                            <div class="card-content">
+                                <span class="category">Web Development</span>
+                                <h3><a href="post.html">Why Rust is the Next Big Thing for Web Performance</a></h3>
+                                <p>Move over JavaScript frameworks. We benchmark WebAssembly applications built with Rust against traditional stacks for blistering speed.</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar"></i> March 10, 2024</span>
+                                    <span><i class="far fa-comment"></i> 28 Comments</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="images/quantum-cloud.jpg" alt="Futuristic depiction of a quantum computer chip with glowing elements" loading="lazy">
+                            <div class="category">Hardware</div>
+                            <h3><a href="post.html">Quantum Computing as a Service: What Early Access Looks Like</a></h3>
+                            <p>Cloud providers are now offering quantum processing units. We test-drive the platforms and explore practical use cases beyond theory.</p>
+                            <div class="meta">
+                                <span><i class="far fa-calendar"></i> March 5, 2024</span>
+                                <span><i class="far fa-comment"></i> 19 Comments</span>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="images/zero-trust.jpg" alt="Diagram showing layers of security shields protecting a data center" loading="lazy">
+                            <div class="card-content">
+                                <span class="category">Cybersecurity</span>
+                                <h3><a href="post.html">Implementing a Zero-Trust Architecture for Remote Teams</a></h3>
+                                <p>A step-by-step guide to moving beyond VPNs. Learn how to configure identity-aware proxies and micro-segmentation for your distributed workforce.</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar"></i> February 28, 2024</span>
+                                    <span><i class="far fa-comment"></i> 31 Comments</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="images/foldable-tech.jpg" alt="Person using a large-screen foldable smartphone and a rollable tablet" loading="lazy">
+                            <div class="card-content">
+                                <span class="category">Gadgets</span>
+                                <h3><a href="post.html">The 2024 Foldable & Rollable Device Showdown</a></h3>
+                                <p>We compare the latest flexible-screen phones, tablets, and even laptops from Samsung, Huawei, and emerging brands. Durability tested.</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar"></i> February 22, 2024</span>
+                                    <span><i class="far fa-comment"></i> 55 Comments</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="images/green-datacenter.jpg" alt="Solar panels and wind turbines powering a modern data center facility" loading="lazy">
+                            <div class="card-content">
+                                <span class="category">Sustainability</span>
+                                <h3><a href="post.html">How Tech Giants are Cutting Data Center Carbon Footprints by 70%</a></h3>
+                                <p>From liquid immersion cooling to AI-powered energy management, discover the innovations making cloud computing greener.</p>
+                                <div class="meta">
+                                    <span><i class="far fa-calendar"></i> February 18, 2024</span>
+                                    <span><i class="far fa-comment"></i> 24 Comments</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="recent_posts_section" aria-labelledby="recent-posts">
+                    <h2 id="recent-posts">Recently Published</h2>
+                    <article class="recent-post">
+                        <h3><a href="post.html">The Hidden Cost of 'Free' AI Models: A Deep Dive into Data Licensing</a></h3>
+                        <p>Many popular open-source AI models were trained on datasets with unclear copyrights. We explore the legal risks for developers and companies.</p>
+                        <div class="meta">
+                            <span class="category">AI Ethics</span> • <span><i class="far fa-user"></i> Alex Chen</span> • <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                    </article>
+                    <article class="recent-post">
+                        <h3><a href="post.html">Building a Personal VPN Server on a Raspberry Pi for Under $100</a></h3>
+                        <p>A complete tutorial on setting up WireGuard for secure browsing anywhere, with performance benchmarks against commercial services.</p>
+                        <div class="meta">
+                            <span class="category">DIY / Cybersecurity</span> • <span><i class="far fa-user"></i> Sam Rivera</span> • <span><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                    </article>
+                    <article class="recent-post">
+                        <h3><a href="post.html">Framework Laptop 16 Review: The Ultimate Repairable Powerhouse?</a></h3>
+                        <p>We disassemble and upgrade the latest modular laptop, evaluating its promise of longevity in a throwaway industry.</p>
+                        <div class="meta">
+                            <span class="category">Hardware Reviews</span> • <span><i class="far fa-user"></i> Jordan Lee</span> • <span><i class="far fa-clock"></i> 15 min read</span>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <section class="category_navigation" aria-labelledby="categories-heading">
+                    <h3 id="categories-heading">Browse by Category</h3>
+                    <ul class="category_list">
+                        <li><a href="categories.html#ai" class="category">Artificial Intelligence <span class="count">(48)</span></a></li>
+                        <li><a href="categories.html#web" class="category">Web Development <span class="count">(112)</span></a></li>
+                        <li><a href="categories.html#cyber" class="category">Cybersecurity <span class="count">(76)</span></a></li>
+                        <li><a href="categories.html#hardware" class="category">Hardware & Gadgets <span class="count">(89)</span></a></li>
+                        <li><a href="categories.html#ops" class="category">DevOps & Cloud <span class="count">(54)</span></a></li>
+                        <li><a href="categories.html#green" class="category">Green Tech <span class="count">(23)</span></a></li>
+                        <li><a href="categories.html#industry" class="category">Industry News <span class="count">(167)</span></a></li>
+                        <li><a href="categories.html" class="btn btn-secondary">View All Categories</a></li>
+                    </ul>
+                </section>
+
+                <section class="tag_cloud" aria-labelledby="tags-heading">
+                    <h3 id="tags-heading">Popular Topics</h3>
+                    <div class="cloud">
+                        <a href="tags.html#machinelearning" class="tag">Machine Learning</a>
+                        <a href="tags.html#javascript" class="tag">JavaScript</a>
+                        <a href="tags.html#privacy" class="tag">Privacy</a>
+                        <a href="tags.html#python" class="tag">Python</a>
+                        <a href="tags.html#startups" class="tag">Startups</a>
+                        <a href="tags.html#opensource" class="tag">Open Source</a>
+                        <a href="tags.html#blockchain" class="tag">Blockchain</a>
+                        <a href="tags.html#iot" class="tag">IoT</a>
+                        <a href="tags.html#ar" class="tag">Augmented Reality</a>
+                        <a href="tags.html#linux" class="tag">Linux</a>
+                        <a href="tags.html#api" class="tag">API Design</a>
+                        <a href="tags.html#fintech" class="tag">FinTech</a>
+                    </div>
+                </section>
+
+                <section class="newsletter_signup_form" aria-labelledby="newsletter-heading">
+                    <h3 id="newsletter-heading">Stay Updated</h3>
+                    <p>Get our weekly digest of the most important tech stories and analysis. No spam, ever.</p>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="newsletter-name">Your Name</label>
+                            <input type="text" id="newsletter-name" name="name" placeholder="e.g., Jamie Smith" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="newsletter-email">Email Address</label>
+                            <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required aria-required="true" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                        </div>
+                        <div class="form-group">
+                            <label for="newsletter-interests">Interests (Optional)</label>
+                            <select id="newsletter-interests" name="interests" multiple class="category_filter">
+                                <option value="ai">AI & ML</option>
+                                <option value="web">Web Dev</option>
+                                <option value="security">Security</option>
+                                <option value="hardware">Hardware</option>
+                            </select>
+                            <small>Hold Ctrl/Cmd to select multiple</small>
+                        </div>
+                        <button type="submit" class="btn btn-accent">Subscribe Now</button>
+                        <p class="form-note">By subscribing, you agree to our <a href="#">Privacy Policy</a>.</p>
+                    </form>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-microchip"></i> Tech Insights</h3>
+                    <p class="about_content">Founded in 2018, Tech Insights provides unbiased, in-depth analysis and practical guides on emerging technologies. Our mission is to demystify the tech shaping our future.</p>
+                    <div class="author_social_links">
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Subscribe to our YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Join our Discord community"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="author.html">Our Writers</a></li>
+                        <li><a href="contact.html">Contact & Support</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Contribution Guidelines</a></li>
+                        <li><a href="#">Code of Ethics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact_information">
+                        <div class="contact_item"><i class="fas fa-envelope"></i> <a href="mailto:editor@techinsights.example.com">editor@techinsights.example.com</a></div>
+                        <div class="contact_item"><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, San Francisco, CA 94107</div>
+                        <div class="contact_item"><i class="fas fa-phone"></i> +1 (555) 123-4567 (Business Inquiries)</div>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Tech Insights. All rights reserved. Content is licensed under <a href="#">CC BY-NC-SA 4.0</a> unless otherwise noted.</p>
+                    <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a> • <a href="#">Cookie Policy</a> • <a href="#">Accessibility Statement</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

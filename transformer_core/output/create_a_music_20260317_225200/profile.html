@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Wave | My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-primary">
+        <nav aria-label="Main navigation">
+            <div class="极-center">
+                <h1>Aurora Wave</h1>
+                <ul>
+                    <li><a href="index.html" class="btn">Home</a></li>
+                    <li><a href="music.html" class="btn">Music</a></li>
+                    <li><a href="tour.html" class="btn">Tour</a></li>
+                    <li><a href="videos.html" class="btn">Videos</a></li>
+                    <li><a href="store.html" class="btn">Store</a></li>
+                    <li><a href="community.html" class="btn">Community</a></li>
+                    <li><a href="press.html" class="btn">极</a></li>
+                    <li><a href="admin.html" class="btn">Admin</a></li>
+                    <li><a href="checkout.html" class="btn">Checkout</a></li>
+                    <li><a href="profile.html" class="btn">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-secondary align-center">
+            <h2>My Profile</h2>
+            <p>Manage your account, orders, and preferences</p>
+        </section>
+
+        <section class="user_profile_editor">
+            <h2>Account Information</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Profile Details</h3>
+                </div>
+                <form>
+                    <div>
+                        <label for="profile-name">Full Name</label>
+                        <input type="text" id="profile-name" value="Sarah Johnson" placeholder="Your full name">
+                    </div>
+                    
+                    <div>
+                        <label for="profile-email">Email Address</label>
+                        <input type="email" id="profile-email" value="sarah.johnson@email.com" placeholder="your@email.com">
+                    </div>
+                    
+                    <div>
+                        <label for="profile-username">Username</label>
+                        <input type="text" id="profile-username" value="SynthWaveFan92" placeholder="Choose a username">
+                    </div>
+                    
+                    <div>
+                        <label for="profile-bio">Bio</label>
+                        <textarea id="profile-bio" rows="4" placeholder="Tell us about yourself">Long-time Aurora Wave fan from Seattle. Love synth-pop and electronic music. Attended 3 concerts so far!</textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="profile-avatar">Profile Picture</label>
+                        <input type="file" id="profile-avatar" accept="image/*">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="order_history bg-card">
+            <h2>Order History</h2>
+            <div class="card">
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="images/vinyl-midnight-serenade.jpg" alt="Midnight Serenade Vinyl" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Order #AW20240215</div>
+                            <div class="cart-item-price">$148.47 • February 15, 2024</div>
+                            <p>Midnight Serenade Vinyl, 2024 Tour T-Shirt (2), Signature Hoodie</p>
+                            <div class="comment-date">Status: Shipped • Tracking: 9405511899223456789012</div>
+                        </div>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <img src="images/cd-deluxe.jpg" alt="Deluxe CD Edition" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Order #AW20231208</div>
+                            <div class="cart-item-price">$64.98 • December 8, 2023</div>
+                            <p>Deluxe CD Edition, Winter Beanie</p>
+                            <div class="comment-date">Status: Delivered • December 12, 2023</div>
+                        </div>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <img src="images/tour-t-shirt.jpg" alt="Tour T-Shirt" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Order #AW20231022</div>
+                            <div class="cart-item-price">$58.97 • October 22, 2023</div>
+                            <p>2024 Tour T-Shirt, Cassette Tape Edition</p>
+                            <div class="comment-date">Status: Delivered • October 26, 2023</div>
+                        </div>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <img src="images/vinyl-midnight-serenade.jpg" alt="Midnight Serenade Vinyl" class="cart-item-image">
+                        <div class极-item-details">
+                            <div class="cart-item-title">Order #AW20230915</div>
+                            <div class="cart-item-price">$35.99 • September 15, 2023</div>
+                            <p>Midnight Serenade Vinyl</p>
+                            <div class="comment-date">Status: Delivered • September 19, 2023</div>
+                        </div>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter_preferences">
+            <h2>Communication Preferences</h2>
+            <div class="card">
+                <form>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="newsletter" checked>
+                            Subscribe to newsletter (new music, tour dates, and updates)
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" name="promotional" checked>
+                            Receive promotional offers and discounts
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" name="community" checked>
+                            Community updates and forum notifications
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" name="event-alerts">
+                            Concert and event alerts in my area
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="checkbox" name="partner-offers">
+                            Special offers from partner artists and brands
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>Email Frequency</label>
+                        <select name="email-frequency">
+                            <option value="weekly">Weekly Digest</option>
+                            <option value="monthly" selected>Monthly Summary</option>
+                            <option value="important">Important Updates Only</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Update Preferences</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="saved_content bg-accent">
+            <h2>Saved Content</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Your Favorites</h3>
+                </div>
+                
+                <div class="album-artwork-display" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+                    <div class="card">
+                        <img src="images/video-starlight-dreams.jpg" alt="Starlight Dreams video" class="cart-item-image">
+                        <div class="card-title">Starlight Dreams Video</div>
+                        <p>Saved: January 15, 2024</p>
+                        <button class="btn btn-secondary">Remove</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/article-interview.jpg" alt="Band interview article" class="cart-item-image">
+                        <div class="card-title">KEXP Interview</div>
+                        <p>Saved: December 5, 2023</p>
+                        <button class="btn btn-secondary">Remove</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/live-performance.jpg" alt="Live performance video" class="cart-item-image">
+                        <div class="card-title">Royal Hall Concert</div>
+                        <p>Saved: November 20, 2023</p>
+                        <button class="btn btn-secondary">Remove</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/lyric-video.jpg" alt="Lyric video" class="cart-item-image">
+                        <div class="card-title">Midnight Drive Lyrics</div>
+                        <p>Saved: October 12, 2023</p>
+                        <button class="btn btn-secondary">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forum_activity bg-card">
+            <h2>Community Activity</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Your Forum Posts</h3>
+                </div>
+                
+                <div class="comment_sections">
+                    <div class="comment">
+                        <div class="comment-author">@SynthWaveFan92</div>
+                        <div class="comment-content">
+                            <h4>Favorite track from Midnight Serenade?</h4>
+                            <p>I can't decide between Starlight Dreams and Electric Pulse. The production on both is incredible!</p>
+                        </div>
+                        <div class="comment-date">Posted 3 hours ago • 24 replies</div>
+                        <button class="btn btn-secondary">View Thread</button>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-author">@SynthWaveFan92</div>
+                        <div class="comment-content">
+                            <h4>Seattle Show Meetup</h4>
+                            <p>Who's going to the Seattle show on March 24th? Let's organize a fan meetup before the concert!</p>
+                        </div>
+                        <div class="comment-date">Posted 2 days ago • 18 replies</div>
+                        <button class="btn btn-secondary">View Thread</button>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-author">@SynthWaveFan92</div>
+                        <div class="comment-content">
+                            <h4>Vinyl Collection Progress</h4>
+                            <p>Just completed my Aurora Wave vinyl collection with the latest release. The blue marble edition is stunning!</p>
+                        </div>
+                        <div class="comment-date">Posted 1 week ago • 42 replies</div>
+                        <button class="btn btn-secondary">View Thread</button>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-author">@SynthWaveFan92</div>
+                        <div class="comment-content">
+                            <h4>Acoustic Session Appreciation</h4>
+                            <p>The acoustic version of Electric Pulse from the chapel session gives me chills every time. So much emotion!</p>
+                        </div>
+                        <div class="comment-date">Posted 2 weeks ago • 15 replies</div>
+                        <button class="btn btn-secondary">View Thread</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="cart-item">
+                        <span>Total Posts:</span>
+                        <span>248</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Threads Started:</span>
+                        <span>42</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Reputation:</span>
+                        <span>1,245 points</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="align-center bg-primary">
+            <h2>Account Security</h2>
+            <div>
+                <a href="#" class="btn btn-secondary">Change Password</a>
+                <a href="#" class="btn btn-secondary">Two-Factor Authentication</a>
+                <a href="#" class="btn btn-secondary">Connected Devices</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary">
+        <div class="align-center">
+            <p>&copy; 2023 Aurora Wave. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help Center</a></li>
+            </ul>
+            <address>
+                Member Since: January 15, 2021<br>
+                Last Login: February 21, 2024 14:32
+            </address>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

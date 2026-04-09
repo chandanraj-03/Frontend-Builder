@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Wave | Videos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-primary">
+        <nav aria-label="Main navigation">
+            <div class="align-center">
+                <h1>Aurora Wave</h1>
+                <ul>
+                    <li><a href="index.html" class="btn">Home</a></li>
+                    <li><a href="music.html" class="btn">Music</a></li>
+                    <li><a href="tour.html" class="btn">Tour</a></li>
+                    <li><a href="videos.html" class="btn">Videos</a></li>
+                    <li><a href="store.html" class="btn">Store</a></li>
+                    <li><a href="community.html" class="btn">Community</a></li>
+                    <li><a href="press.html" class="btn">Press</a></li>
+                    <li><a href="admin.html" class="btn">Admin</a></li>
+                    <li><a href="checkout.html" class="btn">Checkout</a></li>
+                    <li><a href="profile.html" class="btn">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-secondary align-center">
+            <h2>Music Videos & Visual Content</h2>
+            <p>Explore our cinematic music videos, live performances, and behind-the-scenes footage</p>
+        </section>
+
+        <section class="embedded_video_player bg-card">
+            <h2>Featured Video: Starlight Dreams</h2>
+            <div class="youtube_api_integration">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            title="Starlight Dreams Official Music Video">
+                    </iframe>
+                </div>
+            </div>
+            <p>The official music video for "Starlight Dreams" featuring cinematic cityscapes and neon visuals</p>
+        </section>
+
+        <section class="video_categories_filter align-center">
+            <h2>Browse Categories</h2>
+            <div>
+                <button class="btn btn-primary" data-filter="all">All Videos</button>
+                <button class="btn btn-secondary" data-filter="music-videos">Music Videos</button>
+                <button class="btn btn-secondary" data-filter="live-performances">Live Performances</button>
+                <button class="btn btn-secondary" data-filter="behind-scenes">Behind the Scenes</button>
+                <button class="btn btn-secondary" data-filter="interviews">Interviews</button>
+                <button class="btn btn-secondary" data-filter="lyric-videos">Lyric Videos</button>
+            </div>
+        </section>
+
+        <section class="video_gallery_grid">
+            <h2>Video Collection</h2>
+            <div class="album-artwork-display" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+                
+                <div class="card" data-category="music-videos">
+                    <div class="card-header">
+                        <img src="images/video-midnight-drive.jpg" alt="Midnight Drive music video thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Midnight Drive Official Video">
+                    </div>
+                    <div class="card-title">Midnight Drive</div>
+                    <p>Official music video featuring nighttime highway scenes and retro aesthetics</p>
+                    <button class="btn btn-primary" data-video-id="abc123">Play Video</button>
+                    <span class="comment-date">4:32 • 250K views</span>
+                </div>
+
+                <div class="card" data-category="live-performances">
+                    <div class="card-header">
+                        <img src="images/video-live-royal-hall.jpg" alt="Live at Royal Hall performance thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Live at Royal Hall Full Concert">
+                    </div>
+                    <div class="card-title">Live at Royal Hall</div>
+                    <p>Full concert recording from our 2023 sold-out show with complete light show</p>
+                    <button class="btn btn-primary" data-video-id="def456">Play Video</button>
+                    <span class="comment-date">1:28:15 • 180K views</span>
+                </div>
+
+                <div class="card" data-category="music-videos">
+                    <div class="card-header">
+                        <img src="images/video-electric-pulse.jpg" alt="Electric Pulse music video thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Electric Pulse Official Video">
+                    </div>
+                    <div class="card-title">Electric Pulse</div>
+                    <p>Futuristic music video with CGI effects and dance sequences</p>
+                    <button class="btn btn-primary" data-video-id="ghi789">Play Video</button>
+                    <span class="comment-date">5:12 • 310K views</span>
+                </div>
+
+                <div class="card" data-category="behind-scenes">
+                    <div class="card-header">
+                        <img src="images/video-making-of.jpg" alt="Making of Midnight Serenade thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Making of Midnight Serenade">
+                    </div>
+                    <div class="card-title">Making of Midnight Serenade</div>
+                    <p>Documentary showing album recording process and studio sessions</p>
+                    <button class="btn btn-primary" data-video-id="jkl012">Play Video</button>
+                    <span class="comment-date">22:45 • 95K views</span>
+                </div>
+
+                <div class="card" data-category="live-performances">
+                    <div class="card-header">
+                        <img src="images/video-acoustic-session.jpg" alt="Acoustic session thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Acoustic Session Live">
+                    </div>
+                    <div class="card-title">Acoustic Session Live</div>
+                    <p>Intimate acoustic performance recorded in a historic chapel</p>
+                    <button class="btn btn-primary" data-video-id="mno345">Play Video</button>
+                    <span class="comment-date">18:30 • 120K views</span>
+                </div>
+
+                <div class="card" data-category="interviews">
+                    <div class="card-header">
+                        <img src="images/video-interview.jpg" alt="Radio interview thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Radio Interview with KEXP">
+                    </div>
+                    <div class="card-title">KEXP Radio Interview</div>
+                    <p>In-depth interview discussing musical influences and creative process</p>
+                    <button class="btn btn-primary" data-video-id="pqr678">Play Video</button>
+                    <span class="comment-date">45:20 • 85K views</span>
+                </div>
+
+                <div class="card" data-category="lyric-videos">
+                    <div class="card-header">
+                        <img src="images/video-lyric-starlight.jpg" alt="Starlight Dreams lyric video thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Starlight Dreams Lyric Video">
+                    </div>
+                    <div class="card-title">Starlight Dreams Lyric Video</div>
+                    <p>Animated lyric video with custom typography and visual effects</p>
+                    <button class="btn btn-primary" data-video-id="stu901">Play Video</button>
+                    <span class="comment-date">4:32 • 150K views</span>
+                </div>
+
+                <div class="card" data-category="music-videos">
+                    <div class="card-header">
+                        <img src="images/video-neon-reflections.jpg" alt="Neon Reflections music video thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Neon Reflections Official Video">
+                    </div>
+                    <div class="card-title">Neon Reflections</div>
+                    <p>Music video shot in Tokyo featuring vibrant nightlife and urban landscapes</p>
+                    <button class="btn btn-primary" data-video-id="vwx234">Play Video</button>
+                    <span class="comment-date">4:08 • 275K views</span>
+                </div>
+
+                <div class="card" data-category="live-performances">
+                    <div class="card-header">
+                        <img src="images/video-festival.jpg" alt="Festival performance thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Electric Forest Festival Set">
+                    </div>
+                    <div class="card-title">Electric Forest Festival</div>
+                    <p>Full festival set with elaborate stage production and crowd footage</p>
+                    <button class="btn btn-primary" data-video-id="yza567">Play Video</button>
+                    <span class="comment-date">1:15:40 • 210K views</span>
+                </div>
+
+                <div class="card" data-category="behind-scenes">
+                    <div class="card-header">
+                        <img src="images/video-tour-diary.jpg" alt="Tour diary thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Tour Diary Europe 2023">
+                    </div>
+                    <div class="card-title">Tour Diary: Europe 2023</div>
+                    <p>Behind-the-scenes footage from our European tour with band member interviews</p>
+                    <button class="btn btn-primary" data-video-id="bcd890">Play Video</button>
+                    <span class="comment-date">32:15 • 110K views</span>
+                </div>
+
+                <div class="card" data-category="lyric-videos">
+                    <div class="card-header">
+                        <img src="images/video-lyric-midnight.jpg" alt="Midnight Drive lyric video thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Midnight Drive Lyric Video">
+                    </div>
+                    <div class="card-title">Midnight Drive Lyric Video</div>
+                    <p>Retro-style lyric video with driving animation and vintage car visuals</p>
+                    <button class="btn btn-primary" data-video-id="efg123">Play Video</button>
+                    <span class="comment-date">3:45 • 125K views</span>
+                </div>
+
+                <div class="card" data-category="interviews">
+                    <div class="card-header">
+                        <img src="images/video-podcast.jpg" alt="Podcast appearance thumbnail" class="cart-item-image" data-lightbox="video-gallery" data-title="Song Exploder Podcast">
+                    </div>
+                    <div class="card-title">Song Exploder Podcast</div>
+                    <p>Breaking down the production of "Starlight Dreams" track by track</p>
+                    <button class="btn btn-primary" data-video-id="hij456">Play Video</button>
+                    <span class="comment-date">38:50 • 75K views</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="behind_the_scenes_section bg-accent">
+            <h2>Behind the Scenes</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Video Production Insights</h3>
+                </div>
+                <div class="comment">
+                    <div class="comment-author">Director: Maya Chen</div>
+                    <div class="comment-content">"For the Starlight Dreams video, we wanted to capture the feeling of urban isolation mixed with hope. We shot over three nights in downtown LA, using practical neon lights and minimal CGI."</div>
+                </div>
+                <div class="comment">
+                    <div class="comment-author">Cinematographer: Alex Rivera</div>
+                    <div class="comment-content">"We used vintage anamorphic lenses to create the dreamlike quality in the Midnight Drive video. The highway scenes were shot at 4am to get empty roads."</div>
+                </div>
+                <div class="comment">
+                    <div class="comment-author">Lead Vocalist: Jordan</div>
+                    <div class="comment-content">"The acoustic session video was special because it was completely live - no overdubs or fixes. It captured a raw, emotional performance that's different from our studio work."</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="align-center bg-card">
+            <h2>Subscribe to Our YouTube Channel</h2>
+            <p>Get notified when we release new videos, live streams, and exclusive content</p>
+            <a href="https://youtube.com/aurorawave" class="btn btn-large btn-primary" target="_blank">Visit YouTube Channel</a>
+        </section>
+    </main>
+
+    <footer class="bg-primary">
+        <div class="align-center">
+            <p>&copy; 2023 Aurora Wave. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <address>
+                Email: <a href="mailto:info@aurorawave.com">info@aurorawave.com</a><br>
+                Video Licensing: <a href="mailto:licensing@aurorawave.com">licensing@aurorawave.com</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

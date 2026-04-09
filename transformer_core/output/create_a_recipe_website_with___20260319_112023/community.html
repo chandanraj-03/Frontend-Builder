@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - User-Generated Recipes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="home.html">Cooking Collective</a></h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="recipe-detail.html">Recipe Detail</a></li>
+                    <li><a href="meal-planner.html">Meal Planner</a></li>
+                    <li><a href="shopping-list.html">Shopping List</a></li>
+                    <li><a href="community.html" class="active">Community</a></li>
+                    <li><a href="user-profile.html">My Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="community-search">
+            <div class="search-container">
+                <h2>Discover Community Recipes</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search recipes by name, ingredient, or keyword...">
+                    <button id="searchButton">Search</button>
+                </div>
+                <div class="filter-options">
+                    <label><input type="checkbox" id="approvedFilter" checked> Only Approved Recipes</label>
+                    <label><input type="checkbox" id="pendingFilter"> Pending Moderation</label>
+                    <label><input type="checkbox" id="rejectedFilter"> Rejected Recipes</label>
+                    <label><input type="checkbox" id="featuredFilter"> Featured Community</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-grid">
+            <h2>Popular Community Recipes</h2>
+            <div class="grid">
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1553879923-5c3d2c2b2c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vegetarian Lasagna with Sun-Dried Tomato Sauce">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Veggie Delight Lasagna</h3>
+                        <p>Created by <strong>Maria Santos</strong> - <span class="moderation-status approved">Approved</span></p>
+                        <p class="prep-time">Prep: 30 mins | Cook: 45 mins</p>
+                        <p class="description">A hearty vegetarian lasagna with sun-dried tomato sauce, layered with zucchini, eggplant, and vegan cheese. Includes step-by-step photos.</p>
+                        <a href="recipe-detail.html" class="view-btn">View Full Recipe</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1593642636366-9b0a00d345a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="One-Pan Fajitas with Sweet Potato">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Mexican One-Pan Fajitas</h3>
+                        <p>Created by <strong>David Chen</strong> - <span class="moderation-status pending">Pending Review</span></p>
+                        <p class="prep-time">Prep: 15 mins | Cook: 25 mins</p>
+                        <p class="description">Zesty fajitas made in one pan with bell peppers, onions, and sweet potato. Includes gluten-free options.</p>
+                        <a href="recipe-detail.html" class="view-btn">View Full Recipe</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1583552195977-2b59e351a50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Spicy Korean BBQ Chicken">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Spicy Korean BBQ Chicken</h3>
+                        <p>Created by <strong>Emma Rodriguez</strong> - <span class="moderation-status rejected">Rejected (Contains raw chicken)</span></p>
+                        <p class="prep-time">Prep: 20 mins | Cook: 40 mins</p>
+                        <p class="description">Authentic Korean BBQ recipe with gochujang sauce. Note: Raw chicken is not safe, please cook thoroughly.</p>
+                        <a href="recipe-detail.html" class="view-btn">View Full Recipe</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1590181713909-1d73f7a0c4b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mediterranean Eggplant Salad">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Summer Eggplant Salad</h3>
+                        <p>Created by <strong>James Wilson</strong> - <span class="moderation-status approved">Approved</span></p>
+                        <p class="prep-time">Prep: 10 mins | Cook: 20 mins</p>
+                        <p class="description">Fresh Mediterranean salad with roasted eggplant, cucumber, and mint. Vegan and gluten-free option available.</p>
+                        <a href="recipe-detail.html" class="view-btn">View Full Recipe</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1597272986390-9b8b4b70a26c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thai Coconut Curry">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Coconut Curry with Shrimp</h3>
+                        <p>Created by <strong>Lisa Johnson</strong> - <span class="moderation-status approved">Approved</span></p>
+                        <p class="prep-time">Prep: 15 mins | Cook: 30 mins</p>
+                        <p class="description">Creamy coconut curry with shrimp, bell peppers, and Thai herbs. Features a step-by-step video tutorial.</p>
+                        <a href="recipe-detail.html" class="view-btn">View Full Recipe</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1563963537427-3f378e06b015?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chocolate Chia Pudding">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Chocolate Chia Pudding</h3>
+                        <p>Created by <strong>Ben Carter</strong> - <span class="moderation-status approved">Approved</span></p>
+                        <p class="prep-time">Prep: 5 mins | Cook: 4 hours</p>
+                        <p class="description">Decadent chocolate chia pudding with dark chocolate and vanilla. Naturally sweetened with dates.</p>
+                        <a href="recipe-detail.html" class="view-btn">View Full Recipe</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Cooking Collective. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/community.js"></script>
+</body>
+</html>

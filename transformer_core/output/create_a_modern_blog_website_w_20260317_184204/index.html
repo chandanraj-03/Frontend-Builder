@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Horizon | Tech Insights & Innovation News</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">Digital Horizon</a>
+            <nav aria-label="Main Navigation">
+                <button class="mobile-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+                <ul id="primary-menu" class="navigation_menu">
+                    <li><a href="index.html" class="active">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="category.html">Category Archive</a></li>
+                    <li><a href="tag.html">Tag Archive</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="author.html">Author Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true">Legal</a>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search_bar">
+                <form role="search" action="search.html" method="get">
+                    <input type="search" name="q" placeholder="Search articles, tutorials, and news..." aria-label="Search the site">
+                    <button type="submit">Search</button>
+                    <div class="category_filter">
+                        <label for="filter-category">Filter by:</label>
+                        <select id="filter-category" name="category">
+                            <option value="">All Categories</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="web">Web Development</option>
+                            <option value="cyber">Cybersecurity</option>
+                            <option value="gadgets">Gadgets</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero_section" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h1 id="hero-heading">The Future of AI is Here: Unlocking Human Potential</h1>
+                <p class="hero-subtext">Discover how next-generation neural networks are transforming creative industries, from automated film scoring to generative architectural design. Our in-depth analysis breaks down the real-world impact beyond the hype.</p>
+                <a href="post.html" class="cta-button">Read the Groundbreaking Report</a>
+            </div>
+            <div class="hero-image" role="img" aria-label="Abstract visualization of a neural network with glowing connections"></div>
+        </section>
+
+        <section class="featured_posts_grid" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Deep Dives</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <img src="images/quantum-chip.jpg" alt="Close-up of a quantum processor chip on a lab bench" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">Quantum Computing • 2 days ago</div>
+                        <h3 class="card-title"><a href="post.html">Quantum Supremacy Achieved in Weather Modeling</a></h3>
+                        <p class="card-description">Researchers have successfully used a 256-qubit processor to simulate complex atmospheric patterns in minutes, a task that would take classical supercomputers weeks. This could revolutionize disaster prediction.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/developer-tools.jpg" alt="Multiple code editors and terminals open on a developer's desktop" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">Web Development • 5 days ago</div>
+                        <h3 class="card-title"><a href="post.html">The 2024 Frontend Stack: What's In, What's Out</a></h3>
+                        <p class="card-description">A comprehensive guide to the frameworks, build tools, and state management libraries that are dominating projects this year, based on data from over 10,000 code repositories.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/cyber-warfare.jpg" alt="A digital padlock with a shield icon glowing on a dark background" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">Cybersecurity • 1 week ago</div>
+                        <h3 class="card-title"><a href="post.html">State-Sponsored Hackers Target Global Energy Grids</a></h3>
+                        <p class="card-description">Our investigative team uncovers a new wave of sophisticated attacks on power infrastructure across three continents, analyzing the malware and proposing defense strategies.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/foldable-phone.jpg" alt="A person using a large foldable smartphone on a city street" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">Gadgets • 2 weeks ago</div>
+                        <h3 class="card-title"><a href="post.html">Six-Month Review: Does the Foldable Phone Dream Hold Up?</a></h3>
+                        <p class="card-description">After extensive daily use, we report on screen durability, hinge mechanics, and whether the productivity benefits justify the premium price tag of the latest foldable devices.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <section class="latest_posts" aria-labelledby="latest-heading">
+                <h2 id="latest-heading">Latest Stories</h2>
+                <article class="card">
+                    <div class="card-content">
+                        <div class="card-meta">Open Source • 10 hours ago</div>
+                        <h3 class="card-title"><a href="post.html">Major Linux Distro Adopts Rust for Core System Tools</a></h3>
+                        <p class="card-description">In a move for memory safety, developers announced the gradual rewrite of key utilities, sparking debate within the community about stability versus security.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <div class="card-meta">Startups • 1 day ago</div>
+                        <h3 class="card-title"><a href="post.html">Biotech Startup Raises $50M for AI-Driven Drug Discovery Platform</a></h3>
+                        <p class="card-description">The platform claims to reduce early-stage drug candidate identification from years to months by simulating protein interactions with unprecedented accuracy.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <div class="card-meta">Policy • 2 days ago</div>
+                        <h3 class="card-title"><a href="post.html">EU Finalizes Landmark Regulations for General-Purpose AI Models</a></h3>
+                        <p class="card-description">The new rules impose strict transparency requirements on model training data and mandate independent risk assessments for the most powerful systems.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <div class="card-meta">Hardware • 3 days ago</div>
+                        <h3 class="card-title"><a href="post.html">Next-Gen GPUs Promise 2x Ray Tracing Performance for Creators</a></h3>
+                        <p class="card-description">Leaked benchmarks suggest massive gains in rendering efficiency, potentially cutting down 3D animation and architectural visualization times significantly.</p>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <section class="categories_overview" aria-labelledby="categories-heading">
+                    <h3 id="categories-heading">Explore Categories</h3>
+                    <ul class="category-list">
+                        <li class="category-item"><a href="category.html" class="category-link">Artificial Intelligence <span class="category-count">(42)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Web Development <span class="category-count">(28)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Cybersecurity <span class="category-count">(35)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Gadgets & Hardware <span class="category-count">(19)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Software Engineering <span class="category-count">(31)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Tech Policy & Ethics <span class="category-count">(15)</span></a></li>
+                    </ul>
+                </section>
+
+                <section class="tag_cloud" aria-labelledby="tags-heading">
+                    <h3 id="tags-heading">Trending Topics</h3>
+                    <div class="cloud-container">
+                        <a href="tag.html" class="tag">Machine Learning</a>
+                        <a href="tag.html" class="tag">React 19</a>
+                        <a href="tag.html" class="tag">Zero Trust</a>
+                        <a href="tag.html" class="tag">Wearable Tech</a>
+                        <a href="tag.html" class="tag">DevOps</a>
+                        <a href="tag.html" class="tag">Data Privacy</a>
+                        <a href="tag.html" class="tag">AR/VR</a>
+                        <a href="tag.html" class="tag">Blockchain</a>
+                        <a href="tag.html" class="tag">Edge Computing</a>
+                        <a href="tag.html" class="tag">Sustainable Tech</a>
+                    </div>
+                </section>
+
+                <section class="newsletter_signup" aria-labelledby="newsletter-heading">
+                    <h3 id="newsletter-heading">Stay Informed</h3>
+                    <p>Get our weekly digest of the most important tech stories and analysis delivered directly to your inbox.</p>
+                    <form>
+                        <label for="newsletter-email" class="visually-hidden">Email Address</label>
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="small-text">We respect your privacy. Unsubscribe at any time.</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Digital Horizon</a>
+                <p>Illuminating the path of technology with independent reporting, rigorous testing, and forward-looking analysis since 2018.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="category.html">All Categories</a></li>
+                        <li><a href="author.html">Our Authors</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Editorial</a></li>
+                        <li><a href="#">Submit a Tip</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Digital Horizon Media. All rights reserved. All trademarks and registered trademarks are the property of their respective owners.</p>
+            <p>Headquartered in San Francisco, with contributors around the globe.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

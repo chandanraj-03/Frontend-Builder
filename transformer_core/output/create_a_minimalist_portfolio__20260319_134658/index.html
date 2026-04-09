@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan | Digital Designer & Developer</title>
+    <meta name="description" content="Portfolio of Alex Morgan, a digital designer and front-end developer specializing in creating beautiful, functional web experiences.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Home - Alex Morgan Portfolio">Alex Morgan</a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="primary-menu" class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="project-detail.html" role="menuitem">Project Detail</a></li>
+                    <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="404.html" role="menuitem">404 Error</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon" aria-hidden="true">🌙</span>
+                    </button>
+                    <button id="motion-toggle" class="motion-toggle" aria-label="Reduce motion">
+                        <span class="motion-icon" aria-hidden="true">🌀</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h1 id="hero-heading">Crafting Digital Experiences That Inspire</h1>
+                <p class="hero-subtext">I'm Alex Morgan, a passionate digital designer and front-end developer dedicated to creating intuitive, accessible, and visually stunning web solutions that bridge the gap between design and technology.</p>
+                <div class="hero-actions">
+                    <a href="project-detail.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-showcase" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading">Featured Projects</h2>
+                <p class="section-intro">A selection of recent work showcasing my approach to design and development challenges.</p>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/project-nexus.jpg" alt="Nexus Design System - Comprehensive UI component library" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Nexus Design System</h3>
+                            <p>A comprehensive design system built for scalability and consistency across enterprise applications. Features reusable components, accessibility guidelines, and developer documentation.</p>
+                            <ul class="project-tags">
+                                <li>Design Systems</li>
+                                <li>React</li>
+                                <li>Figma</li>
+                                <li>Accessibility</li>
+                            </ul>
+                            <a href="project-detail.html" class="project-link">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/project-eco-market.jpg" alt="EcoMarket - Sustainable e-commerce platform" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>EcoMarket E-commerce</h3>
+                            <p>Full-stack e-commerce platform for sustainable products. Features include product filtering, cart functionality, and seamless checkout experience with a focus on performance and user experience.</p>
+                            <ul class="project-tags">
+                                <li>E-commerce</li>
+                                <li>Vue.js</li>
+                                <li>Node.js</li>
+                                <li>UX Design</li>
+                            </ul>
+                            <a href="project-detail.html" class="project-link">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/project-mindful-app.jpg" alt="Mindful App - Wellness and meditation application" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Mindful Wellness App</h3>
+                            <p>Mobile-first wellness application featuring meditation guides, habit tracking, and personalized recommendations. Designed with mental health and accessibility as core principles.</p>
+                            <ul class="project-tags">
+                                <li>Mobile App</li>
+                                <li>React Native</li>
+                                <li>UI/UX Design</li>
+                                <li>Health Tech</li>
+                            </ul>
+                            <a href="project-detail.html" class="project-link">View Case Study →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-preview" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 id="about-heading">About Me</h2>
+                        <p>With over 8 years of experience in the digital industry, I specialize in creating meaningful connections between users and technology through thoughtful design and clean code.</p>
+                        <p>My journey began in graphic design, evolving into front-end development as I discovered the power of bringing designs to life through code. This unique combination allows me to bridge the gap between design vision and technical implementation.</p>
+                        <p>I'm passionate about accessibility, performance optimization, and creating digital experiences that are both beautiful and functional for everyone.</p>
+                        <div class="skills-highlights">
+                            <div class="skill-category">
+                                <h4>Design</h4>
+                                <ul>
+                                    <li>UI/UX Design</li>
+                                    <li>Design Systems</li>
+                                    <li>Prototyping</li>
+                                    <li>Brand Identity</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Development</h4>
+                                <ul>
+                                    <li>HTML/CSS/JavaScript</li>
+                                    <li>React & Vue.js</li>
+                                    <li>Responsive Design</li>
+                                    <li>Performance Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/profile-photo.jpg" alt="Alex Morgan - Digital Designer and Developer" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-content">
+                    <h2 id="contact-heading">Let's Create Something Amazing Together</h2>
+                    <p>Have a project in mind or want to discuss potential collaboration? I'm always excited to hear about new opportunities and challenges.</p>
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <h4>Email</h4>
+                            <a href="mailto:hello@alexmorgan.design">hello@alexmorgan.design</a>
+                        </div>
+                        <div class="contact-method">
+                            <h4>Location</h4>
+                            <p>Portland, OR</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>Availability</h4>
+                            <p>Currently accepting new projects</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Alex Morgan</a>
+                    <p>Creating digital experiences that make a difference.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="project-detail.html">Projects</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                    <a href="#" aria-label="Dribbble">Dribbble</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex Morgan. All rights reserved.</p>
+                <p>Built with accessibility and performance in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Component | FlowSaaS</title>
+    <meta name="description" content="Footer component for FlowSaaS website with comprehensive links, social media, and legal information.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" id="mainHeader">
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="FlowSaaS Home">
+                    <span class="logo-text">FlowSaaS</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primaryMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="thank-you.html" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="footer-demo" aria-labelledby="demoHeading">
+            <div class="container">
+                <h1 id="demoHeading">Footer Component</h1>
+                <p class="demo-description">This page demonstrates the reusable footer component used across all FlowSaaS website pages. The footer provides comprehensive site navigation, company information, legal links, and social media connections.</p>
+                
+                <div class="component-features">
+                    <h2>Footer Structure & Features</h2>
+                    <div class="features-grid">
+                        <article class="feature">
+                            <h3>Multi-Column Layout</h3>
+                            <p>Organized into four distinct columns: Brand information, Product links, Company details, and Legal resources for easy navigation.</p>
+                        </article>
+                        <article class="feature">
+                            <h3>Responsive Design</h3>
+                            <p>Adapts from multi-column desktop layout to stacked mobile layout with proper spacing and typography scaling.</p>
+                        </article>
+                        <article class="feature">
+                            <h3>Accessibility Compliance</h3>
+                            <p>Includes proper semantic HTML with role="contentinfo", ARIA labels, and keyboard-navigable link structures.</p>
+                        </article>
+                        <article class="feature">
+                            <h3>Dynamic Copyright</h3>
+                            <p>Automatically updates the copyright year using JavaScript to maintain current date information.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="footer-preview">
+                    <h2>Footer Content Overview</h2>
+                    <div class="preview-grid">
+                        <div class="preview-section">
+                            <h3>Brand Column</h3>
+                            <ul>
+                                <li>Company logo with home link</li>
+                                <li>Brand tagline and description</li>
+                                <li>Core value proposition statement</li>
+                            </ul>
+                        </div>
+                        <div class="preview-section">
+                            <h3>Product Links</h3>
+                            <ul>
+                                <li>Features page navigation</li>
+                                <li>Pricing information access</li>
+                                <li>Case studies showcase</li>
+                                <li>Product updates and changelog</li>
+                            </ul>
+                        </div>
+                        <div class="preview-section">
+                            <h3>Company Information</h3>
+                            <ul>
+                                <li>About us and company story</li>
+                                <li>Contact information and support</li>
+                                <li>Career opportunities</li>
+                                <li>Company blog and news</li>
+                            </ul>
+                        </div>
+                        <div class="preview-section">
+                            <h3>Legal & Compliance</h3>
+                            <ul>
+                                <li>Privacy policy and data protection</li>
+                                <li>Terms of service agreement</li>
+                                <li>Cookie usage policy</li>
+                                <li>GDPR compliance information</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-integration">
+                    <h2>Social Media Integration</h2>
+                    <p>The footer includes links to major social media platforms with accessible icons and labels:</p>
+                    <div class="social-preview">
+                        <div class="social-item">
+                            <strong>Twitter (X):</strong> Company announcements and updates
+                        </div>
+                        <div class="social-item">
+                            <strong>LinkedIn:</strong> Professional network and business insights
+                        </div>
+                        <div class="social-item">
+                            <strong>GitHub:</strong> Open-source contributions and developer resources
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implementation-details">
+                    <h2>Technical Implementation</h2>
+                    <div class="tech-specs">
+                        <h3>HTML Structure</h3>
+                        <ul>
+                            <li>Uses <code>&lt;footer&gt;</code> with role="contentinfo" for semantic meaning</li>
+                            <li>Grid-based layout with CSS Flexbox for column organization</li>
+                            <li>Accessible link structures with proper focus states</li>
+                            <li>Dynamic copyright year using JavaScript injection</li>
+                        </ul>
+                        
+                        <h3>CSS Features</h3>
+                        <ul>
+                            <li>Responsive breakpoints for mobile, tablet, and desktop</li>
+                            <li>Consistent typography scaling and spacing</li>
+                            <li>Hover and focus states for interactive elements</li>
+                            <li>Proper contrast ratios for accessibility compliance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="usage-guide">
+                    <h2>Implementation Guide</h2>
+                    <p>To implement this footer component on your website:</p>
+                    <ol>
+                        <li>Copy the HTML structure from this page</li>
+                        <li>Ensure the CSS file is properly linked in your project</li>
+                        <li>Include the JavaScript file for dynamic copyright year</li>
+                        <li>Update links and content to match your specific requirements</li>
+                        <li>Test across different screen sizes and devices</li>
+                    </ol>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Use This Footer?</h2>
+                    <p>This footer component is production-ready and can be easily integrated into any FlowSaaS website page.</p>
+                    <div class="cta-buttons">
+                        <a href="index.html" class="btn btn-primary">View Live Example</a>
+                        <a href="contact.html" class="btn btn-outline">Get Implementation Help</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="FlowSaaS Home">FlowSaaS</a>
+                    <p>Intelligent workflow automation for modern teams. Build faster, scale smarter.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> FlowSaaS Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><span aria-hidden="true">𝕏</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                    <a href="#" aria-label="GitHub"><span aria-hidden="true">gh</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

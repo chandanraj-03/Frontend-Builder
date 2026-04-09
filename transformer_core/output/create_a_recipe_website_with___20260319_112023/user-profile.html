@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Cooking Collective</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="home.html" class="logo">Cooking Collective</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="search.html">search</a></li>
+                    <li><a href="recipe-detail.html">recipe-detail</a></li>
+                    <li><a href="meal-planner.html">meal-planner</a></li>
+                    <li><a href="shopping-list.html">shopping-list</a></li>
+                    <li><a href="community.html">community</a></li>
+                    <li class="active"><a href="user-profile.html">user-profile</a></li>
+                    <li><a href="settings.html">settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="account-settings">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User Profile Picture">
+                    <h2>Emma Rodriguez</h2>
+                    <button class="edit-btn">Edit Profile</button>
+                </div>
+                
+                <div class="settings-group">
+                    <h3>Account Information</h3>
+                    <div class="setting-item">
+                        <span class="label">Email:</span>
+                        <span class="value">emma.rodriguez@example.com</span>
+                    </div>
+                    <div class="setting-item">
+                        <span class="label">Joined:</span>
+                        <span class="value">October 15, 2020</span>
+                    </div>
+                    <div class="setting-item">
+                        <span class="label">Subscription:</span>
+                        <span class="value">Premium (Expires: January 2024)</span>
+                    </div>
+                </div>
+
+                <div class="password-section">
+                    <h3>Change Password</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" placeholder="Enter current password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" placeholder="Enter new password (8+ characters)">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" placeholder="Confirm new password">
+                        </div>
+                        <button type="submit" class="action-btn">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="account-actions">
+                    <button class="action-btn secondary-btn">Cancel Subscription</button>
+                    <button class="action-btn primary-btn">Save Changes</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="saved-recipes">
+            <div class="section-header">
+                <h2>Saved Recipes</h2>
+                <button class="action-btn secondary-btn">Clear All Saves</button>
+            </div>
+            
+            <div class="saved-list">
+                <div class="saved-item">
+                    <img src="https://images.unsplash.com/photo-1542281286970-5c1b8bca2983?auto=format&fit=crop&w=300" alt="Mediterranean Eggplant Salad">
+                    <div class="item-content">
+                        <h3>Mediterranean Eggplant Salad</h3>
+                        <p>Refreshing salad with roasted eggplant, tomatoes, and herbs. Vegan option available.</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                
+                <div class="saved-item">
+                    <img src="https://images.unsplash.com/photo-1587160042329-6c6f9a0f0c15?auto=format&fit=crop&w=300" alt="Chocolate Chia Pudding">
+                    <div class="item-content">
+                        <h3>Chocolate Chia Pudding</h3>
+                        <p>Decadent chocolate pudding with dates and vanilla. Ready in 4 hours.</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                
+                <div class="saved-item">
+                    <img src="https://images.unsplash.com/photo-1616015606638-1a304d5a4d18?auto=format&fit=crop&w=300" alt="Thai Coconut Curry">
+                    <div class="item-content">
+                        <h3>Coconut Curry with Shrimp</h3>
+                        <p>Creamy coconut curry with shrimp, bell peppers, and Thai herbs. Includes video tutorial.</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                
+                <div class="saved-item">
+                    <img src="https://images.unsplash.com/photo-1563963537427-3f378e06b015?auto=format&fit=crop&w=300" alt="Chocolate Chia Pudding">
+                    <div class="item-content">
+                        <h3>Chocolate Chia Pudding</h3>
+                        <p>Decadent chocolate pudding with dates and vanilla. Ready in 4 hours.</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                
+                <div class="saved-item">
+                    <img src="https://images.unsplash.com/photo-1558532185-10b01d8d8b6e?auto=format&fit=crop&w=300" alt="Avocado Toast">
+                    <div class="item-content">
+                        <h3>Avocado Toast with Poached Egg</h3>
+                        <p>Classic breakfast with avocado, cherry tomatoes, and poached egg on sourdough.</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="section-header">
+                <h2>My Reviews</h2>
+                <button class="action-btn secondary-btn">Clear All Reviews</button>
+            </div>
+            
+            <div class="review-list">
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Reviewer">
+                        </div>
+                        <div class="review-meta">
+                            <h4>Emma Rodriguez</h4>
+                            <p>Verified Purchase | Oct 28, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"This recipe is a game-changer! The Mediterranean Eggplant Salad is fresh, vibrant, and incredibly easy to make. My family loved it - especially my 5-year-old who usually refuses veggies. The vegan option works perfectly. I'll be making this weekly!"</p>
+                        <div class="rating">
+                            <span>★★★★★</span>
+                        </div>
+                        <div class="review-actions">
+                            <button class="action-btn secondary-btn">Edit Review</button>
+                            <button class="action-btn primary-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Reviewer">
+                        </div>
+                        <div class="review-meta">
+                            <h4>Michael Chen</h4>
+                            <p>Verified Purchase | Oct 15, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The Coconut Curry with Shrimp is absolutely delicious. The flavor is rich and authentic. The video tutorial was very helpful for the first time I made it. I made it for my partner who's a Thai food enthusiast - she loved it! The recipe works great for a weeknight dinner." </p>
+                        <div class="rating">
+                            <span>★★★★☆</span>
+                        </div>
+                        <div class="review-actions">
+                            <button class="action-btn secondary-btn">Edit Review</button>
+                            <button class="action-btn primary-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Reviewer">
+                        </div>
+                        <div class="review-meta">
+                            <h4>Sarah Johnson</h4>
+                            <p>Verified Purchase | Sep 30, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"I'm a vegetarian, but this recipe was a lifesaver! The Chocolate Chia Pudding is the perfect dessert for a special occasion. I used dates instead of sugar and it turned out amazing. The texture is creamy without being heavy, and it's so easy to make. Highly recommend!"</p>
+                        <div class="rating">
+                            <span>★★★★★</span>
+                        </div>
+                        <div class="review-actions">
+                            <button class="action-btn secondary-btn">Edit Review</button>
+                            <button class="action-btn primary-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Cooking Collective. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactivity
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.saved-item').remove();
+                alert('Recipe removed from your saved list!');
+            });
+        });
+
+        document.querySelectorAll('.edit-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Profile editing functionality would open here!');
+            });
+        });
+    </script>
+</body>
+</html>

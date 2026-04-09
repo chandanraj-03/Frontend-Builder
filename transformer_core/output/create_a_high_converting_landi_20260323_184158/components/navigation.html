@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation System | FlowSaaS</title>
+    <meta name="description" content="Complete navigation system for FlowSaaS website with responsive menus, accessibility features, and user-friendly interface.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" id="mainHeader">
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="FlowSaaS Home">
+                    <span class="logo-text">FlowSaaS</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primaryMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="thank-you.html" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="navigation-hero" aria-labelledby="navHeroHeading">
+            <div class="container">
+                <h1 id="navHeroHeading">FlowSaaS Navigation System</h1>
+                <p class="hero-subtext">A comprehensive, accessible navigation system designed to guide users seamlessly through the FlowSaaS platform and website experience.</p>
+            </div>
+        </section>
+
+        <section class="nav-overview" aria-labelledby="overviewHeading">
+            <div class="container">
+                <h2 id="overviewHeading">Navigation Architecture</h2>
+                <p>The FlowSaaS navigation system is built with user experience, accessibility, and scalability in mind. It provides clear pathways to all major sections of the website while maintaining brand consistency.</p>
+                
+                <div class="architecture-grid">
+                    <div class="arch-item">
+                        <h3>Primary Navigation</h3>
+                        <p>The main navigation bar appears at the top of every page and includes links to all core sections:</p>
+                        <ul>
+                            <li><strong>Home:</strong> Landing page with product overview and main CTAs</li>
+                            <li><strong>Features:</strong> Detailed product capabilities and benefits</li>
+                            <li><strong>Pricing:</strong> Subscription plans and billing information</li>
+                            <li><strong>Case Studies:</strong> Customer success stories and results</li>
+                            <li><strong>Contact:</strong> Support and sales contact information</li>
+                            <li><strong>Get Started:</strong> Prominent CTA for trial signup</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="arch-item">
+                        <h3>Navigation Features</h3>
+                        <p>Key technical and UX features implemented in the navigation system:</p>
+                        <ul>
+                            <li><strong>Sticky Navigation:</strong> Remains visible while scrolling for constant access</li>
+                            <li><strong>Responsive Design:</strong> Adapts to mobile, tablet, and desktop screens</li>
+                            <li><strong>Accessibility:</strong> Full keyboard navigation and screen reader support</li>
+                            <li><strong>Active States:</strong> Visual indication of current page location</li>
+                            <li><strong>Performance:</strong> Optimized for fast loading and smooth interactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-pages" aria-labelledby="pagesHeading">
+            <div class="container">
+                <h2 id="pagesHeading">Navigation Pages Structure</h2>
+                <div class="pages-grid">
+                    <article class="page-card">
+                        <h3><a href="index.html">Home</a></h3>
+                        <p class="page-purpose">Primary landing page introducing the SaaS product and driving conversions</p>
+                        <ul class="page-components">
+                            <li>Hero section with animated CTA</li>
+                            <li>Features grid with icons</li>
+                            <li>Pricing comparison table</li>
+                            <li>Testimonial carousel</li>
+                            <li>Lead capture form</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="page-card">
+                        <h3><a href="features.html">Features</a></h3>
+                        <p class="page-purpose">Detailed overview of all product capabilities and benefits</p>
+                        <ul class="page-components">
+                            <li>Enhanced features grid with detailed descriptions</li>
+                            <li>Interactive demos and video walkthroughs</li>
+                            <li>Use case examples by industry</li>
+                            <li>Feature comparison with competitors</li>
+                            <li>Secondary CTA buttons throughout</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="page-card">
+                        <h3><a href="pricing.html">Pricing</a></h3>
+                        <p class="page-purpose">Display subscription plans and encourage sign-ups</p>
+                        <ul class="page-components">
+                            <li>Detailed pricing table with feature comparisons</li>
+                            <li>Plan toggle (monthly/annual billing)</li>
+                            <li>Testimonial highlights from customers</li>
+                            <li>FAQ section focused on billing questions</li>
+                            <li>Prominent CTA buttons per plan</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="page-card">
+                        <h3><a href="case-studies.html">Case Studies</a></h3>
+                        <p class="page-purpose">Showcase customer success stories to build credibility</p>
+                        <ul class="page-components">
+                            <li>Customer story grid with results metrics</li>
+                            <li>Quote carousels with customer testimonials</li>
+                            <li>Industry filters for relevant case studies</li>
+                            <li>Contact form for demo requests</li>
+                            <li>Before/after results visualization</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="page-card">
+                        <h3><a href="contact.html">Contact</a></h3>
+                        <p class="page-purpose">Capture leads and provide customer support information</p>
+                        <ul class="page-components">
+                            <li>Progressive lead capture form</li>
+                            <li>Comprehensive contact information</li>
+                            <li>Live chat widget for immediate support</li>
+                            <li>Support response time indicators</li>
+                            <li>Resource links and documentation</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="page-card">
+                        <h3><a href="thank-you.html">Thank You</a></h3>
+                        <p class="page-purpose">Confirm form submission and guide users to next steps</p>
+                        <ul class="page-components">
+                            <li>Clear confirmation message</li>
+                            <li>Next step instructions and timeline</li>
+                            <li>Resource recommendations</li>
+                            <li>Social sharing buttons</li>
+                            <li>Secondary CTA for further engagement</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-implementation" aria-labelledby="implementationHeading">
+            <div class="container">
+                <h2 id="implementationHeading">Implementation Guidelines</h2>
+                
+                <div class="implementation-grid">
+                    <div class="impl-card">
+                        <h3>HTML Structure</h3>
+                        <p>The navigation uses semantic HTML5 elements for optimal accessibility and SEO:</p>
+                        <ul>
+                            <li><code>&lt;nav&gt;</code> with <code>aria-label="Main Navigation"</code></li>
+                            <li>Unordered list <code>&lt;ul&gt;</code> for navigation items</li>
+                            <li>List items <code>&lt;li&gt;</code> containing anchor links</li>
+                            <li>Mobile toggle button with ARIA attributes</li>
+                            <li>Active state using <code>aria-current="page"</code></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impl-card">
+                        <h3>CSS Features</h3>
+                        <p>Styling implementation for responsive and accessible navigation:</p>
+                        <ul>
+                            <li>Flexbox layout for horizontal desktop navigation</li>
+                            <li>Media queries for mobile responsiveness</li>
+                            <li>CSS transitions for smooth animations</li>
+                            <li>Focus states for keyboard navigation</li>
+                            <li>Z-index management for proper layering</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impl-card">
+                        <h3>JavaScript Functionality</h3>
+                        <p>Interactive features enhanced with JavaScript:</p>
+                        <ul>
+                            <li>Mobile menu toggle functionality</li>
+                            <li>Active link state management</li>
+                            <li>Smooth scrolling for anchor links</li>
+                            <li>Sticky navigation on scroll</li>
+                            <li>Accessibility enhancements</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impl-card">
+                        <h3>Accessibility Compliance</h3>
+                        <p>Features ensuring inclusive user experience:</p>
+                        <ul>
+                            <li>Proper ARIA labels and roles</li>
+                            <li>Keyboard navigation support</li>
+                            <li>Screen reader optimized markup</li>
+                            <li>Color contrast compliance</li>
+                            <li>Focus management for modals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-testing" aria-labelledby="testingHeading">
+            <div class="container">
+                <h2 id="testingHeading">Navigation Testing Checklist</h2>
+                <div class="testing-checklist">
+                    <div class="test-item">
+                        <h3>Functionality Tests</h3>
+                        <ul>
+                            <li>All navigation links work correctly</li>
+                            <li>Mobile menu opens and closes properly</li>
+                            <li>Active page is clearly indicated</li>
+                            <li>Sticky navigation works on scroll</li>
+                            <li>Dropdowns function on hover/tap</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="test-item">
+                        <h3>Responsive Tests</h3>
+                        <ul>
+                            <li>Navigation adapts to mobile screens</li>
+                            <li>Tablet layout displays correctly</li>
+                            <li>Desktop layout is optimized</li>
+                            <li>Touch targets are appropriately sized</li>
+                            <li>Text remains readable at all sizes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="test-item">
+                        <h3>Accessibility Tests</h3>
+                        <ul>
+                            <li>Keyboard navigation works end-to-end</li>
+                            <li>Screen readers announce navigation correctly</li>
+                            <li>Focus states are visible and logical</li>
+                            <li>Color contrast meets WCAG standards</li>
+                            <li>ARIA attributes are properly implemented</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="test-item">
+                        <h3>Performance Tests</h3>
+                        <ul>
+                            <li>Navigation loads quickly</li>
+                            <li>Animations are smooth and performant</li>
+                            <li>No layout shifts during interaction</li>
+                            <li>Mobile menu doesn't cause jank</li>
+                            <li>JavaScript is optimized and efficient</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-cta" aria-labelledby="navCtaHeading">
+            <div class="container">
+                <h2 id="navCtaHeading">Ready to Navigate?</h2>
+                <p>Explore the complete FlowSaaS website using our intuitive navigation system.</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn btn-primary">Visit Home Page</a>
+                    <a href="features.html" class="btn btn-outline">Explore Features</a>
+                    <a href="pricing.html" class="btn btn-outline">View Pricing</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Support</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="FlowSaaS Home">FlowSaaS</a>
+                    <p>Intelligent workflow automation for modern teams. Build faster, scale smarter.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> FlowSaaS Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><span aria-hidden="true">𝕏</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                    <a href="#" aria-label="GitHub"><span aria-hidden="true">gh</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennis Analytics - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="brand">
+            <h1>Table Tennis Analytics</h1>
+            <p>Performance Tracking & Analysis Dashboard</p>
+        </div>
+        <nav class="dashboard-navigation-menu">
+            <ul>
+                <li><a href="dashboard.html" class="btn btn-primary">Dashboard</a></li>
+                <li><a href="data_input.html" class="btn btn-outline">Data Input</a></li>
+                <li><a href="data_management.html" class="btn btn-outline">Data Management</a></li>
+                <li><a href="detailed_analysis.html" class="btn btn-outline">Detailed Analysis</a></li>
+                <li><a href="settings.html" class="btn btn-outline">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container dashboard-layout">
+        <section class="dashboard-hero">
+            <h2>Player Performance Dashboard</h2>
+            <p>Comprehensive analysis of your table tennis matches, strokes, and strategic patterns. Data updated from your last 15 training sessions and 8 competitive matches.</p>
+            <div class="data-upload-quick-action">
+                <p>Last data import: October 26, 2024 | <a href="data_input.html" class="btn btn-accent">Upload New Session Data</a></p>
+            </div>
+        </section>
+
+        <div class="dashboard-content">
+            <section class="dashboard-main">
+                <div class="dashboard-grid">
+                    <article class="chart-container">
+                        <div class="chart-title">Serve Type Distribution</div>
+                        <div id="serve_type_pie_chart" class="expandable-chart-visualizations">
+                            <div class="chart-legend">
+                                <span class="legend-item" style="color: #3b82f6;">● Pendulum: 42%</span>
+                                <span class="legend-item" style="color: #10b981;">● Reverse Pendulum: 28%</span>
+                                <span class="legend-item" style="color: #f59e0b;">● Tomahawk: 18%</span>
+                                <span class="legend-item" style="color: #ef4444;">● High Toss: 12%</span>
+                            </div>
+                            <p>Your pendulum serve remains your most frequent (42%) and effective serve, with a 78% success rate in recent matches.</p>
+                        </div>
+                        <button class="btn btn-outline expand-btn">Expand Visualization</button>
+                    </article>
+
+                    <article class="chart-container">
+                        <div class="chart-title">Stroke Analysis & Success Rates</div>
+                        <div id="stroke_analysis_bar_graph" class="expandable-chart-visualizations">
+                            <div class="bar-chart-visual">
+                                <div class="bar-label">Forehand Loop: <span class="bar-value" style="width: 85%; background-color: #3b82f6;">85%</span></div>
+                                <div class="bar-label">Backhand Drive: <span class="bar-value" style="width: 72%; background-color: #10b981;">72%</span></div>
+                                <div class="bar-label">Forehand Smash: <span class="bar-value" style="width: 68%; background-color: #f59e0b;">68%</span></div>
+                                <div class="bar-label">Backhand Flip: <span class="bar-value" style="width: 63%; background-color: #ef4444;">63%</span></div>
+                                <div class="bar-label">Forehand Push: <span class="bar-value" style="width: 89%; background-color: #8b5cf6;">89%</span></div>
+                                <div class="bar-label">Backhand Push: <span class="bar-value" style="width: 91%; background-color: #06b6d4;">91%</span></div>
+                            </div>
+                            <p>Your backhand push has the highest consistency (91%), while backhand flip needs improvement (63% success rate).</p>
+                        </div>
+                        <button class="btn btn-outline expand-btn">Expand Visualization</button>
+                    </article>
+
+                    <article class="chart-container">
+                        <div class="chart-title">Match Focus Analysis</div>
+                        <div id="focus_analysis_pie_chart" class="expandable-chart-visualizations">
+                            <div class="chart-legend">
+                                <span class="legend-item" style="color: #3b82f6;">● Serve & 3rd Ball: 35%</span>
+                                <span class="legend-item" style="color: #10b981;">● Rally Consistency: 28%</span>
+                                <span class="legend-item" style="color: #f59e0b;">● Footwork: 22%</span>
+                                <span class="legend-item" style="color: #ef4444;">● Mental Game: 15%</span>
+                            </div>
+                            <p>35% of your training focus has been on serve and 3rd ball attack, showing strategic emphasis on opening points.</p>
+                        </div>
+                        <button class="btn btn-outline expand-btn">Expand Visualization</button>
+                    </article>
+
+                    <article class="statistics-summary">
+                        <div class="chart-title">Performance Statistics Summary</div>
+                        <div id="statistics_summary_table" class="datatable-with-records">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>Last 30 Days</th>
+                                        <th>Previous 30 Days</th>
+                                        <th>Change</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Win Rate</td>
+                                        <td>68%</td>
+                                        <td>62%</td>
+                                        <td class="positive">+6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Average Points/Game</td>
+                                        <td>8.7</td>
+                                        <td>8.2</td>
+                                        <td class="positive">+0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serve Success Rate</td>
+                                        <td>84%</td>
+                                        <td>79%</td>
+                                        <td class="positive">+5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unforced Errors/Match</td>
+                                        <td>5.2</td>
+                                        <td>6.8</td>
+                                        <td class="positive">-1.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Forehand Winner Rate</td>
+                                        <td>22%</td>
+                                        <td>19%</td>
+                                        <td class="positive">+3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Backhand Consistency</td>
+                                        <td>74%</td>
+                                        <td>71%</td>
+                                        <td class="positive">+3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3rd Ball Attack Success</td>
+                                        <td>58%</td>
+                                        <td>52%</td>
+                                        <td class="positive">+6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Footwork Efficiency Score</td>
+                                        <td>7.8/10</td>
+                                        <td>7.2/10</td>
+                                        <td class="positive">+0.6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="recent-matches">
+                        <div class="chart-title">Recent Match Performance</div>
+                        <div class="match-cards">
+                            <div class="match-card">
+                                <h4>Oct 25: vs. Alex Chen</h4>
+                                <p>Result: <strong>3-1 Win</strong> | Duration: 28 minutes</p>
+                                <p>Key Stat: 85% serve return success rate</p>
+                                <a href="detailed_analysis.html" class="btn btn-outline">View Analysis</a>
+                            </div>
+                            <div class="match-card">
+                                <h4>Oct 22: vs. Maria Rodriguez</h4>
+                                <p>Result: <strong>2-3 Loss</strong> | Duration: 35 minutes</p>
+                                <p>Key Stat: 42% forehand loop success (needs improvement)</p>
+                                <a href="detailed_analysis.html" class="btn btn-outline">View Analysis</a>
+                            </div>
+                            <div class="match-card">
+                                <h4>Oct 18: vs. Tournament Group</h4>
+                                <p>Result: <strong>4-0 Win</strong> | Duration: 42 minutes</p>
+                                <p>Key Stat: Only 3 unforced errors in 4 games</p>
+                                <a href="detailed_analysis.html" class="btn btn-outline">View Analysis</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="training-focus">
+                        <div class="chart-title">Recommended Training Focus</div>
+                        <div class="focus-recommendations">
+                            <div class="focus-item">
+                                <h5>Priority 1: Backhand Flip Consistency</h5>
+                                <p>Current success rate: 63% | Target: 75%+</p>
+                                <p>Recommended drills: Multi-ball backhand flip practice, short push to flip transitions</p>
+                            </div>
+                            <div class="focus-item">
+                                <h5>Priority 2: 3rd Ball Attack Variation</h5>
+                                <p>Current predictability score: 6.2/10</p>
+                                <p>Recommended: Develop 3 different 3rd ball options from pendulum serve</p>
+                            </div>
+                            <div class="focus-item">
+                                <h5>Priority 3: Match Point Conversion</h5>
+                                <p>Conversion rate at 10-9: 58% | Target: 75%+</p>
+                                <p>Recommended: Pressure point simulation drills</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="dashboard-sidebar">
+                <div class="sidebar-widget">
+                    <h4>Quick Data Upload</h4>
+                    <div class="data-upload-quick-action">
+                        <p>Upload your latest match or training data for immediate analysis.</p>
+                        <a href="data_input.html" class="btn btn-primary">Upload New Data</a>
+                        <p class="small">Supports: CSV, Excel, JSON formats</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Chart Color Scheme</h4>
+                    <div class="chart-color-scheme-selector">
+                        <label class="color-scheme-option">
+                            <input type="radio" name="colorScheme" checked> Default Professional
+                        </label>
+                        <label class="color-scheme-option">
+                            <input type="radio" name="colorScheme"> High Contrast
+                        </label>
+                        <label class="color-scheme-option">
+                            <input type="radio" name="colorScheme"> Colorblind Friendly
+                        </label>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Upcoming Analysis</h4>
+                    <ul class="upcoming-list">
+                        <li>Opponent Analysis: Jamie Wilson (Nov 2)</li>
+                        <li>Tournament Preparation: Regional Open (Nov 15-17)</li>
+                        <li>Equipment Performance: New rubber evaluation</li>
+                        <li>Monthly Progress Report (Due Nov 5)</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Quick Filters</h4>
+                    <div class="filter-group">
+                        <label>Time Period:</label>
+                        <select class="form-control">
+                            <option>Last 7 days</option>
+                            <option selected>Last 30 days</option>
+                            <option>Last 90 days</option>
+                            <option>All time</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Match Type:</label>
+                        <select class="form-control">
+                            <option>All matches</option>
+                            <option>Tournament only</option>
+                            <option>Training only</option>
+                            <option>Practice matches</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary">Apply Filters</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Table Tennis Analytics</h5>
+                <p>Advanced performance tracking and strategic analysis for competitive table tennis players.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Dashboard Modules</h5>
+                <ul>
+                    <li><a href="dashboard.html">Performance Overview</a></li>
+                    <li><a href="detailed_analysis.html">Stroke Analysis</a></li>
+                    <li><a href="detailed_analysis.html">Match Statistics</a></li>
+                    <li><a href="data_management.html">Data Management</a></li>
+                    <li><a href="settings.html">Customization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Support & Resources</h5>
+                <p>Email: support@ttanalytics.com</p>
+                <p>Coach Portal: coach.access@ttanalytics.com</p>
+                <p>Training Hours: Mon-Sun 8AM-10PM EST</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Table Tennis Analytics Pro. Competition data tracking licensed for personal training use.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

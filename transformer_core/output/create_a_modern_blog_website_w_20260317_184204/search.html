@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results for "Quantum Computing" | Digital Horizon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="极速.html" class="brand-logo">Digital Horizon</a>
+            <nav aria-label="Main Navigation">
+                <button class="mobile-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+                <ul id="primary-menu" class="navigation_menu">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="category.html">Category Archive</a></li>
+                    <li><a href="tag.html">Tag Archive</a></li>
+                    <li><a href="search.html" class="active">Search Results</a></li>
+                    <li><a href="author.html">Author Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true">Legal</a>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search_bar">
+                <form role="search" action="search.html" method="get">
+                    <input type="search" name="q" value="Quantum Computing" placeholder="Search articles, tutorials, and news..." aria-label="Search the site">
+                    <button type="submit">Search</button>
+                    <div class="category_filter">
+                        <label for="filter-category">Filter by:</label>
+                        <select id="filter-category" name="category">
+                            <option value="">All Categories</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="quantum">Quantum Computing</option>
+                            <option value="hardware">Hardware</option>
+                            <option value="research">Research</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="autocomplete_suggestions" style="display: none;">
+                    <div class="suggestion-item">Quantum Computing Applications</div>
+                    <div class="suggestion-item">Quantum Machine Learning</div>
+                    <div class="suggestion-item">Quantum Cryptography</div>
+                    <div class="suggestion-item">Quantum Supremacy</div>
+                    <div class="suggestion-item">Quantum Algorithms</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="search-results-container">
+        <div class="search-header">
+            <h1>Search Results for "Quantum Computing"</h1>
+            <p class="results-count">Found 47 articles matching your search</p>
+        </div>
+
+        <div class="search-controls">
+            <div class="sort_options">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="relevance">Relevance</option>
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="rating">Highest Rated</option>
+                </select>
+            </div>
+            <div class="view-options">
+                <button class="view-button active" aria-label="Grid view">Grid</button>
+                <button class="view-button" aria-label="List view">List</button>
+            </div>
+        </div>
+
+        <div class="content-with-filters">
+            <aside class="filters-sidebar">
+                <section class="category_filters">
+                    <h3>Categories</h3>
+                    <div class="filter-group">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Quantum Computing <span class="filter-count">(18)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Artificial Intelligence <span class="filter-count">(12)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Hardware <span class="filter-count">(8)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Research <span class="filter-count">(6)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Cryptography <span class="filter-count">(3)</span></span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="tag_filters">
+                    <h3>Popular Tags</h3>
+                    <div class="tag-cloud">
+                        <label class="tag-checkbox">
+                            <input type="checkbox">
+                            <span class="tag">Quantum Supremacy</span>
+                        </label>
+                        <label class="tag-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="tag">Qubits</span>
+                        </label>
+                        <label class="极速checkbox">
+                            <input type="checkbox">
+                            <span class="tag">Quantum Algorithms</span>
+                        </label>
+                        <label class="tag-checkbox">
+                            <input type="checkbox">
+                            <span class="tag">Cryptography</span>
+                        </label>
+                        <label class="tag-checkbox">
+                            <input type="checkbox">
+                            <span class="tag">Quantum Hardware</span>
+                        </label>
+                        <label class="tag-checkbox">
+                            <input type="checkbox">
+                            <span class="tag">Error Correction</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="date-filter">
+                    <h3>Publication Date</h3>
+                    <div class="filter-group">
+                        <label class="radio-label">
+                            <input type="radio" name="date" checked>
+                            <span>Any Time</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="date">
+                            <span>Past Week</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="date">
+                            <span>Past Month</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="date">
+                            <span>Past Year</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="author-filter">
+                    <h3>Authors</h3>
+                    <div class="filter-group">
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Dr. Elena Rodriguez <span class="filter-count">(5)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Prof. Kenji Tanaka <span class="filter-count">(3)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Michael Chen <span class="filter-count">(4)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Sarah Johnson <span class="filter-count">(2)</span></span>
+                        </label>
+                    </div>
+                </section>
+
+                <button class="apply-filters">Apply Filters</button>
+                <button class="reset-filters">Reset All</button>
+            </aside>
+
+            <div class="results-content">
+                <section class="results_grid">
+                    <div class="grid-container">
+                        <article class="card">
+                            <img src="images/quantum-supremacy.jpg" alt="Quantum processor achieving computational supremacy milestone" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Quantum Computing • 2 days ago • 12 min read</div>
+                                <h3 class="card-title"><a href="post.html">Quantum Supremacy Achieved in Weather Modeling: A New Era for Climate Prediction</a></h3>
+                                <p class="card-description">Researchers have successfully used a 256-qubit processor to simulate complex atmospheric patterns in minutes—a task that would take classical supercomputers weeks. This breakthrough could revolutionize disaster prediction.</p>
+                                <div class="card-stats">🔥 428 views • 💬 47 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-error-correction.jpg" alt="Advanced error correction techniques for quantum computers" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Research • 1 week ago • 15 min read</div>
+                                <h3 class="card-title"><a href="post.html">Breakthrough in Quantum Error Correction Increases Qubit Stability by 10x</a></h3>
+                                <p class="card-description">New topological error correction method maintains qubit coherence for unprecedented durations, bringing practical quantum computing significantly closer to reality.</p>
+                                <div class="card-stats">🔥 892 views • 💬 63 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-crypto.jpg" alt="Quantum-resistant cryptography implementation" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Cryptography • 2 weeks ago • 10 min read</div>
+                                <h3 class="card-title"><a href="post.html">Post-Quantum Cryptography Standards Finalized: What Developers Need to Know</a></h3>
+                                <p class="card-description">NIST announces the first quantum-resistant cryptographic algorithms approved for widespread adoption, with migration guidelines for existing systems.</p>
+                                <div class="card-stats">🔥 1.2k views • 💬 89 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-machine-learning.jpg" alt="Quantum neural network architecture diagram" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">AI Research • 3 weeks ago • 14 min read</div>
+                                <h3 class="card-title"><a href="post.html">Quantum Machine Learning Models Solve Complex Optimization Problems 100x Faster</a></h3>
+                                <p class="card-description">Hybrid quantum-classical algorithms demonstrate dramatic speedups for logistics, drug discovery, and financial modeling applications previously considered intractable.</p>
+                                <div class="card-stats">🔥 756 views • 💬 52 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-hardware.jpg" alt="Next-generation quantum processor design" class="card-image">
+                            <极速 class="card-content">
+                                <div class="card-meta">Hardware • 1 month ago • 11 min read</div>
+                                <h3 class="card-title"><a href="post.html">IBM Unveils 1000-Qubit Quantum Processor: The Condor Chip</a></h3>
+                                <p class="card-description">Largest quantum processor to date features improved connectivity and lower error rates, marking a significant milestone in the quantum computing roadmap.</p>
+                                <div class="card-stats">🔥 1.1k views • 💬 71 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-cloud.jpg" alt="Cloud-based quantum computing access platform" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Cloud Computing • 1 month ago • 9 min read</div>
+                                <h3 class="card-title"><a href="post.html">AWS Quantum Solutions Lab Makes Quantum Computing Accessible to Enterprises</a></h3>
+                                <p class="card-description">New platform provides managed quantum services with hybrid classical-quantum workflows, lowering the barrier to entry for quantum experimentation.</p>
+                                <div class="card-stats">🔥 893 views • 💬 61 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-sensors.jpg" alt="Quantum sensing technology applications" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Sensors • 2 months ago • 13 min read</div>
+                                <h3 class="card-title"><a href="post.html">Quantum Sensors Achieve Atomic-Scale Precision for Medical Imaging</a></h3>
+                                <p class="card-description">Nitrogen-vacancy center sensors enable magnetic resonance imaging at the molecular level, opening new possibilities for early disease detection.</p>
+                                <div class="card-stats">🔥 672 views • 💬 38 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-networking.jpg" alt="Quantum internet infrastructure diagram" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Networking • 2 months ago • 16 min read</div>
+                                <h3 class="card-title"><a href="post.html">First City-Scale Quantum Network Demonstrates Unhackable Communications</a></h3>
+                                <p class="card-description">80km quantum network in Chicago proves feasibility of quantum key distribution for secure metropolitan-area communications.</p>
+                                <div class="card-stats">🔥 945 views • 💬 57 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/quantum-education.jpg" alt="Quantum computing education programs" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Education • 3 months ago • 8 min read</div>
+                                <h3 class="card-title"><a href="post.html">Quantum Computing Bootcamps Address Critical Skills Shortage</a></h3>
+                                <p class="card-description">Intensive training programs produce quantum-ready developers in 12 weeks, helping meet the growing demand for quantum programming expertise.</p>
+                                <div class="card-stats">🔥 523 views • 💬 42 comments</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <nav class="pagination" aria-label="Search results pagination">
+                    <ul>
+                        <li><span class="current-page" aria-current="page">1</span></li>
+                        <li><a href="search.html?q=quantum+computing&page=2">2</a></极速>
+                        <li><a href="search.html?q=quantum+computing&page=3">3</a></li>
+                        <li><a href="search.html?q=quantum+computing&page=4">4</a></li>
+                        <li><a href="search.html?q=quantum+computing&page=5">5</a></li>
+                        <li><span class="pagination-ellipsis">…</span></li>
+                        <li><a href="search.html?q=quantum+computing&page=2" class="next-page">Next →</a></li>
+                    </ul>
+                    <div class="pagination-info">Showing 1-9 of 47 results</div>
+                </nav>
+
+                <div class="search-suggestions">
+                    <h3>Related Searches</h3>
+                    <div class="suggestion-tags">
+                        <a href="search.html?q=quantum+algorithms" class="suggestion-tag">Quantum Algorithms</a>
+                        <a href="search.html?q=quantum+hardware" class="suggestion-tag">Quantum Hardware</a>
+                        <a href="search.html?q=quantum+cryptography" class="suggestion-tag">Quantum Cryptography</a>
+                        <a href="search.html?q=quantum+machine+learning" class="suggestion-tag">Quantum Machine Learning</a>
+                        <a href="search.html?q=qubit+technology" class="suggestion-tag">Qubit Technology</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Digital Horizon</a>
+                <p>Illuminating the path of technology with independent reporting, rigorous testing, and forward-looking analysis since 2018.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="category.html">极速 Categories</a></li>
+                        <li><a href="author.html">Our Authors</a></li>
+                        <li><a href="about.html">About Us</极速></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </极速>
+                </div>
+                <div class="link-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Editorial</a></li>
+                        <li><a href="#">Submit a Tip</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Digital Horizon Media. All rights reserved. All trademarks and registered trademarks are the property of their respective owners.</p>
+            <p>Headquartered in San Francisco, with contributors around the globe.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

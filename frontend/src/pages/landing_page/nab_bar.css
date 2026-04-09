@@ -1,0 +1,123 @@
+/* Navbar Container */
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    background: rgba(255, 255, 255, 0.82);
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 32px;
+}
+
+/* Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.navbar-logo-icon {
+    width: 50px;
+    height: 60px;
+
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* Menu */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+/* Links */
+.navbar-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: #7c3aed;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding-left: 16px;
+    border-left: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Secondary Button */
+.navbar-btn-secondary {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+
+    padding: 8px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(139, 92, 246, 0.4);
+    color: #7c3aed;
+}
+
+/* Primary Button */
+.navbar-btn-primary {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+
+    padding: 8px 20px;
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #a855f7, #6366f1);
+    border: none;
+
+    box-shadow: 0 2px 10px rgba(168, 85, 247, 0.35);
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.navbar-btn-primary:hover {
+    background: linear-gradient(135deg, #9333ea, #4f46e5);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.5);
+    transform: translateY(-1px);
+}
+
+/* Divider */
+.navbar-divider {
+    height: 1px;
+    background-color: rgba(99, 102, 241, 0.15);
+    border: none;
+    width: 100%;
+    margin: 0;
+}

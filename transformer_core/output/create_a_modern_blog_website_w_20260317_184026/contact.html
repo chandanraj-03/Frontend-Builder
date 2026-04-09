@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Tech Insights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo" aria-label="Tech Insights Homepage">
+                    <h1><i class="fas fa-microchip"></i> Tech Insights</h1>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="navigation_menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="categories.html">Category List</a></li>
+                    <li><a href="author.html">Author Profile</a></li>
+                    <li><a href="about.html">About Page</a></li>
+                    <li><a href="contact.html" class="btn">Contact Page</a></li>
+                    <li class="dropdown">
+                        <a href="archive.html" aria-haspopup="true">Archive Page <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="archive.html#2024">2024 Archive</a></li>
+                            <li><a href="archive.html#2023">2023 Archive</a></li>
+                            <li><a href="archive.html#2022">2022 Archive</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tags.html">Tags Page</a></li>
+                    <li><a href="404.html">404 Error Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb_trail" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Contact Us</li>
+            </ol>
+        </nav>
+
+        <header class="page-hero">
+            <h1>Get In Touch With Tech Insights</h1>
+            <p>We value your feedback, questions, and collaboration opportunities. Reach out to us through any of the channels below.</p>
+        </header>
+
+        <div class="content-layout">
+            <div class="main-content">
+                <section class="contact_form" id="general">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and our team will respond within 24-48 hours during business days.</p>
+                    
+                    <form action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" placeholder="John Smith" required aria-required="true" minlength="2">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required aria-required="true" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">Subject *</label>
+                            <select id="contact-subject" name="subject" required aria-required="true" class="category_filter">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="editorial">Editorial Feedback</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="advertising">Advertising Inquiry</option>
+                                <option value="contribute">Content Contribution</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="6" placeholder="Please provide details about your inquiry..." required aria-required="true" minlength="10"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-attachment">Attachment (Optional)</label>
+                            <input type="file" id="contact-attachment" name="attachment" accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+                            <small>Maximum file size: 5MB. Accepted formats: PDF, DOC, TXT, JPG, PNG</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" checked>
+                                <span>Subscribe to our weekly newsletter for tech insights and updates</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required aria-required="true">
+                                <span>I agree to the <a href="#">Privacy Policy</a> and understand my data will be processed according to GDPR guidelines *</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-accent">Send Message</button>
+                    </form>
+                </section>
+            </div>
+            
+            <aside class="sidebar">
+                <section class="contact_information">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact_item" id="support">
+                            <div class="contact-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3>Technical Support</h3>
+                                <p>For website issues, broken links, or technical problems</p>
+                                <a href="mailto:support@techinsights.example">support@techinsights.example</a>
+                                <p class="response-time">Response time: Within 12 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact_item" id="editorial">
+                            <div class="contact-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div>
+                                <h3>Editorial Team</h3>
+                                <p>For article suggestions, corrections, or content feedback</p>
+                                <a href="mailto:editorial@techinsights.example">editorial@techinsights.example</a>
+                                <p class="response-time">Response time: 24-48 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact_item" id="advertising">
+                            <div class="contact-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <h3>Advertising & Sponsorships</h3>
+                                <p>For media kits, advertising rates, and sponsorship opportunities</p>
+                                <a href="mailto:ads@techinsights.example">ads@techinsights.example</a>
+                                <p class="response-time">Response time: Within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact_item">
+                            <div class="contact-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h3>Contributor Applications</h3>
+                                <p>Interested in writing for Tech Insights? Send your portfolio</p>
+                                <a href="mailto:contributors@techinsights.example">contributors@techinsights.example</a>
+                                <p class="response-time">Response time: 3-5 business days</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact_item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Office Location</h3>
+                                <p>123 Tech Lane<br>San Francisco, CA 94107<br>United States</p>
+                                <p class="note"><i class="fas fa-info-circle"></i> By appointment only</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact_item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+1 (555) 123-4567</p>
+                                <p class="note"><i class="fas fa-clock"></i> Mon-Fri, 9AM-5PM PST</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="social_media_links">
+                    <h3>Connect With Us</h3>
+                    <p>Follow us on social media for daily updates, discussions, and community engagement.</p>
+                    
+                    <div class="social-grid">
+                        <a href="#" class="social-link twitter" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                            <small>Daily tech news & discussions</small>
+                        </a>
+                        
+                        <a href="#" class="social-link linkedin" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                            <small>Professional network & articles</small>
+                        </a>
+                        
+                        <a href="#" class="social-link github" aria-label="Follow us on GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                            <small>Code samples & projects</small>
+                        </a>
+                        
+                        <a href="#" class="social-link youtube" aria-label="Subscribe to our YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                            <small>Tutorials & conference talks</small>
+                        </a>
+                        
+                        <a href="#" class="social-link discord" aria-label="Join our Discord community">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                            <small>Community discussions</small>
+                        </a>
+                        
+                        <a href="#" class="social-link rss" aria-label="Subscribe via RSS">
+                            <i class="fas fa-rss"></i>
+                            <span>RSS Feed</span>
+                            <small>All articles & updates</small>
+                        </a>
+                    </div>
+                </section>
+                
+                <section class="faq-preview">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <h4>How long does it take to get a response?</h4>
+                        <p>We aim to respond to all inquiries within 24-48 hours during business days (Monday-Friday). Technical support requests often receive faster responses.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you accept guest posts?</h4>
+                        <p>Yes! We welcome contributions from industry experts. Please email your portfolio and topic ideas to our contributors address for consideration.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I republish your content?</h4>
+                        <p>Most content is licensed under Creative Commons (CC BY-NC-SA 4.0). Please review our licensing terms and attribute properly when sharing.</p>
+                    </div>
+                    <a href="about.html#faq" class="btn btn-secondary">View All FAQs</a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-microchip"></i> Tech Insights</h3>
+                    <p class="about_content">Providing in-depth, actionable tech analysis since 2018. Our mission is to demystify the technologies shaping our future.</p>
+                    <div class="author_social_links">
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Subscribe to our YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="author.html">Our Writers</a></li>
+                        <li><a href="contact.html">Contact & Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact_information">
+                        <div class="contact_item"><i class="fas fa-envelope"></i> <a href="mailto:info@techinsights.example">info@techinsights.example</a></div>
+                        <div class="contact_item"><i class="fas fa-map-marker-alt"></i> 123 Tech Lane, San Francisco, CA</div>
+                        <div class="contact_item"><i class="fas fa-phone"></i> +1 (555) 123-4567</div>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Tech Insights. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

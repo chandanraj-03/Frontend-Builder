@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia Rodriguez - Author Profile | Tech Insights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo" aria-label="Tech Insights Homepage">
+                    <h1><i class="fas fa-microchip"></i> Tech Insights</h1>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+            <nav class="navigation_menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="categories.html">Category List</a></li>
+                    <li><a href="author.html" class="btn">Author Profile</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" aria-haspopup="true">About Page <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#mission">Our Mission</a></li>
+                            <li><a href="about.html#team">Our Team</a></li>
+                            <li><a href="about.html#values">Our Values</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Page</a></li>
+                    <li><a href="archive.html">Archive Page</a></li>
+                    <li><a href="tags.html">Tags Page</a></li>
+                    <li><a href="404.html">404 Error Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb_trail" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="author.html">Authors</a></li>
+                <li aria-current="page">Mia Rodriguez</li>
+            </ol>
+        </nav>
+
+        <section class="author_bio">
+            <div class="author-header">
+                <img src="images/author-mia-large.jpg" alt="Professional headshot of Mia Rodriguez" class="author-avatar">
+                <div class="author-info">
+                    <h1>Mia Rodriguez</h1>
+                    <p class="author-title">Principal Security Architect & Senior Writer</p>
+                    <div class="author-stats">
+                        <span class="stat"><strong>42</strong> Articles Published</span>
+                        <span class="stat"><strong>12</strong> Years Experience</span>
+                        <span class="stat"><strong>28k</strong> Monthly Readers</span>
+                    </div>
+                    <div class="author_social_links">
+                        <a href="#" aria-label="Mia Rodriguez on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Mia Rodriguez on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Mia Rodriguez on GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Email Mia Rodriguez"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="author_bio-content">
+                <h2>About Mia</h2>
+                <p>Mia Rodriguez is a Principal Security Architect with over 12 years of experience designing and implementing secure infrastructures for Fortune 500 companies and government agencies. She holds CISSP, CISM, and CCSP certifications and specializes in cloud security, Zero-Trust architectures, and threat intelligence.</p>
+                
+                <p>Before joining Tech Insights, Mia led the security engineering team at a major financial institution where she architected their global Zero-Trust implementation, reducing security incidents by 93%. Her work has been featured in industry publications and she regularly speaks at conferences including Black Hat, RSA, and DEF CON.</p>
+                
+                <h3>Areas of Expertise</h3>
+                <ul>
+                    <li>Zero-Trust Architecture Implementation</li>
+                    <li>Cloud Security (AWS, Azure, GCP)</li>
+                    <li>Identity and Access Management</li>
+                    <li>Network Security & Micro-segmentation</li>
+                    <li>Security Compliance (SOC 2, ISO 27001, NIST)</li>
+                    <li>Incident Response & Threat Hunting</li>
+                </ul>
+                
+                <h3>Professional Background</h3>
+                <p>Mia began her career as a network security analyst at a regional bank before moving into consulting roles with major cybersecurity firms. She has helped organizations across finance, healthcare, and technology sectors build resilient security postures. Mia is passionate about mentoring the next generation of security professionals and volunteers with cybersecurity education nonprofits.</p>
+                
+                <blockquote>
+                    <p>"Security shouldn't be an obstacle to innovation. The best security architectures enable business growth while protecting what matters most."</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="author_posts_list">
+            <h2>Articles by Mia Rodriguez</h2>
+            <div class="posts-filter">
+                <label for="sort-posts">Sort by:</label>
+                <select id="sort-posts" class="category_filter">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="category">By Category</option>
+                </select>
+            </div>
+            
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Cybersecurity</span>
+                        <span class="date">February 28, 2024</span>
+                    </div>
+                    <h3><a href="post.html">Implementing a Zero-Trust Architecture for Modern Remote Teams</a></h3>
+                    <p>A comprehensive guide to transitioning from traditional perimeter-based security to a Zero-Trust model. Learn step-by-step implementation strategies, recommended tools, and real-world case studies for securing remote workforces.</p>
+                    <div class="post-stats">
+                        <span class="read-time">15 min read</span>
+                        <span class="comments">42 comments</span>
+                        <span class="views">2.4k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Cloud Security</span>
+                        <span class="date">January 15, 2024</span>
+                    </div>
+                    <h3><a href="post.html">Securing Multi-Cloud Environments: AWS, Azure, and GCP Best Practices</a></h3>
+                    <p>As organizations adopt multi-cloud strategies, security becomes increasingly complex. This article provides actionable guidance for maintaining consistent security policies across different cloud platforms.</p>
+                    <div class="post-stats">
+                        <span class="read-time">18 min read</span>
+                        <span class="comments">28 comments</span>
+                        <span class="views">1.8k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Compliance</span>
+                        <span class="date">December 5, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Navigating SOC 2 Compliance: A Practical Guide for Tech Companies</a></h3>
+                    <p>Everything you need to know about achieving and maintaining SOC 2 compliance, from scoping your audit to implementing necessary controls and preparing for the examination.</p>
+                    <div class="post-stats">
+                        <span class="read-time">22 min read</span>
+                        <span class="comments">35 comments</span>
+                        <span class="views">3.1k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Threat Intelligence</span>
+                        <span class="date">November 12, 2023</span>
+                    </div>
+                    <h3><a href="post.html">The Evolution of Ransomware: 2023 Trends and Defense Strategies</a></h3>
+                    <p>An in-depth analysis of how ransomware tactics have evolved this year, including double-extortion schemes, RaaS platforms, and emerging targets in critical infrastructure.</p>
+                    <div class="post-stats">
+                        <span class="read-time">16 min read</span>
+                        <span class="comments">41 comments</span>
+                        <span class="views">2.7k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Identity Management</span>
+                        <span class="date">October 20, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Beyond Passwords: Implementing Modern Authentication Systems</a></h3>
+                    <p>Explore passwordless authentication, biometric verification, and hardware security keys as alternatives to traditional password-based systems.</p>
+                    <div class="post-stats">
+                        <span class="read-time">14 min read</span>
+                        <span class="comments">29 comments</span>
+                        <span class="views">2.2k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Network Security</span>
+                        <span class="date">September 8, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Micro-segmentation: Creating Granular Security Zones in Your Network</a></h3>
+                    <p>A technical deep dive into implementing micro-segmentation using tools from VMware, Cisco, and cloud providers to contain breaches and limit lateral movement.</p>
+                    <div class="post-stats">
+                        <span class="read-time">20 min read</span>
+                        <span class="comments">33 comments</span>
+                        <span class="views">1.9k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Incident Response</span>
+                        <span class="date">August 14, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Building an Effective Security Operations Center (SOC) on a Budget</a></h3>
+                    <p>How small and medium-sized organizations can establish capable security monitoring and incident response capabilities without enterprise-level budgets.</p>
+                    <div class="post-stats">
+                        <span class="read-time">17 min read</span>
+                        <span class="comments">26 comments</span>
+                        <span class="views">2.5k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Cloud Security</span>
+                        <span class="date">July 22, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Azure Security Center vs AWS Security Hub: A Comparative Analysis</a></h3>
+                    <p>Detailed comparison of Microsoft and Amazon's cloud security management platforms, including features, pricing, and integration capabilities.</p>
+                    <div class="post-stats">
+                        <span class="read-time">19 min read</span>
+                        <span class="comments">31 comments</span>
+                        <span class="views">2.8k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Compliance</span>
+                        <span class="date">June 30, 2023</span>
+                    </div>
+                    <h3><a href="post.html">GDPR Compliance for US-Based Tech Companies: What You Need to Know</a></h3>
+                    <p>Practical guidance for American technology companies handling European user data and navigating GDPR requirements.</p>
+                    <div class="post-stats">
+                        <span class="read-time">15 min read</span>
+                        <span class="comments">24 comments</span>
+                        <span class="views">1.7k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Threat Intelligence</span>
+                        <span class="date">May 18, 2023</span>
+                    </div>
+                    <h3><a href="post.html">The Rise of Supply Chain Attacks: Protecting Your Software Dependencies</a></h3>
+                    <p>Analysis of recent software supply chain attacks and strategies for vetting third-party dependencies and implementing software bill of materials (SBOM).</p>
+                    <div class="post-stats">
+                        <span class="read-time">21 min read</span>
+                        <span class="comments">38 comments</span>
+                        <span class="views">3.2k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Network Security</span>
+                        <span class="date">April 5, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Next-Generation Firewalls: Are They Worth the Investment?</a></h3>
+                    <p>Evaluation of NGFW capabilities from leading vendors and whether the additional features justify the premium pricing for different organization sizes.</p>
+                    <div class="post-stats">
+                        <span class="read-time">13 min read</span>
+                        <span class="comments">22 comments</span>
+                        <span class="views">1.6k views</span>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <span class="category">Identity Management</span>
+                        <span class="date">March 12, 2023</span>
+                    </div>
+                    <h3><a href="post.html">Implementing Privileged Access Management (PAM) in Hybrid Environments</a></h3>
+                    <p>Best practices for managing privileged accounts across on-premises infrastructure and cloud services while maintaining security and auditability.</p>
+                    <div class="post-stats">
+                        <span class="read-time">16 min read</span>
+                        <span class="comments">27 comments</span>
+                        <span class="views">2.3k views</span>
+                    </div>
+                </article>
+            </div>
+
+            <nav class="pagination" aria-label="Author articles pagination">
+                <span class="page-info">Showing 1-12 of 42 articles</span>
+                <div class="page-controls">
+                    <button class="btn btn-secondary" disabled aria-label="Previous page"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn btn-primary active" aria-label="Page 1">1</button>
+                    <button class="btn btn-secondary" aria-label="Page 2">2</button>
+                    <button class="btn btn-secondary" aria-label="Page 3">3</button>
+                    <button class="btn btn-secondary" aria-label="Page 4">4</button>
+                    <button class="btn btn-secondary" aria-label="Next page"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><i class="fas fa-microchip"></i> Tech Insights</h3>
+                    <p class="about_content">Providing in-depth, actionable tech analysis since 2018. Our mission is to demystify the technologies shaping our future.</p>
+                    <div class="author_social_links">
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Subscribe to our YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="author.html">Our Writers</a></li>
+                        <li><a href="contact.html">Contact & Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact_information">
+                        <div class="contact_item"><i class="fas fa-envelope"></i> <a href="mailto:info@techinsights.example">info@techinsights.example</a></div>
+                        <div class="contact_item"><i class="fas fa-map-marker-alt"></i> 123 Tech Lane, San Francisco, CA</div>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Tech Insights. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

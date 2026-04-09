@@ -1,0 +1,24 @@
+
+# ── AI / LLM ─────────────────────────────────────────────────────────
+ollama
+colorama
+requests
+
+# ── Web Framework ────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+
+# ── Database ─────────────────────────────────────────────────────────
+pymongo[srv]
+motor
+
+# ── Auth ─────────────────────────────────────────────────────────────
+python-jose[cryptography]
+bcrypt
+
+# ── Validation / Config ──────────────────────────────────────────────
+pydantic[email]
+python-dotenv
+
+# ── Utilities ────────────────────────────────────────────────────────
+python-multipart

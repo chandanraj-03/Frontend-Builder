@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Survey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Survey Settings</a>
+                                <a class="dropdown-item" href="#">Question Types</a>
+                                <a class="dropdown-item" href="#">Builder Interface</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                        <li class="nav-item"><a href="share-survey.html">Share Survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Survey Link Generator</h2>
+            <p>Copy and share the link below to let others take your survey.</p>
+            <input type="text" id="survey-link" value="#" readonly>
+            <button class="btn btn-primary" id="copy-button">Copy Link</button>
+        </section>
+        <section class="section">
+            <h2>Social Media Sharing Buttons</h2>
+            <div class="social-media-links">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Survey Settings</a>
+                                <a class="dropdown-item" href="#">Question Types</a>
+                                <a class="dropdown-item" href="#">Builder Interface</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                        <li class="nav-item"><a href="share-survey.html">Share Survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#copy-button').click(function() {
+                var link = $('#survey-link').val();
+                navigator.clipboard.writeText(link);
+                alert('Link copied to clipboard!');
+            });
+        });
+    </script>
+</body>
+</html>

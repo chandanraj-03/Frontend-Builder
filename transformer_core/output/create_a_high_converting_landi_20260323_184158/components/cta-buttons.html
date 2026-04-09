@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Button System | FlowSaaS</title>
+    <meta name="description" content="Complete Call-to-Action button system for FlowSaaS website with multiple styles, sizes, and interactive states.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" id="mainHeader">
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="FlowSaaS Home">
+                    <span class="logo-text">FlowSaaS</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primaryMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="thank-you.html" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="cta-hero" aria-labelledby="ctaHeroHeading">
+            <div class="container">
+                <h1 id="ctaHeroHeading">CTA Button Design System</h1>
+                <p class="hero-subtext">A comprehensive collection of Call-to-Action buttons designed to drive conversions, guide user journeys, and create engaging interactive experiences across the FlowSaaS platform.</p>
+            </div>
+        </section>
+
+        <section class="primary-ctas" aria-labelledby="primaryHeading">
+            <div class="container">
+                <h2 id="primaryHeading">Primary CTA Buttons</h2>
+                <p class="section-description">Primary buttons are used for the main conversion actions on each page. They feature high contrast colors and prominent placement to attract user attention.</p>
+                
+                <div class="button-showcase">
+                    <div class="button-example">
+                        <h3>Standard Primary</h3>
+                        <p>The default primary button used throughout the website for main conversion actions.</p>
+                        <div class="button-demo">
+                            <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="pricing.html" class="btn btn-primary"&gt;Start Free Trial&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="button-example">
+                        <h3>Large Primary</h3>
+                        <p>Used for extra emphasis in hero sections and key conversion points.</p>
+                        <div class="button-demo">
+                            <a href="pricing.html" class="btn btn-primary btn-large">Get Started Now</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="pricing.html" class="btn btn-primary btn-large"&gt;Get Started Now&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="button-example">
+                        <h3>Primary with Icon</h3>
+                        <p>Buttons with icons for enhanced visual appeal and clearer action indication.</p>
+                        <div class="button-demo">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span class="btn-icon" aria-hidden="true">→</span>
+                                Schedule a Demo
+                            </a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="contact.html" class="btn btn-primary"&gt;&lt;span class="btn-icon" aria-hidden="true"&gt;→&lt;/span&gt;Schedule a Demo&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secondary-ctas" aria-labelledby="secondaryHeading">
+            <div class="container">
+                <h2 id="secondaryHeading">Secondary CTA Buttons</h2>
+                <p class="section-description">Secondary buttons are used for supporting actions, alternative choices, or less prominent conversions. They complement primary buttons without competing for attention.</p>
+                
+                <div class="button-showcase">
+                    <div class="button-example">
+                        <h3>Standard Secondary</h3>
+                        <p>The default secondary button used for alternative actions and supporting CTAs.</p>
+                        <div class="button-demo">
+                            <a href="features.html" class="btn btn-secondary">View Features</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="features.html" class="btn btn-secondary"&gt;View Features&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="button-example">
+                        <h3>Outline Button</h3>
+                        <p>Used for less prominent actions or when a lighter visual weight is needed.</p>
+                        <div class="button-demo">
+                            <a href="case-studies.html" class="btn btn-outline">Read Case Studies</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="case-studies.html" class="btn btn-outline"&gt;Read Case Studies&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="button-example">
+                        <h3>Small Secondary</h3>
+                        <p>Compact buttons for space-constrained areas or inline actions.</p>
+                        <div class="button-demo">
+                            <a href="#" class="btn btn-secondary btn-small">Learn More</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="#" class="btn btn-secondary btn-small"&gt;Learn More&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-ctas" aria-labelledby="specialHeading">
+            <div class="container">
+                <h2 id="specialHeading">Specialized CTA Buttons</h2>
+                <p class="section-description">Specialized buttons with unique styles and behaviors for specific use cases and enhanced user engagement.</p>
+                
+                <div class="button-showcase">
+                    <div class="button-example">
+                        <h3>Animated CTA</h3>
+                        <p>Buttons with subtle animations to draw attention to key conversion points.</p>
+                        <div class="button-demo">
+                            <a href="pricing.html" class="btn btn-primary btn-pulse">Start Free Trial</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="pricing.html" class="btn btn-primary btn-pulse"&gt;Start Free Trial&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="button-example">
+                        <h3>Navigation CTA</h3>
+                        <p>Special CTA style used in the navigation menu for prominent access.</p>
+                        <div class="button-demo">
+                            <a href="thank-you.html" class="btn cta-nav">Get Started</a>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;a href="thank-you.html" class="btn cta-nav"&gt;Get Started&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="button-example">
+                        <h3>Form Submit Button</h3>
+                        <p>Special styling for form submission actions with loading states.</p>
+                        <div class="button-demo">
+                            <button type="submit" class="btn btn-primary btn-submit">Submit Application</button>
+                        </div>
+                        <div class="button-code">
+                            <code>&lt;button type="submit" class="btn btn-primary btn-submit"&gt;Submit Application&lt;/button&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="button-states" aria-labelledby="statesHeading">
+            <div class="container">
+                <h2 id="statesHeading">Button States & Interactions</h2>
+                <p class="section-description">Interactive states that provide visual feedback and enhance user experience across all button types.</p>
+                
+                <div class="states-showcase">
+                    <div class="state-example">
+                        <h3>Default State</h3>
+                        <p>The normal appearance of buttons before any interaction.</p>
+                        <div class="button-demo">
+                            <button class="btn btn-primary" disabled>Start Free Trial</button>
+                        </div>
+                    </div>
+                    
+                    <div class="state-example">
+                        <h3>Hover State</h3>
+                        <p>Visual feedback when users hover over buttons with a cursor.</p>
+                        <div class="button-demo">
+                            <button class="btn btn-primary hover-state">Start Free Trial</button>
+                        </div>
+                    </div>
+                    
+                    <div class="state-example">
+                        <h3>Active/Focus State</h3>
+                        <p>Visual indication when buttons are clicked or focused via keyboard navigation.</p>
+                        <div class="button-demo">
+                            <button class="btn btn-primary focus-state">Start Free Trial</button>
+                        </div>
+                    </div>
+                    
+                    <div class="state-example">
+                        <h3>Disabled State</h3>
+                        <p>Buttons that are temporarily inactive, often during form processing.</p>
+                        <div class="button-demo">
+                            <button class="btn btn-primary" disabled>Processing...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage-guidelines" aria-labelledby="guidelinesHeading">
+            <div class="container">
+                <h2 id="guidelinesHeading">CTA Usage Guidelines</h2>
+                
+                <div class="guidelines-grid">
+                    <article class="guideline">
+                        <h3>Button Placement</h3>
+                        <ul>
+                            <li><strong>Above the fold:</strong> Place primary CTAs in hero sections for immediate visibility</li>
+                            <li><strong>Strategic positioning:</strong> Position CTAs at natural decision points in user journeys</li>
+                            <li><strong>Multiple touchpoints:</strong> Include CTAs throughout pages, not just at the end</li>
+                            <li><strong>Visual hierarchy:</strong> Use size and color to indicate importance and sequence</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="guideline">
+                        <h3>Button Copy Principles</h3>
+                        <ul>
+                            <li><strong>Action-oriented:</strong> Use verbs that clearly indicate the action (Start, Get, Try, Download)</li>
+                            <li><strong>Benefit-focused:</strong> Highlight the value users will receive</li>
+                            <li><strong>Clear and concise:</strong> Keep button text short and easily scannable</li>
+                            <li><strong>Consistent language:</strong> Maintain consistent terminology across similar actions</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="guideline">
+                        <h3>Accessibility Standards</h3>
+                        <ul>
+                            <li><strong>Color contrast:</strong> Maintain minimum 4.5:1 contrast ratio for text</li>
+                            <li><strong>Focus indicators:</strong> Ensure clear focus states for keyboard navigation</li>
+                            <li><strong>ARIA labels:</strong> Provide descriptive labels for screen readers</li>
+                            <li><strong>Touch targets:</strong> Maintain minimum 44x44px touch targets for mobile</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="guideline">
+                        <h3>Performance Considerations</h3>
+                        <ul>
+                            <li><strong>Loading states:</strong> Provide feedback during asynchronous actions</li>
+                            <li><strong>Progressive enhancement:</strong> Ensure functionality without JavaScript</li>
+                            <li><strong>Animation performance:</strong> Use CSS transforms for smooth animations</li>
+                            <li><strong>Mobile optimization:</strong> Ensure fast loading and responsive behavior</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="implementation-examples" aria-labelledby="examplesHeading">
+            <div class="container">
+                <h2 id="examplesHeading">Real-World Implementation Examples</h2>
+                
+                <div class="example-grid">
+                    <div class="example-card">
+                        <h3>Hero Section CTA</h3>
+                        <p>Primary CTA in the homepage hero section with supporting secondary option.</p>
+                        <div class="example-demo">
+                            <div class="hero-cta-example">
+                                <a href="pricing.html" class="btn btn-primary btn-large">Start Your Free Trial</a>
+                                <a href="features.html" class="btn btn-secondary">Watch Product Demo</a>
+                            </div>
+                        </div>
+                        <p class="example-note">Features a large primary button with animated hover effects and a supporting secondary action.</p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <h3>Pricing Table CTA</h3>
+                        <p>Plan-specific CTAs in the pricing table with visual hierarchy.</p>
+                        <div class="example-demo">
+                            <div class="pricing-cta-example">
+                                <a href="thank-you.html?plan=starter" class="btn btn-outline">Choose Starter</a>
+                                <a href="thank-you.html?plan=pro" class="btn btn-primary">Choose Pro</a>
+                                <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                            </div>
+                        </div>
+                        <p class="example-note">Uses color and style to highlight the recommended plan while providing clear alternatives.</p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <h3>Form Submission CTA</h3>
+                        <p>Form submit button with loading state and validation feedback.</p>
+                        <div class="example-demo">
+                            <button type="submit" class="btn btn-primary btn-submit" id="demoSubmit">
+                                <span class="btn-text">Submit Request</span>
+                                <span class="btn-loader hidden" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <p class="example-note">Includes visual feedback during submission and error states for validation failures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-testing" aria-labelledby="testingHeading">
+            <div class="container">
+                <h2 id="testingHeading">CTA Testing & Optimization</h2>
+                
+                <div class="testing-checklist">
+                    <div class="test-category">
+                        <h3>Functionality Tests</h3>
+                        <ul>
+                            <li>All buttons link to correct destinations</li>
+                            <li>Form buttons submit data correctly</li>
+                            <li>Loading states work as expected</li>
+                            <li>Error states provide clear feedback</li>
+                            <li>Buttons are not broken or overlapping</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="test-category">
+                        <h3>Usability Tests</h3>
+                        <ul>
+                            <li>Button text is clear and actionable</li>
+                            <li>Visual hierarchy guides user attention</li>
+                            <li>Placement supports natural user flow</li>
+                            <li>Multiple CTAs don't create decision fatigue</li>
+                            <li>Mobile touch targets are adequately sized</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="test-category">
+                        <h3>Performance Tests</h3>
+                        <ul>
+                            <li>Buttons load quickly and render correctly</li>
+                            <li>Animations are smooth and performant</li>
+                            <li>No layout shifts during interactions</li>
+                            <li>Works correctly with slow connections</li>
+                            <li>JavaScript fallbacks work properly</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="test-category">
+                        <h3>Accessibility Tests</h3>
+                        <ul>
+                            <li>Color contrast meets WCAG standards</li>
+                            <li>Keyboard navigation works correctly</li>
+                            <li>Screen readers announce buttons properly</li>
+                            <li>Focus states are visible and logical</li>
+                            <li>ARIA attributes are correctly implemented</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-library-cta" aria-labelledby="libraryCtaHeading">
+            <div class="container">
+                <h2 id="libraryCtaHeading">Ready to Implement These CTAs?</h2>
+                <p>Use our comprehensive CTA button system to drive conversions and enhance user experience across your FlowSaaS implementation.</p>
+                <div class="cta-showcase-final">
+                    <a href="index.html" class="btn btn-primary btn-large">View Live Examples</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Implementation Support</a>
+                    <a href="pricing.html" class="btn btn-outline">Start Free Trial</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="FlowSaaS Home">FlowSaaS</a>
+                    <p>Intelligent workflow automation for modern teams. Build faster, scale smarter.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> FlowSaaS Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><span aria-hidden="true">𝕏</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                    <a href="#" aria-label="GitHub"><span aria-hidden="true">gh</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

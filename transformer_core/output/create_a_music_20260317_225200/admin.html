@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Wave | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-primary">
+        <nav aria-label="Main navigation">
+            <div class="align-center">
+                <h1>Aurora Wave Admin</h1>
+                <ul>
+                    <li><a href="index.html" class="btn">Home</a></li>
+                    <li><a href="music.html" class="btn">Music</a></li>
+                    <li><a href="tour.html" class="btn">Tour</a></li>
+                    <li><a href="videos.html" class="btn">Videos</a></li>
+                    <li><a href="store.html" class="btn">Store</a></li>
+                    <li><a href="community.html" class="btn">Community</a></li>
+                    <li><a href="press.html" class="btn">Press</a></li>
+                    <li><a href="admin.html" class="btn">Admin</a></li>
+                    <li><a href="checkout.html" class="btn">Checkout</a></li>
+                    <li><a href="profile.html" class="btn">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-secondary align-center">
+            <h2>Content Management Dashboard</h2>
+            <p>Manage website content, inventory, users, and view analytics</p>
+        </section>
+
+        <section class="content_management_dashboard">
+            <h2>Quick Actions</h2>
+            <div class="album-artwork-display" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Add New Tour Date</h3>
+                    </div>
+                    <p>Add upcoming concert dates to the tour schedule</p>
+                    <button class="btn btn-primary">Create New</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Upload New Product</h3>
+                    </div>
+                    <p>Add merchandise items to the online store</p>
+                    <button class="btn btn-primary">Add Product</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Publish News Article</h3>
+                    </div>
+                    <p>Create and publish news updates for the website</p>
+                    <button class="btn btn-primary">Write Article</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Manage Users</h3>
+                    </div>
+                    <p>View and manage community member accounts</p>
+                    <button class="btn btn-primary">View Users</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tour_date_editor bg-card">
+            <h2>Tour Date Management</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Upcoming Shows</h3>
+                </div>
+                
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Los Angeles, CA - The Wiltern</div>
+                            <div class="cart-item-price">March 15, 2024</div>
+                            <div class="inventory_status">Tickets: 85% sold • 150 remaining</div>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Promote</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">San Francisco, CA - The Fillmore</div>
+                            <div class="cart-item-price">March 18, 2024</div>
+                            <div class="inventory_status">Tickets: 92% sold • 80 remaining</div>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Promote</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Portland, OR - Crystal Ballroom</div>
+                            <div class="cart-item-price">March 21, 2024</div>
+                            <div class="inventory_status">Tickets: 78% sold • 220 remaining</div>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Promote</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Seattle, WA - The Showbox</div>
+                            <div class="cart-item-price">March 24, 2024</div>
+                            <div class="inventory_status">Tickets: 95% sold • 50 remaining</div>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Promote</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Chicago, IL - The Metro</div>
+                            <div class="cart-item-price">April 5, 2024</div>
+                            <div class="inventory_status">Tickets: 65% sold • 350 remaining</div>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Promote</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">New York, NY - Terminal 5</div>
+                            <div class="cart-item-price">April 12, 2024</div>
+                            <div class="inventory_status">Tickets: 88% sold • 120 remaining</div>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Promote</button>
+                    </div>
+                </div>
+                
+                <div class="align-center">
+                    <button class="btn btn-large btn-primary">Add New Tour Date</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="merchandise_inventory_manager">
+            <h2>Inventory Management</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Current Stock Levels</h3>
+                </div>
+                
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Midnight Serenade Vinyl</div>
+                            <div class="cart-item-price">SKU: AW-VINYL-001</div>
+                        </div>
+                        <div class="inventory_status">
+                            <span class="bg-primary">42 in stock</span>
+                            <span>Last ordered: Feb 10, 2024</span>
+                        </div>
+                        <button class="btn btn-primary">Reorder Now</button>
+                        <button class="btn btn-secondary">Edit Product</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">2024 Tour T-Shirt</div>
+                            <div class="cart-item-price">SKU: AW-TSHIRT-004</div>
+                        </div>
+                        <div class="inventory_status">
+                            <span class="bg-primary">78 in stock</span>
+                            <span>Last ordered: Jan 28, 2024</span>
+                        </div>
+                        <button class="btn btn-secondary">Reorder</button>
+                        <button class="btn btn-secondary">Edit Product</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Signature Hoodie</div>
+                            <div class="cart-item-price">SKU: AW-HOODIE-002</div>
+                        </div>
+                        <div class="inventory_status">
+                            <span class="bg-accent">5 in stock</span>
+                            <span>Low stock alert triggered</span>
+                        </div>
+                        <button class="btn btn-primary">Reorder Urgently</button>
+                        <button class="btn btn-secondary">Edit Product</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Deluxe CD Edition</div>
+                            <div class="cart-item-price">SKU: AW-CD-003</div>
+                        </div>
+                        <div class="inventory_status">
+                            <span class="bg-primary">56 in stock</span>
+                            <span>Last ordered: Feb 5, 2024</span>
+                        </div>
+                        <button class="btn btn-secondary">Reorder</button>
+                        <button class="btn btn-secondary">Edit Product</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Concert Poster Set</div>
+                            <div class="cart-item-price">SKU: AW-POSTER-005</div>
+                        </div>
+                        <div class="inventory_status">
+                            <span class="bg-secondary">0 in stock</span>
+                            <span>Backorder: 250 units arriving Mar 20</span>
+                        </div>
+                        <button class="btn btn-primary">Reorder Urgently</button>
+                        <button class="btn btn-secondary">Edit Product</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">Winter Beanie</div>
+                            <div class="cart-item-price">SKU: AW-BEANIE-006</div>
+                        </div>
+                        <div class="inventory_status">
+                            <span class="bg-primary">34 in stock</span>
+                            <span>Last ordered: Dec 15, 2023</span>
+                        </div>
+                        <button class="btn btn-secondary">Reorder</button>
+                        <button class="btn btn-secondary">Edit Product</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="cart-item">
+                        <span>Total Products:</span>
+                        <span>18</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Low Stock Items:</span>
+                        <span>3</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Out of Stock:</span>
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news_updater bg-accent">
+            <h2>News & Content Updates</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Articles</h3>
+                </div>
+                
+                <div class="comment_sections">
+                    <div class="comment">
+                        <div class="comment-author">Published: February 15, 2024</div>
+                        <div class="comment-content">
+                            <h4>2024 World Tour Expansion Announced</h4>
+                            <p>Status: Published • Views: 12,450</p>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">View Analytics</button>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-author">Published: January 28, 2024</div>
+                        <div class="comment-content">
+                            <h4>50 Million Streams Milestone Reached</h4>
+                            <p>Status: Published • Views: 8,920</p>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">View Analytics</button>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-author">Draft: February 20, 2024</div>
+                        <div class="comment-content">
+                            <h4>New Music Video Behind-the-Scenes</h4>
+                            <p>Status: Draft • Ready for review</p>
+                        </div>
+                        <button class="btn btn-primary">Edit Draft</button>
+                        <button class="btn btn-primary">Publish Now</button>
+                    </div>
+                    
+                    <div class="comment">
+                        <div class="comment-author">Scheduled: March 1, 2024</div>
+                        <div class="comment-content">
+                            <h4>European Tour Dates Preview</h4>
+                            <p>Status: Scheduled • Auto-publish at 9:00 AM</p>
+                        </div>
+                        <button class="btn btn-secondary">Edit</button>
+                        <button class="btn btn-secondary">Reschedule</button>
+                    </div>
+                </div>
+                
+                <div class="align-center">
+                    <button class="btn btn-large btn-primary">Create New Article</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="user_management bg-card">
+            <h2>User Management</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent User Activity</h3>
+                </div>
+                
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">@SynthWaveFan92</div>
+                            <div class="cart-item-price">Gold Member • Joined: 2021</div>
+                            <p>Last active: 2 hours ago • 248 forum posts</p>
+                        </div>
+                        <button class="btn btn-secondary">View Profile</button>
+                        <button class="btn btn-secondary">Send Message</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">@ConcertLover</div>
+                            <div class="cart-item-price">Silver Member • Joined: 2022</div>
+                            <p>Last active: 1 day ago • 156 forum posts</p>
+                        </div>
+                        <button class="btn btn-secondary">View Profile</button>
+                        <button class="btn btn-secondary">Send Message</button>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">@VinylCollector</div>
+                            <div class="cart-item-price">Platinum Member • Joined: 2020</div>
+                            <p>Last active: 3 days ago • 312 forum posts</p>
+                        </div>
+                        <button class="btn btn-secondary">View Profile</button>
+                        <button class="btn btn-secondary">Send Message</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="cart-item">
+                        <span>Total Members:</span>
+                        <span>25,428</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>New This Month:</span>
+                        <span>1,245</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Active Today:</span>
+                        <span>3,892</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="analytics_dashboard">
+            <h2>Website Analytics</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">30-Day Performance Overview</h3>
+                </div>
+                
+                <div class="album-artwork-display" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+                    <div class="card">
+                        <div class="card-title">Total Visitors</div>
+                        <div class="cart-item-price">124,850</div>
+                        <p>↑ 12% from last month</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-title">Page Views</div>
+                        <div class="cart-item-price">458,920</div>
+                        <p>↑ 8% from last month</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-title">Store Revenue</div>
+                        <div class="cart-item-price">$42,580</div>
+                        <p>↑ 15% from last month</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-title">New Members</div>
+                        <div class="cart-item-price">1,245</div>
+                        <p>↑ 22% from last month</p>
+                    </div>
+                </div>
+                
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <span>Most Visited Page:</span>
+                        <span>Music (45,820 views)</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Top Selling Product:</span>
+                        <span>Midnight Serenade Vinyl (842 units)</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Conversion Rate:</span>
+                        <span>3.2%</span>
+                    </div>
+                    <div class="cart-item">
+                        <span>Average Session Duration:</span>
+                        <span>4 minutes 22 seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary">
+        <div class="align-center">
+            <p>&copy; 2023 Aurora Wave. Admin Dashboard v2.4.1</p>
+            <ul>
+                <li><a href="admin-audit.html">Audit Log</a></li>
+                <li><a href="admin-backup.html">Backup System</a></li>
+                <li><a href="admin-settings.html">Settings</a></li>
+                <li><a href="admin-help.html">Help & Support</a></li>
+            </ul>
+            <address>
+                System Admin: <a href="mailto:admin@aurorawave.com">admin@aurorawave.com</a><br>
+                Last Backup: February 21, 2024 02:00 AM
+            </address>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

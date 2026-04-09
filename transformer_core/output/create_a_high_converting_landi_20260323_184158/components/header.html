@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component | FlowSaaS</title>
+    <meta name="description" content="Header navigation component for FlowSaaS website with sticky navigation and responsive design.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" id="mainHeader">
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="FlowSaaS Home">
+                    <span class="logo-text">FlowSaaS</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primaryMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="thank-you.html" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="header-demo" aria-labelledby="demoHeading">
+            <div class="container">
+                <h1 id="demoHeading">Header Navigation Component</h1>
+                <p class="demo-description">This page demonstrates the reusable header component used across all FlowSaaS website pages. The header features a sticky navigation bar that remains visible while scrolling, responsive design for all devices, and accessible navigation controls.</p>
+                
+                <div class="component-features">
+                    <h2>Component Features</h2>
+                    <div class="features-grid">
+                        <article class="feature">
+                            <h3>Sticky Navigation</h3>
+                            <p>The header remains fixed at the top of the viewport as users scroll, providing constant access to navigation links and the main CTA button.</p>
+                        </article>
+                        <article class="feature">
+                            <h3>Responsive Design</h3>
+                            <p>Automatically adapts to mobile, tablet, and desktop screens with a hamburger menu toggle for smaller viewports.</p>
+                        </article>
+                        <article class="feature">
+                            <h3>Accessibility Focused</h3>
+                            <p>Includes proper ARIA labels, keyboard navigation support, and screen reader optimized markup for inclusive user experience.</p>
+                        </article>
+                        <article class="feature">
+                            <h3>Active State Management</h3>
+                            <p>Highlights the current page in the navigation menu to provide clear orientation and context for users.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="implementation-guide">
+                    <h2>Implementation Details</h2>
+                    <div class="code-example">
+                        <h3>Navigation Structure</h3>
+                        <p>The header uses semantic HTML5 elements with proper nesting for optimal SEO and accessibility:</p>
+                        <ul>
+                            <li><code>&lt;header&gt;</code> as the main container with role="banner"</li>
+                            <li><code>&lt;nav&gt;</code> with aria-label="Main Navigation"</li>
+                            <li><code>&lt;ul&gt;</code> for the navigation list with proper list item structure</li>
+                            <li>Accessible mobile menu toggle button with ARIA attributes</li>
+                            <li>Active page indication using <code>aria-current="page"</code></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navigation-preview">
+                    <h2>Navigation Links Preview</h2>
+                    <p>The header includes links to all main pages of the FlowSaaS website:</p>
+                    <div class="links-preview">
+                        <div class="link-item">
+                            <strong>Home:</strong> Primary landing page with hero section and main CTAs
+                        </div>
+                        <div class="link-item">
+                            <strong>Features:</strong> Detailed overview of product capabilities and benefits
+                        </div>
+                        <div class="link-item">
+                            <strong>Pricing:</strong> Subscription plans, pricing tables, and billing information
+                        </div>
+                        <div class="link-item">
+                            <strong>Case Studies:</strong> Customer success stories and real-world results
+                        </div>
+                        <div class="link-item">
+                            <strong>Contact:</strong> Support information, contact forms, and live chat
+                        </div>
+                        <div class="link-item">
+                            <strong>Thank You:</strong> Confirmation page for form submissions
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Implement?</h2>
+                    <p>This header component is ready to use across your website. Simply include the HTML structure and ensure the CSS and JavaScript files are properly linked.</p>
+                    <div class="cta-buttons">
+                        <a href="index.html" class="btn btn-primary">View Home Page</a>
+                        <a href="contact.html" class="btn btn-outline">Contact for Support</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="FlowSaaS Home">FlowSaaS</a>
+                    <p>Intelligent workflow automation for modern teams. Build faster, scale smarter.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> FlowSaaS Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><span aria-hidden="true">𝕏</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                    <a href="#" aria-label="GitHub"><span aria-hidden="true">gh</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

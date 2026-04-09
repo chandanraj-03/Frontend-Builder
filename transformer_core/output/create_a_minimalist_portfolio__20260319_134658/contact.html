@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Alex Morgan - Digital Designer & Developer</title>
+    <meta name="description" content="Get in touch with Alex Morgan for design and development projects. Contact form and detailed contact information available.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Home - Alex Morgan Portfolio">Alex Morgan</a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul id="primary-menu" class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="project-detail.html" role="menuitem">Project Detail</a></li>
+                    <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="contact.html" role="menuitem" aria-current="page">Contact</a></li>
+                    <li role="none"><a href="404.html" role="menuitem">404 Error</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon" aria-hidden="true">🌙</span>
+                    </button>
+                    <button id="motion-toggle" class="motion-toggle" aria-label="Reduce motion">
+                        <span class="motion-icon" aria-hidden="true">🌀</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="contact-page">
+            <header class="contact-header">
+                <div class="container">
+                    <h1>Let's Create Something Amazing Together</h1>
+                    <p class="tagline">Ready to discuss your next project? I'm currently accepting new clients and collaboration opportunities.</p>
+                </div>
+            </header>
+
+            <section class="contact-content" aria-labelledby="contact-heading">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-form-section">
+                            <h2 id="contact-heading">Send Me a Message</h2>
+                            <p>Fill out the form below and I'll get back to you within 24 hours. Whether you have a specific project in mind or just want to explore possibilities, I'm here to help.</p>
+                            
+                            <form class="contact-form" id="contact-form" novalidate>
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required minlength="2" maxlength="100" placeholder="Enter your full name">
+                                    <span class="error-message" id="name-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                    <span class="error-message" id="email-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company">Company/Organization</label>
+                                    <input type="text" id="company" name="company" maxlength="100" placeholder="Your company name (optional)">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="project-type">Project Type *</label>
+                                    <select id="project-type" name="project-type" required>
+                                        <option value="">Select a project type</option>
+                                        <option value="website-design">Website Design & Development</option>
+                                        <option value="design-system">Design System Creation</option>
+                                        <option value="ux-audit">UX/UI Audit & Improvement</option>
+                                        <option value="consultation">Design Consultation</option>
+                                        <option value="collaboration">Collaboration Opportunity</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <span class="error-message" id="project-type-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="budget">Project Budget Range</label>
+                                    <select id="budget" name="budget">
+                                        <option value="">Select budget range</option>
+                                        <option value="under-5k">Under $5,000</option>
+                                        <option value="5k-15k">$5,000 - $15,000</option>
+                                        <option value="15k-30k">$15,000 - $30,000</option>
+                                        <option value="30k-50k">$30,000 - $50,000</option>
+                                        <option value="over-50k">Over $50,000</option>
+                                        <option value="tbd">To be determined</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="timeline">Project Timeline</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Select timeline</option>
+                                        <option value="asap">ASAP</option>
+                                        <option value="1-2-months">1-2 months</option>
+                                        <option value="3-6-months">3-6 months</option>
+                                        <option value="6-plus-months">6+ months</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Project Details *</label>
+                                    <textarea id="message" name="message" required minlength="20" maxlength="1000" placeholder="Tell me about your project goals, challenges, and what you hope to achieve..." rows="6"></textarea>
+                                    <span class="error-message" id="message-error"></span>
+                                </div>
+                                
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">Subscribe to my occasional newsletter with design insights and project updates</label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                            </form>
+                        </div>
+                        
+                        <div class="contact-info-section">
+                            <h2>Contact Information</h2>
+                            <p>Prefer to reach out directly? Here are all the ways you can get in touch with me.</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <h3>Email</h3>
+                                    <div class="contact-value">
+                                        <span id="email-value">hello@alexmorgan.design</span>
+                                        <button class="copy-btn" data-clipboard-target="#email-value" aria-label="Copy email address to clipboard">
+                                            <span class="copy-icon" aria-hidden="true">📋</span>
+                                            <span class="copy-text">Copy</span>
+                                        </button>
+                                    </div>
+                                    <p>Primary contact method. I typically respond within 24 hours.</p>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <h3>Phone</h3>
+                                    <div class="contact-value">
+                                        <span id="phone-value">+1 (503) 555-0123</span>
+                                        <button class="copy-btn" data-clipboard-target="#phone-value" aria-label="Copy phone number to clipboard">
+                                            <span class="copy-icon" aria-hidden="true">📋</span>
+                                            <span class="copy-text">Copy</span>
+                                        </button>
+                                    </div>
+                                    <p>Available for calls Monday-Friday, 9 AM - 5 PM PST.</p>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <h3>Location</h3>
+                                    <div class="contact-value">
+                                        <span>Portland, Oregon</span>
+                                    </div>
+                                    <p>Based in the Pacific Northwest. Available for remote work worldwide.</p>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <h3>Office Hours</h3>
+                                    <div class="contact-value">
+                                        <span>Monday - Friday</span>
+                                        <span>9:00 AM - 5:00 PM PST</span>
+                                    </div>
+                                    <p>Response times may vary during weekends and holidays.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="social-links">
+                                <h3>Connect Online</h3>
+                                <div class="social-grid">
+                                    <a href="https://linkedin.com/in/alexmorgan" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+                                        <span class="social-icon" aria-hidden="true">💼</span>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    <a href="https://github.com/alexmorgan" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">
+                                        <span class="social-icon" aria-hidden="true">💻</span>
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://dribbble.com/alexmorgan" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="View Dribbble portfolio">
+                                        <span class="social-icon" aria-hidden="true">🎨</span>
+                                        <span>Dribbble</span>
+                                    </a>
+                                    <a href="https://twitter.com/alexmorgan" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow on Twitter">
+                                        <span class="social-icon" aria-hidden="true">🐦</span>
+                                        <span>Twitter</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-preview">
+                                <h3>Common Questions</h3>
+                                <details>
+                                    <summary>What's your typical project process?</summary>
+                                    <p>I follow an iterative process starting with discovery and research, moving to design and prototyping, then development and testing. Each phase includes client collaboration and feedback.</p>
+                                </details>
+                                <details>
+                                    <summary>Do you work with international clients?</summary>
+                                    <p>Yes! I regularly work with clients across different time zones. My flexible schedule allows me to accommodate various time zones effectively.</p>
+                                </details>
+                                <details>
+                                    <summary>What industries do you specialize in?</summary>
+                                    <p>I have extensive experience in tech, healthcare, education, and e-commerce. However, I enjoy learning about new industries and adapting to different business needs.</p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-cta" aria-labelledby="cta-heading">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 id="cta-heading">Ready to Start Your Project?</h2>
+                        <p>Whether you're at the early planning stage or ready to begin development, I'm here to help bring your vision to life. Let's schedule a complimentary consultation to discuss your project needs.</p>
+                        <div class="cta-actions">
+                            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                            <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">Alex Morgan</a>
+                    <p>Creating digital experiences that make a difference.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="project-detail.html">Projects</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                    <a href="#" aria-label="Dribbble">Dribbble</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex Morgan. All rights reserved.</p>
+                <p>Let's build something amazing together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="copy-notification" aria-live="polite" aria-atomic="true">
+        <span id="notification-text">Copied to clipboard!</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

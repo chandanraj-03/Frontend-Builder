@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Analysis - Table Tennis Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="brand">
+            <h1>Table Tennis Analytics</h1>
+            <p>Performance Tracking & Analysis Dashboard</p>
+        </div>
+        <nav class="dashboard-navigation-menu">
+            <ul>
+                <li><a href="dashboard.html" class="btn btn-outline">Dashboard</a></li>
+                <li><a href="data_input.html" class="btn btn-outline">Data Input</a></li>
+                <li><a href="data_management.html" class="btn btn-outline">Data Management</a></li>
+                <li><a href="detailed_analysis.html" class="btn btn-primary">Detailed Analysis</a></li>
+                <li><a href="settings.html" class="btn btn-outline">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Advanced Performance Analysis</h2>
+            <p>Deep dive into your table tennis performance with comprehensive analytics, trend analysis, and detailed breakdowns of every aspect of your game.</p>
+        </section>
+
+        <div class="analysis-layout">
+            <section class="main-content">
+                <article class="time-period-selector">
+                    <h3>Analysis Time Period</h3>
+                    <div class="period-controls">
+                        <div class="filter-group">
+                            <label class="form-label">Analysis Range:</label>
+                            <select class="form-control">
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option selected>Last 90 days</option>
+                                <option>Last 6 months</option>
+                                <option>Year to date</option>
+                                <option>All time</option>
+                                <option>Custom range</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="form-label">Match Type:</label>
+                            <select class="form-control">
+                                <option selected>All matches</option>
+                                <option>Tournament only</option>
+                                <option>League matches</option>
+                                <option>Training sessions</option>
+                                <option>Friendly matches</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Update Analysis</button>
+                    </div>
+                    <p class="analysis-summary">Currently analyzing: <strong>47 matches and 32 training sessions</strong> from August 1, 2024 to October 26, 2024</p>
+                </article>
+
+                <article class="expandable-chart-visualizations">
+                    <div class="chart-container">
+                        <div class="chart-title">Serve Performance Evolution</div>
+                        <div class="chart-content">
+                            <div class="chart-visual">
+                                <div class="timeline-chart">
+                                    <div class="chart-grid">
+                                        <div class="grid-line">100%</div>
+                                        <div class="grid-line">90%</div>
+                                        <div class="grid-line">80%</div>
+                                        <div class="grid-line">70%</div>
+                                        <div class="grid-line">60%</div>
+                                    </div>
+                                    <div class="data-line" style="height: 85%;" data-value="85%">Aug</div>
+                                    <div class="data-line" style="height: 82%;" data-value="82%">Sep</div>
+                                    <div class="data-line" style="height: 88%;" data-value="88%">Oct</div>
+                                </div>
+                            </div>
+                            <div class="chart-insights">
+                                <h4>Key Insights</h4>
+                                <ul>
+                                    <li>Serve success rate improved by 6% over 3 months</li>
+                                    <li>October shows highest consistency at 88%</li>
+                                    <li>September dip correlated with new serve technique experimentation</li>
+                                    <li>Pendulum serve remains most reliable at 92% success rate</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline expand-btn">Expand Visualization</button>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-title">Stroke Success Rates by Match Type</div>
+                        <div class="chart-content">
+                            <div class="comparison-chart">
+                                <div class="chart-bars">
+                                    <div class="bar-category">
+                                        <span>Forehand Loop</span>
+                                        <div class="bar-group">
+                                            <div class="bar tournament" style="width: 78%">78%</div>
+                                            <div class="bar training" style="width: 85%">85%</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-category">
+                                        <span>Backhand Drive</span>
+                                        <div class="bar-group">
+                                            <div class="bar tournament" style="width: 72%">72%</div>
+                                            <div class="bar training" style="width: 79%">79%</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-category">
+                                        <span>Forehand Smash</span>
+                                        <div class="bar-group">
+                                            <div class="bar tournament" style="width: 65%">65%</div>
+                                            <div class="bar training" style="width: 72%">72%</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-category">
+                                        <span>Backhand Flip</span>
+                                        <div class="bar-group">
+                                            <div class="bar tournament" style="width: 58%">58%</div>
+                                            <div class="bar training" style="width: 68%">68%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <span class="legend tournament">● Tournament Matches</span>
+                                    <span class="legend training">● Training Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline expand-btn">Expand Visualization</button>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-title">Win/Loss Analysis by Opponent Rating</div>
+                        <div class="chart-content">
+                            <div class="scatter-plot">
+                                <div class="plot-grid">
+                                    <div class="point" style="left: 20%; bottom: 85%;" data-rating="1800" data-result="win">W</div>
+                                    <div class="point" style="left: 35%; bottom: 45%;" data-rating="1950" data-result="loss">L</div>
+                                    <div class="point" style="left: 50%; bottom: 75%;" data-rating="2100" data-result="win">W</div>
+                                    <div class="point" style="left: 65%; bottom: 60%;" data-rating="2250" data-result="loss">L</div>
+                                    <div class="point" style="left: 80%; bottom: 40%;" data-rating="2400" data-result="loss">L</div>
+                                </div>
+                                <div class="axes">
+                                    <div class="x-axis">Opponent Rating</div>
+                                    <div class="y-axis">Match Performance Score</div>
+                                </div>
+                            </div>
+                            <div class="chart-insights">
+                                <h4>Performance Patterns</h4>
+                                <ul>
+                                    <li>Strong performance against opponents rated 1800-2200</li>
+                                    <li>Struggle against highly defensive players above 2300</li>
+                                    <li>Consistent improvement shown against similar-rated opponents</li>
+                                    <li>Optimal competitive range: 2000-2200 rating opponents</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline expand-btn">Expand Visualization</button>
+                    </div>
+                </article>
+
+                <article class="drilldown-statistics">
+                    <h3>Match-by-Match Performance Drilldown</h3>
+                    <div class="match-analysis-cards">
+                        <div class="match-card detailed">
+                            <h4>Oct 26 vs Alex Chen (Rating: 2050)</h4>
+                            <div class="match-stats">
+                                <span class="result win">3-1 Win</span>
+                                <span class="duration">28 minutes</span>
+                                <span class="performance-score">8.2/10</span>
+                            </div>
+                            <div class="stroke-breakdown">
+                                <div class="stroke-metric">
+                                    <span>Serve Success: 84%</span>
+                                    <div class="progress-bar"><div style="width: 84%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Forehand Loop: 78%</span>
+                                    <div class="progress-bar"><div style="width: 78%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Backhand Drive: 72%</span>
+                                    <div class="progress-bar"><div style="width: 72%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Unforced Errors: 7</span>
+                                    <div class="progress-bar error"><div style="width: 35%"></div></div>
+                                </div>
+                            </div>
+                            <p><strong>Key Insight:</strong> Excellent serve return performance (85% success) against opponent's pendulum serve.</p>
+                        </div>
+
+                        <div class="match-card detailed">
+                            <h4>Oct 22 vs Maria Rodriguez (Rating: 2180)</h4>
+                            <div class="match-stats">
+                                <span class="result loss">2-3 Loss</span>
+                                <span class="duration">35 minutes</span>
+                                <span class="performance-score">6.8/10</span>
+                            </div>
+                            <div class="stroke-breakdown">
+                                <div class="stroke-metric">
+                                    <span>Serve Success: 76%</span>
+                                    <div class="progress-bar"><div style="width: 76%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Forehand Loop: 65%</span>
+                                    <div class="progress-bar"><div style="width: 65%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Backhand Drive: 68%</span>
+                                    <div class="progress-bar"><div style="width: 68%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Unforced Errors: 12</span>
+                                    <div class="progress-bar error"><div style="width: 60%"></div></div>
+                                </div>
+                            </div>
+                            <p><strong>Key Insight:</strong> High unforced errors and poor forehand loop consistency led to close loss.</p>
+                        </div>
+
+                        <div class="match-card detailed">
+                            <h4>Oct 18 Tournament Group Stage</h4>
+                            <div class="match-stats">
+                                <span class="result win">4-0 Win</span>
+                                <span class="duration">42 minutes</span>
+                                <span class="performance-score">9.1/10</span>
+                            </div>
+                            <div class="stroke-breakdown">
+                                <div class="stroke-metric">
+                                    <span>Serve Success: 89%</span>
+                                    <div class="progress-bar"><div style="width: 89%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Forehand Loop: 81%</span>
+                                    <div class="progress-bar"><div style="width: 81%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Backhand Drive: 77%</span>
+                                    <div class="progress-bar"><div style="width: 77%"></div></div>
+                                </div>
+                                <div class="stroke-metric">
+                                    <span>Unforced Errors: 3</span>
+                                    <div class="progress-bar error"><div style="width: 15%"></div></div>
+                                </div>
+                            </div>
+                            <p><strong>Key Insight:</strong> Exceptional consistency with only 3 unforced errors in 4 games.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="comparison-tools">
+                    <h3>Performance Comparison Tools</h3>
+                    <div class="comparison-options">
+                        <div class="comparison-type">
+                            <h4>Compare Time Periods</h4>
+                            <div class="period-comparison">
+                                <select class="form-control">
+                                    <option>August 2024 vs September 2024</option>
+                                    <option>September 2024 vs October 2024</option>
+                                    <option selected>Q3 2024 vs Q4 2024</option>
+                                    <option>Last 30 days vs Previous 30 days</option>
+                                </select>
+                                <button class="btn btn-primary">Compare</button>
+                            </div>
+                        </div>
+                        <div class="comparison-type">
+                            <h4>Compare Opponent Types</h4>
+                            <div class="opponent-comparison">
+                                <select class="form-control">
+                                    <option>Defensive vs Offensive players</option>
+                                    <option>Left-handed vs Right-handed</option>
+                                    <option selected>Higher rated vs Lower rated</option>
+                                    <option>Penhold vs Shakehand grip</option>
+                                </select>
+                                <button class="btn btn-primary">Compare</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-results">
+                        <h4>Q3 vs Q4 2024 Performance Comparison</h4>
+                        <div class="comparison-stats">
+                            <div class="stat-comparison">
+                                <span>Win Rate:</span>
+                                <span class="q3">62%</span>
+                                <span class="q4 positive">68%</span>
+                                <span class="change positive">+6%</span>
+                            </div>
+                            <div class="stat-comparison">
+                                <span>Serve Success:</span>
+                                <span class="q3">79%</span>
+                                <span class="q4 positive">84%</span>
+                                <span class="change positive">+5%</span>
+                            </div>
+                            <div class="stat-comparison">
+                                <span>Forehand Loop:</span>
+                                <span class="q3">72%</span>
+                                <span class="q4 positive">78%</span>
+                                <span class="change positive">+6%</span>
+                            </div>
+                            <div class="stat-comparison">
+                                <span>Unforced Errors/Match:</span>
+                                <span class="q3">6.8</span>
+                                <span class="q4 positive">5.2</span>
+                                <span class="change positive">-1.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="analysis-export-options">
+                    <h3>Export Analysis Results</h3>
+                    <p>Download comprehensive analysis reports for coaching reviews, personal study, or sharing with your training partners.</p>
+                    <div class="export-formats">
+                        <button class="btn btn-accent">Export as PDF Report</button>
+                        <button class="btn btn-accent">Export as Excel Workbook</button>
+                        <button class="btn btn-accent">Export Charts as Images</button>
+                        <button class="btn btn-outline">Generate Coaching Report</button>
+                    </div>
+                    <div class="export-settings">
+                        <h4>Report Customization</h4>
+                        <div class="form-group">
+                            <label class="form-label">Report Type:</label>
+                            <select class="form-control">
+                                <option>Comprehensive Analysis</option>
+                                <option>Executive Summary</option>
+                                <option>Technical Deep Dive</option>
+                                <option>Coaching Recommendations</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Include Sections:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" checked> Performance Trends</label>
+                                <label><input type="checkbox" checked> Stroke Analysis</label>
+                                <label><input type="checkbox" checked> Match Breakdowns</label>
+                                <label><input type="checkbox"> Training Recommendations</label>
+                                <label><input type="checkbox" checked> Comparative Analysis</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Generate Report</button>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <article class="quick-analysis">
+                    <h3>Quick Analysis</h3>
+                    <div class="analysis-tools">
+                        <button class="btn btn-secondary">Serve Pattern Analysis</button>
+                        <button class="btn btn-secondary">Weakness Identification</button>
+                        <button class="btn btn-secondary">Progress Tracking</button>
+                        <button class="btn btn-secondary">Opponent Strategy</button>
+                    </div>
+                </article>
+
+                <article class="analysis-history">
+                    <h3>Recent Analysis</h3>
+                    <div class="analysis-items">
+                        <div class="analysis-item">
+                            <strong>Serve Performance Trend</strong>
+                            <span>Completed: Today</span>
+                        </div>
+                        <div class="analysis-item">
+                            <strong>Backhand Consistency Report</strong>
+                            <span>Completed: Oct 25</span>
+                        </div>
+                        <div class="analysis-item">
+                            <strong>Tournament Preparation</strong>
+                            <span>Completed: Oct 20</span>
+                        </div>
+                        <div class="analysis-item">
+                            <strong>Quarterly Progress Review</strong>
+                            <span>Completed: Oct 15</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="insight-alerts">
+                    <h3>Key Insights</h3>
+                    <div class="insight-list">
+                        <div class="insight alert">
+                            <span class="icon">⚠</span>
+                            <span>Backhand flip success rate below target (58%)</span>
+                        </div>
+                        <div class="insight positive">
+                            <span class="icon">✓</span>
+                            <span>Serve consistency improved by 6% this quarter</span>
+                        </div>
+                        <div class="insight info">
+                            <span class="icon">ℹ</span>
+                            <span>Optimal performance against 2000-2200 rated opponents</span>
+                        </div>
+                        <div class="insight alert">
+                            <span class="icon">⚠</span>
+                            <span>High unforced errors in pressure situations</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="analysis-settings">
+                    <h3>Analysis Settings</h3>
+                    <div class="setting-group">
+                        <label class="form-label">Statistical Significance:</label>
+                        <select class="form-control">
+                            <option>Standard (95% confidence)</option>
+                            <option>High (99% confidence)</option>
+                            <option>Exploratory (90% confidence)</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label class="form-label">Trend Smoothing:</label>
+                        <select class="form-control">
+                            <option>7-day moving average</option>
+                            <option selected>14-day moving average</option>
+                            <option>30-day moving average</option>
+                            <option>No smoothing</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline">Save Settings</button>
+                </article>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Table Tennis Analytics</h5>
+                <p>Advanced performance tracking and strategic analysis for competitive table tennis players.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Analysis Tools</h5>
+                <ul>
+                    <li><a href="detailed_analysis.html">Performance Analysis</a></li>
+                    <li><a href="detailed_analysis.html">Trend Analysis</a></li>
+                    <li><a href="detailed_analysis.html">Comparative Tools</a></li>
+                    <li><a href="detailed_analysis.html">Export Reports</a></li>
+                    <li><a href="settings.html">Analysis Settings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Support & Resources</h5>
+                <p>Email: analysis@ttanalytics.com</p>
+                <p>Coach Analysis: coaches@ttanalytics.com</p>
+                <p>Advanced Analytics Help Available</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Table Tennis Analytics Pro. All analysis based on your personal performance data.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/detailed_analysis.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner - Plan Weekly Meals & Sync Calendars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Meal Planner</h1>
+            <p>Plan your weekly meals, assign ingredients to shopping lists, and sync with calendars</p>
+        </div>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search Recipes</a></li>
+            <li><a href="recipe-detail.html">Recipe Detail</a></li>
+            <li><a href="meal-planner.html" aria-current="page">Meal Planner</a></li>
+            <li><a href="shopping-list.html">Shopping List</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="user-profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="calendar-view" aria-labelledby="calendar-heading">
+            <h2 id="calendar-heading">Weekly Meal Calendar</h2>
+            <div class="calendar-grid">
+                <div class="calendar-day" aria-label="Monday">
+                    <div class="day-header">Monday</div>
+                    <div class="meal-slot breakfast">Breakfast: Avocado Toast with Poached Eggs</div>
+                    <div class="meal-slot lunch">Lunch: Quinoa Salad with Chickpeas & Lemon-Tahini Dressing</div>
+                    <div class="meal-slot dinner">Dinner: Baked Salmon with Herb Crust</div>
+                    <div class="meal-note">Note: Dinner requires fresh thyme & rosemary</div>
+                </div>
+                <div class="calendar-day" aria-label="Tuesday">
+                    <div class="day-header">Tuesday</div>
+                    <div class="meal-slot breakfast">Breakfast: Greek Yogurt Parfait with Berries & Honey</div>
+                    <div class="meal-slot lunch">Lunch: Leftover Salmon Salad</div>
+                    <div class="meal-slot dinner">Dinner: Vegetable Stir-Fry with Tofu</div>
+                </div>
+                <div class="calendar-day" aria-label="Wednesday">
+                    <div class="day-header">Wednesday</div>
+                    <div class="meal-slot breakfast">Breakfast: Overnight Oats with Chia Seeds</div>
+                    <div class="meal-slot lunch">Lunch: Lentil Soup with Whole Grain Bread</div>
+                    <div class="meal-slot dinner">Dinner: Chicken & Mushroom Skewers</div>
+                </div>
+                <div class="calendar-day" aria-label="Thursday">
+                    <div class="day-header">Thursday</div>
+                    <div class="meal-slot breakfast">Breakfast: Spinach & Feta Scramble</div>
+                    <div class="meal-slot lunch">Lunch: Tuna Salad Sandwich</div>
+                    <div class="meal-slot dinner">Dinner: Beef & Vegetable Stew</div>
+                </div>
+                <div class="calendar-day" aria-label="Friday">
+                    <div class="day-header">Friday</div>
+                    <div class="meal-slot breakfast">Breakfast: Smoothie Bowl (Frozen Banana, Spinach, Almond Milk)</div>
+                    <div class="meal-slot lunch">Lunch: Leftover Stew</div>
+                    <div class="meal-slot dinner">Dinner: Veggie Pasta with Marinara</div>
+                </div>
+                <div class="calendar-day" aria-label="Saturday">
+                    <div class="day-header">Saturday</div>
+                    <div class="meal-slot breakfast">Breakfast: French Toast with Berries</div>
+                    <div class="meal-slot lunch">Lunch: Fresh Fruit Salad</div>
+                    <div class="meal-slot dinner">Dinner: Grilled Chicken with Roasted Vegetables</div>
+                </div>
+                <div class="calendar-day" aria-label="Sunday">
+                    <div class="day-header">Sunday</div>
+                    <div class="meal-slot breakfast">Breakfast: Scrambled Eggs with Tomatoes & Cheese</div>
+                    <div class="meal-slot lunch">Lunch: Leftover Chicken Salad</div>
+                    <div class="meal-slot dinner">Dinner: Turkey Meatball Soup</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shopping-list-assignment" aria-labelledby="shopping-list-heading">
+            <h2 id="shopping-list-heading">Shopping List Assignment</h2>
+            <div class="shopping-list-container">
+                <ul class="shopping-list">
+                    <li>
+                        <input type="checkbox" id="oats" value="oats" aria-label="Check Oats">
+                        <label for="oats">Oats (500g)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="berries" value="berries" aria-label="Check Berries">
+                        <label for="berries">Fresh Berries (1 pack, 200g)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="chickpeas" value="chickpeas" aria-label="Check Chickpeas">
+                        <label for="chickpeas">Chickpeas (400g can)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="salmon" value="salmon" aria-label="Check Salmon">
+                        <label for="salmon">Wild Salmon (2 fillets, 200g each)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="thyme" value="thyme" aria-label="Check Thyme">
+                        <label for="thyme">Fresh Thyme (1 bunch)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="almonds" value="almonds" aria-label="Check Almonds">
+                        <label for="almonds">Almonds (100g pack)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="quinoa" value="quinoa" aria-label="Check Quinoa">
+                        <label for="quinoa">Quinoa (500g)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="chickpeas2" value="chickpeas2" aria-label="Check Chickpeas">
+                        <label for="chickpeas2">Chickpeas (400g can) <span class="quantity">(2 cans)</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tofu" value="tofu" aria-label="Check Tofu">
+                        <label for="tofu">Extra-Firm Tofu (1 block, 340g)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tomatoes" value="tomatoes" aria-label="Check Tomatoes">
+                        <label for="tomatoes">Ripe Tomatoes (6 medium)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="spinach" value="spinach" aria-label="Check Spinach">
+                        <label for="spinach">Fresh Spinach (250g)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cherry" value="cherry" aria-label="Check Cherry">
+                        <label for="cherry">Cherry Tomatoes (1 pint)</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-controls">
+                <button id="generate-list" aria-label="Generate shopping list">Generate Full List</button>
+                <button id="clear-list" aria-label="Clear shopping list">Clear Assigned Items</button>
+            </div>
+        </section>
+
+        <section id="calendar-sync" aria-labelledby="sync-heading">
+            <h2 id="sync-heading">Calendar Synchronization</h2>
+            <div class="sync-container">
+                <div class="sync-status">
+                    <div class="sync-icon" aria-hidden="true">✓</div>
+                    <div class="status-message">Synced with Google Calendar - Sunday at 21:30 (Dinner)</div>
+                </div>
+                <div class="sync-options">
+                    <label for="sync-calendar" class="sync-label" aria-label="Select calendar sync options">Sync to:</label>
+                    <select id="sync-calendar" aria-label="Select calendar synchronization method">
+                        <option value="google">Google Calendar</option>
+                        <option value="apple">Apple Calendar</option>
+                        <option value="outlook">Outlook Calendar</option>
+                    </select>
+                    <button id="sync-now" aria-label="Sync meals to calendar now" class="sync-btn">
+                        <span>Sync All Meals Now</span>
+                    </button>
+                </div>
+                <div class="sync-features">
+                    <ul>
+                        <li><span aria-hidden="true">✓</span> Automatically create daily meal reminders</li>
+                        <li><span aria-hidden="true">✓</span> Sync special dietary requests to calendar events</li>
+                        <li><span aria-hidden="true">✓</span> Receive notifications for meal prep</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2023 Meal Planner. All rights reserved.</p>
+            <p><a href="#" aria-label="Privacy Policy">Privacy Policy</a> | <a href="#" aria-label="Terms of Service">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple event handlers for demo purposes
+        document.getElementById('sync-now').addEventListener('click', function() {
+            this.textContent = 'Syncing...';
+            setTimeout(() => {
+                this.textContent = 'Sync All Meals Now';
+            }, 2000);
+        });
+
+        document.getElementById('generate-list').addEventListener('click', function() {
+            alert('Shopping list generated! Would you like to view the printable version?');
+        });
+    </script>
+</body>
+</html>

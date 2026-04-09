@@ -1,0 +1,162 @@
+/* Section */
+.architecture-section {
+    padding: 96px 0;
+    background: transparent;
+}
+
+/* Container */
+.architecture-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* Header */
+.architecture-header {
+    margin-bottom: 64px;
+    max-width: 768px;
+}
+
+.architecture-subtitle {
+   font-size: 24px;
+    font-weight: bold;
+    color: #9333ea;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.architecture-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e293b;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .architecture-title {
+        font-size: 48px;
+    }
+}
+
+.architecture-desc {
+    font-size: 18px;
+    color: #161717;
+    line-height: 1.6;
+}
+
+/* Grid */
+.architecture-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 1024px) {
+    .architecture-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card */
+.architecture-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 4px 4px 16px rgb(30, 30, 31);
+    transition: box-shadow 0.3s ease;
+}
+
+.architecture-card:hover {
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.18);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+/* Card Header */
+.architecture-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Icons */
+.architecture-icon-cyan {
+    width: 24px;
+    height: 24px;
+    color: #06b6d4;
+}
+
+.architecture-icon-purple {
+    width: 24px;
+    height: 24px;
+    color: #a855f7;
+}
+
+.architecture-icon-green {
+    width: 24px;
+    height: 24px;
+    color: #22c55e;
+}
+
+/* Card Titles */
+.architecture-card-title-cyan {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0891b2;
+}
+
+.architecture-card-title-purple {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9333ea;
+}
+
+.architecture-card-title-green {
+    font-size: 18px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* List */
+.architecture-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.architecture-list-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Dots */
+.architecture-dot-cyan,
+.architecture-dot-purple,
+.architecture-dot-green {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.architecture-dot-cyan { background: #22d3ee; }
+.architecture-dot-purple { background: #c084fc; }
+.architecture-dot-green { background: #4ade80; }
+
+/* Item Text */
+.architecture-item-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+}

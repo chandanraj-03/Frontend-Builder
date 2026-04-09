@@ -1,0 +1,173 @@
+/* Section */
+.workflow-section {
+    padding: 96px 0;
+    background: transparent;
+}
+
+/* Container */
+.workflow-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* Header */
+.workflow-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 64px auto;
+}
+
+.workflow-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #7c3aed;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.workflow-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e293b;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+    .workflow-title {
+        font-size: 48px;
+    }
+}
+
+/* Grid */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 64px;
+    column-gap: 32px;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .workflow-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Step */
+.workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Connector (large screens only) */
+.workflow-connector {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .workflow-connector {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 60%;
+        width: 90%;
+        height: 4px;
+        background: linear-gradient(to right, rgb(209, 126, 18), transparent);
+        z-index: 0;
+    }
+}
+
+/* Shared Icon Wrapper */
+[class^="workflow-icon-wrapper-"] {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.workflow-step:hover [class^="workflow-icon-wrapper-"] {
+    transform: scale(1.1);
+}
+
+/* Individual Step Colors */
+.workflow-icon-wrapper-1 { background: #f8fafc; border: 1px solid #e2e8f0; }
+.workflow-icon-wrapper-2 { background: #eff6ff; border: 1px solid #dbeafe; }
+.workflow-icon-wrapper-3 { background: #eef2ff; border: 1px solid #e0e7ff; }
+.workflow-icon-wrapper-4 { background: #f5f3ff; border: 1px solid #ede9fe; }
+.workflow-icon-wrapper-5 { background: #fdf4ff; border: 1px solid #fae8ff; }
+.workflow-icon-wrapper-6 { background: #fdf2f8; border: 1px solid #fce7f3; }
+.workflow-icon-wrapper-7 { background: #fff1f2; border: 1px solid #ffe4e6; }
+
+/* Icons */
+.workflow-icon-1 { width: 32px; height: 32px; color: #64748b; }
+.workflow-icon-2 { width: 32px; height: 32px; color: #3b82f6; }
+.workflow-icon-3 { width: 32px; height: 32px; color: #6366f1; }
+.workflow-icon-4 { width: 32px; height: 32px; color: #8b5cf6; }
+.workflow-icon-5 { width: 32px; height: 32px; color: #d946ef; }
+.workflow-icon-6 { width: 32px; height: 32px; color: #ec4899; }
+.workflow-icon-7 { width: 32px; height: 32px; color: #f43f5e; }
+
+/* Step Labels */
+.workflow-step-label-1 { color: #64748b; }
+.workflow-step-label-2 { color: #3b82f6; }
+.workflow-step-label-3 { color: #6366f1; }
+.workflow-step-label-4 { color: #8b5cf6; }
+.workflow-step-label-5 { color: #d946ef; }
+.workflow-step-label-6 { color: #ec4899; }
+.workflow-step-label-7 { color: #f43f5e; }
+
+[class^="workflow-step-label-"] {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+/* Text */
+.workflow-step-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.workflow-step-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    max-width: 200px;
+}
+
+/* Agent Badge */
+.workflow-agent-badge {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(139, 92, 246, 0.08);
+    color: #7c3aed;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 4px;
+}

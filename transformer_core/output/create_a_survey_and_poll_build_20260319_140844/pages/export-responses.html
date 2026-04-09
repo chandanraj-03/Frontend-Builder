@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Responses</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Survey Settings</a>
+                                <a class="dropdown-item" href="#">Question Types</a>
+                                <a class="dropdown-item" href="#">Builder Interface</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                        <li class="nav-item"><a href="share-survey.html">Share Survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>CSV Export Settings</h2>
+            <form id="export-settings">
+                <label for="include-headers">Include headers:</label>
+                <input type="checkbox" id="include-headers" name="include-headers"><br><br>
+                <label for="delimiter">Delimiter:</label>
+                <select id="delimiter" name="delimiter">
+                    <option value=",">Comma</option>
+                    <option value=";">Semicolon</option>
+                    <option value="|">Pipe</option>
+                </select><br><br>
+                <button type="submit">Export to CSV</button>
+            </form>
+        </section>
+        <section class="section">
+            <h2>Response Data Table</h2>
+            <table id="responses-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Response</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Question 1</td>
+                        <td>This is a sample response.</td>
+                        <td>2022-01-01 12:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>Question 2</td>
+                        <td>This is another sample response.</td>
+                        <td>2022-01-02 13:00:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Survey Builder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"><a href="survey-builder.html">Survey Builder</a></li>
+                        <li class="nav-item"><a href="live-preview.html">Live Preview</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Analytics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Survey Settings</a>
+                                <a class="dropdown-item" href="#">Question Types</a>
+                                <a class="dropdown-item" href="#">Builder Interface</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="export-responses.html">Export Responses</a></li>
+                        <li class="nav-item"><a href="share-survey.html">Share Survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#responses-table').DataTable();
+        });
+    </script>
+</body>
+</html>

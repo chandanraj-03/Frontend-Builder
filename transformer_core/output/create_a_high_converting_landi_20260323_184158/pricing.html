@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | FlowSaaS - Simple, Transparent Plans</title>
+    <meta name="description" content="Choose the perfect FlowSaaS plan. Transparent pricing for Starter, Pro, and Enterprise with 14-day free trial on all plans.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header" id="mainHeader">
+        <nav class="primary-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="FlowSaaS Home">
+                    <span class="logo-text">FlowSaaS</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primaryMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="thank-you.html" class="nav-link cta-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="pricing-hero" aria-labelledby="pricingHeroHeading">
+            <div class="container">
+                <h1 id="pricingHeroHeading">Simple, Transparent Pricing</h1>
+                <p class="hero-subtext">Choose the plan that fits your team. All plans include a 14-day free trial with full feature access. No hidden fees.</p>
+                <div class="billing-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <button class="toggle-switch" id="billingToggle" aria-pressed="false" aria-label="Switch billing period">
+                        <span class="toggle-slider"></span>
+                    </button>
+                    <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-plans" aria-labelledby="plansHeading">
+            <div class="container">
+                <h2 id="plansHeading" class="visually-hidden">Available Plans</h2>
+                <div class="plans-grid">
+                    <article class="plan-card" id="starter-plan">
+                        <div class="plan-header">
+                            <h3>Starter</h3>
+                            <p class="plan-description">Perfect for small teams getting started with automation</p>
+                            <div class="plan-price">
+                                <span class="price-amount monthly-price">$29</span>
+                                <span class="price-amount annual-price hidden">$23</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="billing-note annual-price hidden">Billed annually at $276</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><strong>Up to 10 active workflows</strong></li>
+                                <li><strong>5 team members included</strong></li>
+                                <li>50 GB storage</li>
+                                <li>10 premium integrations</li>
+                                <li>Email support</li>
+                                <li>Basic analytics dashboard</li>
+                                <li>Community forum access</li>
+                            </ul>
+                        </div>
+                        <div class="plan-cta">
+                            <a href="thank-you.html?plan=starter" class="btn btn-outline">Start Free Trial</a>
+                        </div>
+                    </article>
+
+                    <article class="plan-card popular" id="pro-plan">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h3>Pro</h3>
+                            <p class="plan-description">For growing businesses scaling their automation</p>
+                            <div class="plan-price">
+                                <span class="price-amount monthly-price">$89</span>
+                                <span class="price-amount annual-price hidden">$71</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="billing-note annual-price hidden">Billed annually at $852</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><strong>Up to 100 active workflows</strong></li>
+                                <li><strong>25 team members included</strong></li>
+                                <li>500 GB storage</li>
+                                <li>Unlimited integrations</li>
+                                <li>Priority chat & email support</li>
+                                <li>Advanced analytics & reporting</li>
+                                <li>AI-powered optimization</li>
+                                <li>Custom workflow templates</li>
+                                <li>API access</li>
+                            </ul>
+                        </div>
+                        <div class="plan-cta">
+                            <a href="thank-you.html?plan=pro" class="btn btn-primary">Start Free Trial</a>
+                        </div>
+                    </article>
+
+                    <article class="plan-card" id="enterprise-plan">
+                        <div class="plan-header">
+                            <h3>Enterprise</h3>
+                            <p class="plan-description">For large organizations with complex needs</p>
+                            <div class="plan-price">
+                                <span class="price-amount">Custom</span>
+                            </div>
+                            <p class="billing-note">Tailored to your requirements</p>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><strong>Unlimited active workflows</strong></li>
+                                <li><strong>100+ team members included</strong></li>
+                                <li>5 TB+ storage with custom options</li>
+                                <li>Unlimited + custom integrations</li>
+                                <li>24/7 phone & dedicated manager</li>
+                                <li>Enterprise-grade analytics</li>
+                                <li>Advanced AI optimization</li>
+                                <li>Custom SLA & uptime guarantees</li>
+                                <li>On-premise deployment option</li>
+                                <li>SOC 2 Type II compliance</li>
+                                <li>Single sign-on (SSO)</li>
+                                <li>Custom training & onboarding</li>
+                            </ul>
+                        </div>
+                        <div class="plan-cta">
+                            <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-comparison" aria-labelledby="comparisonHeading">
+            <div class="container">
+                <h2 id="comparisonHeading">Detailed Feature Comparison</h2>
+                <div class="table-container">
+                    <table class="detailed-comparison-table" aria-label="Detailed Plan Feature Comparison">
+                        <thead>
+                            <tr>
+                                <th scope="col">Feature Category</th>
+                                <th scope="col">Starter</th>
+                                <th scope="col">Pro</th>
+                                <th scope="col">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="category-header">Workflow Limits</th>
+                                <td>10 active</td>
+                                <td>100 active</td>
+                                <td>Unlimited</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Team Members</th>
+                                <td>5 included</td>
+                                <td>25 included</td>
+                                <td>100+ included</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Storage</th>
+                                <td>50 GB</td>
+                                <td>500 GB</td>
+                                <td>5 TB+</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="category-header">Integrations</th>
+                                <td>10 premium</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited + Custom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">API Access</th>
+                                <td>Read-only</td>
+                                <td>Full access</td>
+                                <td>Full + custom endpoints</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="category-header">Support</th>
+                                <td>Email (48h response)</td>
+                                <td>Priority chat & email (4h response)</td>
+                                <td>24/7 phone & dedicated manager</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SLA Guarantee</th>
+                                <td>99.5%</td>
+                                <td>99.9%</td>
+                                <td>99.99%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AI Optimization</th>
+                                <td>Basic insights</td>
+                                <td>Full AI recommendations</td>
+                                <td>Advanced AI + predictive analytics</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="category-header">Security</th>
+                                <td>Standard encryption</td>
+                                <td>Enhanced security</td>
+                                <td>SOC 2 Type II, SSO, custom controls</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Custom Domains</th>
+                                <td>✗</td>
+                                <td>✓ 1 domain</td>
+                                <td>✓ Multiple domains</td>
+                            </tr>
+                            <tr class="table-cta-row">
+                                <td></td>
+                                <td><a href="thank-you.html?plan=starter" class="btn btn-outline btn-small">Choose Starter</a></td>
+                                <td><a href="thank-you.html?plan=pro" class="btn btn-primary btn-small">Choose Pro</a></td>
+                                <td><a href="contact.html" class="btn btn-outline btn-small">Contact Sales</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-testimonials" aria-labelledby="testimonialsHeading">
+            <div class="container">
+                <h2 id="testimonialsHeading">Teams Love FlowSaaS</h2>
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The Pro plan paid for itself in the first month. We automated processes that used to take hours daily."</p>
+                        </div>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">JS</div>
+                            <div class="author-info">
+                                <cite class="author-name">Jamie Smith</cite>
+                                <span class="author-role">Operations Director, TechFlow Inc.</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Enterprise plan gave us the security and custom integrations we needed for our global team. The ROI is exceptional."</p>
+                        </div>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">MR</div>
+                            <div class="author-info">
+                                <cite class="author-name">Maria Rodriguez</cite>
+                                <span class="author-role">CTO, GlobalData Corp</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Started with Starter, scaled to Pro as we grew. The upgrade was seamless and the value just keeps increasing."</p>
+                        </div>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">AC</div>
+                            <div class="author-info">
+                                <cite class="author-name">Alex Chen</cite>
+                                <span class="author-role">Founder, StartupLabs</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The transparent pricing and no hidden fees made budgeting easy. We knew exactly what we were getting."</p>
+                        </div>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">SP</div>
+                            <div class="author-info">
+                                <cite class="author-name">Sarah Patel</cite>
+                                <span class="author-role">Finance Manager, GrowthCo</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-faq" aria-labelledby="faqHeading">
+            <div class="container">
+                <h2 id="faqHeading">Pricing & Billing FAQs</h2>
+                <div class="accordion">
+                    <details class="accordion-item">
+                        <summary class="accordion-question">Can I switch plans later?</summary>
+                        <div class="accordion-answer">
+                            <p>Yes, you can upgrade or downgrade your plan at any time from your account settings. When upgrading, you'll get immediate access to new features. When downgrading, changes take effect at the start of your next billing cycle. All changes are prorated.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-question">What payment methods do you accept?</summary>
+                        <div class="accordion-answer">
+                            <p>We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers (for annual Enterprise plans). All payments are processed securely through our PCI-compliant payment processor.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-question">Is there a contract or long-term commitment?</summary>
+                        <div class="accordion-answer">
+                            <p>Monthly plans are month-to-month with no long-term contract. Annual plans require a 1-year commitment but offer a 20% discount. Enterprise plans may have custom contract terms based on your requirements.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-question">Do you offer refunds?</summary>
+                        <div class="accordion-answer">
+                            <p>We offer a 14-day free trial on all plans, so you can test everything before paying. If you're not satisfied within the first 30 days of a paid subscription, we offer a full refund. After 30 days, we offer prorated refunds for the unused portion of your subscription.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-question">Are there any setup or hidden fees?</summary>
+                        <div class="accordion-answer">
+                            <p>No. The price you see is what you pay. There are no setup fees, hidden charges, or overage fees for standard usage. For Enterprise plans, custom implementation or training services may be quoted separately based on your needs.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-question">Can I get a discount for non-profits or educational institutions?</summary>
+                        <div class="accordion-answer">
+                            <p>Yes! We offer a 25% discount for registered non-profits and educational institutions. Please <a href="contact.html">contact our sales team</a> with proof of your status to apply for this discount.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-cta" aria-labelledby="finalCtaHeading">
+            <div class="container">
+                <h2 id="finalCtaHeading">Still Have Questions?</h2>
+                <p>Our team is here to help you choose the right plan for your needs.</p>
+                <div class="cta-group">
+                    <a href="contact.html" class="btn btn-primary">Contact Sales</a>
+                    <a href="features.html" class="btn btn-outline">Explore Features</a>
+                </div>
+                <p class="cta-note">All plans include 14-day free trial • No credit card required to start • Cancel anytime</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="FlowSaaS Home">FlowSaaS</a>
+                    <p>Intelligent workflow automation for modern teams. Build faster, scale smarter.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> FlowSaaS Inc. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><span aria-hidden="true">𝕏</span></a>
+                    <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+                    <a href="#" aria-label="GitHub"><span aria-hidden="true">gh</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Core Variables & Reset */
+:root {
+  --text-color: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --spacing-unit: 1rem;
+  --spacing-unit-1: 0.5rem;
+  --spacing-unit-2: 1.5rem;
+  --spacing-unit-3: 2.5rem;
+  --font-base: 16px;
+  --animation-duration: 300ms;
+  --reduced-motion: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Reduced Motion Toggle */
+.accessibility-toggle {
+  display: inline-block;
+  width: 3.5rem;
+  height: 1.8rem;
+  border-radius: 0.9rem;
+  background-color: var(--surface-color);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+}
+
+.accessibility-toggle input {
+  display: none;
+  appearance: none;
+}
+
+.accessibility-toggle .slider {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  transition: all 0.2s ease;
+  transform: translateX(0);
+}
+
+.accessibility-toggle input:checked ~ .slider {
+  transform: translateX(1.7rem);
+  background-color: var(--secondary-color);
+}
+
+.accessibility-toggle input:checked ~ .slider::before {
+  content: '';
+  position: absolute;
+  top: -0.15rem;
+  left: -0.15rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 0 0 3px var(--surface-color);
+}
+
+/* Animation Classes */
+.animated-element {
+  transition: all var(--animation-duration) ease;
+  will-change: transform, opacity;
+}
+
+body.reduced-motion-active .animated-element {
+  transition: none !important;
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation-duration: 0.01s !important;
+    transition: none !important;
+  }
+  
+  .animated-element {
+    transition: none !important;
+  }
+}
+
+/* Accessibility Enhancements */
+.accessibility-toggle {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline 0.2s;
+}
+
+.accessibility-toggle:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Responsive Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit-1);
+}

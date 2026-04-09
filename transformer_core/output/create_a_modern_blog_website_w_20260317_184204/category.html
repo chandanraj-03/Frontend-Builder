@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence Articles & Research | Digital Horizon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">Digital Horizon</a>
+            <nav aria-label="Main Navigation">
+                <button class="mobile-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+                <ul id="primary-menu" class="navigation_menu">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="post.html">Post Detail</a></li>
+                    <li><a href="category.html" class="active">Category Archive</a></li>
+                    <li><a href="tag.html">Tag Archive</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="author.html">Author Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true">Legal</a>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search_bar">
+                <form role="search" action="search.html" method="get">
+                    <input type="search" name="q" placeholder="Search within AI articles..." aria-label="Search the site">
+                    <button type="submit">Search</button>
+                    <div class="category_filter">
+                        <label for="filter-category">Filter by:</label>
+                        <select id="filter-category" name="category">
+                            <option value="">All Categories</option>
+                            <option value="ml">Machine Learning</option>
+                            <option value="nlp">Natural Language Processing</option>
+                            <option value="vision">Computer Vision</option>
+                            <option value="ethics">AI Ethics</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="category-archive-container">
+        <div class="category_header">
+            <h1>Artificial Intelligence</h1>
+            <p class="category-description">Cutting-edge research, practical applications, and ethical discussions shaping the future of intelligent systems. From neural network architectures to real-world deployment challenges.</p>
+            <div class="category-stats">
+                <span class="category-count">42 articles</span> •
+                <span class="category-updated">Last updated: Today</span> •
+                <span class="category-followers">3.2k followers</span>
+            </div>
+        </div>
+
+        <div class="content-with-sidebar">
+            <div class="main-content">
+                <div class="category_filters">
+                    <div class="filter-group">
+                        <span class="filter-label">Sort by:</span>
+                        <button class="filter-button active">Latest</button>
+                        <button class="filter-button">Most Viewed</button>
+                        <button class="filter-button">Top Rated</button>
+                        <button class="filter-button">Trending</button>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Timeframe:</span>
+                        <button class="filter-button">All Time</button>
+                        <button class="filter-button active">This Month</button>
+                        <button class="filter-button">This Week</button>
+                        <button class="filter-button">Last 24h</button>
+                    </div>
+                </div>
+
+                <section class="posts_grid" aria-labelledby="posts-heading">
+                    <h2 id="posts-heading" class="visually-hidden">AI Articles</h2>
+                    <div class="grid-container">
+                        <article class="card">
+                            <img src="images/ai-ethics-board.jpg" alt="Diverse group of people around a table discussing AI governance" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">AI Ethics • 5 hours ago • 12 min read</div>
+                                <h3 class="card-title"><a href="post.html">Global Consortium Releases First Standardized AI Risk Assessment Framework</a></h3>
+                                <p class="card-description">Over 50 organizations across 12 countries have agreed on a common methodology for evaluating algorithmic bias, transparency, and societal impact before deployment.</p>
+                                <div class="card-stats">🔥 428 views • 💬 47 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/neural-architecture.jpg" alt="Complex 3D visualization of a neural network with attention mechanisms" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Machine Learning • 1 day ago • 8 min read</div>
+                                <h3 class="card-title"><a href="post.html">Transformer Alternatives: Are State Space Models the Next Breakthrough?</a></h3>
+                                <p class="card-description">New research shows Mamba and other SSMs achieve comparable performance to transformers on language tasks with 60% less computational cost during inference.</p>
+                                <div class="card-stats">🔥 892 views • 💬 63 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-medical-imaging.jpg" alt="Radiologist reviewing a scan alongside AI-generated annotations" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Computer Vision • 2 days ago • 10 min read</div>
+                                <h3 class="card-title"><a href="post.html">FDA Clears First Autonomous AI for Early-Stage Cancer Detection in CT Scans</a></h3>
+                                <p class="card-description">The system demonstrated 94% sensitivity in identifying lung nodules smaller than 6mm, potentially catching cancers years earlier than human radiologists alone.</p>
+                                <div class="card-stats">🔥 1.2k views • 💬 89 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-robotics-factory.jpg" alt="Robotic arms assembling electronics with AI vision guidance" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Robotics • 3 days ago • 15 min read</div>
+                                <h3 class="card-title"><a href="post.html">Multimodal LLMs Enable Robots to Understand Natural Language Instructions</a></h3>
+                                <p class="card-description">Factories report 40% reduction in programming time as workers can now verbally instruct robots with phrases like "move the red component near the blue one."</p>
+                                <div class="card-stats">🔥 756 views • 💬 52 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-climate-modeling.jpg" alt="Climate prediction maps generated by AI overlaying satellite imagery" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Climate AI • 4 days ago • 11 min read</div>
+                                <h3 class="card-title"><a href="post.html">Neural Weather Models Outperform Traditional Physics-Based Forecasts at 7+ Days</a></h3>
+                                <p class="card-description">Google's GraphCast and Nvidia's FourCastNet show remarkable accuracy in predicting extreme weather events beyond the one-week horizon.</p>
+                                <div class="card-stats">🔥 1.1k views • 💬 71 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-code-generation.jpg" alt="Developer's screen showing AI-generated code suggestions" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Developer Tools • 5 days ago • 7 min read</div>
+                                <h3 class="card-title"><a href="post.html">GitHub Copilot Study: AI Pair Programming Increases Developer Productivity by 55%</a></h3>
+                                <p class="card-description">Longitudinal study of 1,500 developers shows significant reduction in boilerplate code writing and faster debugging cycles with AI assistance.</p>
+                                <div class="card-stats">🔥 2.3k views • 💬 124 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-music-composition.jpg" alt="Musician collaborating with AI-generated musical notation on screen" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">Creative AI • 1 week ago • 9 min read</div>
+                                <h3 class="card-title"><a href="post.html">AI-Generated Symphony Performed by London Philharmonic to Critical Acclaim</a></h3>
+                                <p class="card-description">The 45-minute composition, created through iterative collaboration between composer and AI, challenges notions of artistic authorship and creativity.</p>
+                                <div class="card-stats">🔥 1.8k views • 💬 203 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-cybersecurity.jpg" alt="Network security dashboard showing AI-detected anomalies" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">AI Security • 1 week ago • 14 min read</div>
+                                <h3 class="card-title"><a href="post.html">Adversarial Attacks Fool Enterprise AI Systems Through Subtle Input Perturbations</a></h3>
+                                <p class="card-description">Research reveals how adding invisible noise to images or text can cause classification models to make dangerously incorrect predictions with high confidence.</p>
+                                <div class="card-stats">🔥 943 views • 💬 68 comments</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="images/ai-education.jpg" alt="Students in classroom interacting with personalized AI tutor on tablets" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">EdTech • 2 weeks ago • 12 min read</div>
+                                <h3 class="card-title"><a href="post.html">Personalized AI Tutors Demonstrate 30% Improvement in Standardized Test Scores</a></h3>
+                                <p class="card-description">Year-long study across 50 schools shows adaptive learning systems closing achievement gaps by providing individualized instruction at scale.</p>
+                                <div class="card-stats">🔥 1.5k views • 💬 97 comments</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <nav class="pagination" aria-label="Page navigation">
+                    <ul>
+                        <li><span class="current-page" aria-current="page">1</span></li>
+                        <li><a href="category.html?page=2">2</a></li>
+                        <li><a href="category.html?page=3">3</a></li>
+                        <li><a href="category.html?page=4">4</a></li>
+                        <li><span class="pagination-ellipsis">…</span></li>
+                        <li><a href="category.html?page=8">8</a></li>
+                        <li><a href="category.html?page=2" class="next-page">Next →</a></li>
+                    </ul>
+                    <div class="pagination-info">Showing 1-9 of 42 articles</div>
+                </nav>
+            </div>
+
+            <aside class="sidebar_categories">
+                <section class="categories_overview">
+                    <h3 class="category_header">Browse All Categories</h3>
+                    <ul class="category-list">
+                        <li class="category-item"><a href="category.html" class="category-link active">Artificial Intelligence <span class="category-count">(42)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Web Development <span class="category-count">(28)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Cybersecurity <span class="category-count">(35)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Quantum Computing <span class="category-count">(18)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Hardware & Gadgets <span class="category-count">(19)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Software Engineering <span class="category-count">(31)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Data Science <span class="category-count">(26)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Tech Policy & Ethics <span class="category-count">(15)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Startups & VC <span class="category-count">(22)</span></a></li>
+                        <li class="category-item"><a href="category.html" class="category-link">Climate Tech <span class="category-count">(17)</span></a></li>
+                    </ul>
+                </section>
+
+                <section class="category_filter">
+                    <h3>Filter by AI Subfield</h3>
+                    <div class="filter-options">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Machine Learning <span class="filter-count">(18)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Natural Language Processing <span class="filter-count">(12)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Computer Vision <span class="filter-count">(9)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Robotics & Autonomous Systems <span class="filter-count">(7)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>AI Ethics & Governance <span class="filter-count">(6)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Generative AI <span class="filter-count">(11)</span></span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span>Reinforcement Learning <span class="filter-count">(5)</span></span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="popular-tags">
+                    <h3>Top AI Topics</h3>
+                    <div class="tag-cloud">
+                        <a href="tag.html" class="tag">Large Language Models</a>
+                        <a href="tag.html" class="tag">Neural Architecture</a>
+                        <a href="tag.html" class="tag">Algorithmic Bias</a>
+                        <a href="tag.html" class="tag">Multimodal AI</a>
+                        <a href="tag.html" class="tag">Explainable AI</a>
+                        <a href="tag.html" class="tag">AI Safety</a>
+                        <a href="tag.html" class="tag">Edge AI</a>
+                        <a href="tag.html" class="tag">Federated Learning</a>
+                    </div>
+                </section>
+
+                <section class="trending-articles">
+                    <h3>Trending in AI</h3>
+                    <div class="trending-list">
+                        <div class="trending-item">
+                            <span class="trending-rank">1</span>
+                            <a href="post.html" class="trending-title">Meta Open Sources 400B Parameter Multimodal Model</a>
+                        </div>
+                        <div class="trending-item">
+                            <span class="trending-rank">2</span>
+                            <a href="post.html" class="trending-title">EU AI Act Final Text: What Developers Need to Know</a>
+                        </div>
+                        <div class="trending-item">
+                            <span class="trending-rank">3</span>
+                            <a href="post.html" class="trending-title">AI Discovers New Antibiotic Class Using Protein Folding</a>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Digital Horizon</a>
+                <p>Illuminating the path of technology with independent reporting, rigorous testing, and forward-looking analysis since 2018.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="category.html">All Categories</a></li>
+                        <li><a href="author.html">Our Authors</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact Editorial</a></li>
+                        <li><a href="#">Submit a Tip</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Digital Horizon Media. All rights reserved. All trademarks and registered trademarks are the property of their respective owners.</p>
+            <p>Headquartered in San Francisco, with contributors around the globe.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
