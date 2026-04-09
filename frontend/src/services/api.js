@@ -5,7 +5,10 @@
  * JWT token is automatically attached from localStorage.
  */
 
-const BASE = "";
+// In development: BASE is "" — Vite proxy forwards /api/* to localhost:8000
+// In production (Vercel): VITE_API_URL is set to "" because Vercel routes /api/* internally
+const BASE = import.meta.env.VITE_API_URL ?? "";
+
 
 // ── Token helpers ─────────────────────────────────────────────────────
 

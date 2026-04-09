@@ -1,0 +1,27 @@
+# ── Vercel serverless adapter ─────────────────────────────────────────
+mangum
+
+# ── AI / LLM ─────────────────────────────────────────────────────────
+ollama
+colorama
+requests
+
+# ── Web Framework ─────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+
+# ── Database ──────────────────────────────────────────────────────────
+pymongo[srv]
+motor
+certifi
+
+# ── Auth ──────────────────────────────────────────────────────────────
+python-jose[cryptography]
+bcrypt
+
+# ── Validation / Config ───────────────────────────────────────────────
+pydantic[email]
+python-dotenv
+
+# ── Utilities ─────────────────────────────────────────────────────────
+python-multipart
