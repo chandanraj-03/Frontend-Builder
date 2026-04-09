@@ -11,7 +11,7 @@ fastapi
 uvicorn[standard]
 
 # ── Database ──────────────────────────────────────────────────────────
-pymongo[srv]
+pymongo
 motor
 certifi
 
