@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details - TodoMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <h1>TodoMaster</h1>
+                <p>Task Management System</p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Todo Dashboard</a></li>
+                    <li><a href="task-detail.html" class="active">Task Detail View</a></li>
+                    <li><a href="settings.html">Settings Page</a></li>
+                    <li><a href="help.html">Help & Tutorial</a></li>
+                    <li><a href="stats.html">Statistics & Analytics</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search tasks..." aria-label="Search tasks">
+                    <button type="submit">🔍</button>
+                </div>
+                <div class="cart-icon">
+                    <span class="cart-count">2</span>
+                    <span class="cart-label">Items</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="task-detail-view">
+            <div class="detail-header">
+                <h2>Task Details</h2>
+                <p>Edit and manage your task properties</p>
+            </div>
+
+            <form class="task-editor-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" class="task-title-editor" value="Complete Q3 Financial Report Analysis" aria-label="Task title">
+                </div>
+
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea id="task-description" class="task-description-field" rows="5" aria-label="Task description">Analyze quarterly financial performance, prepare summary report for stakeholders, include revenue trends, expense analysis, and projections for next quarter. Coordinate with finance team for accurate data.</textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" id="due-date" class="due-date-selector" value="2024-09-30" aria-label="Due date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority Level</label>
+                        <select id="priority" class="priority-selector" aria-label="Task priority">
+                            <option value="low">Low Priority</option>
+                            <option value="medium">Medium Priority</option>
+                            <option value="high" selected>High Priority</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <div class="status-toggle">
+                        <input type="checkbox" id="task-status" checked>
+                        <label for="task-status">Completed</label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="save-changes-button">Save Changes</button>
+                    <button type="button" class="delete-task-button">Delete Task</button>
+                </div>
+            </form>
+
+            <div class="task-meta">
+                <h3>Task Information</h3>
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Created:</span>
+                        <span class="meta-value">August 15, 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Last Updated:</span>
+                        <span class="meta-value">September 10, 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Estimated Time:</span>
+                        <span class="meta-value">4 hours</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category:</span>
+                        <span class="meta-value">Finance & Reporting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TodoMaster. Streamlining your workflow efficiency.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

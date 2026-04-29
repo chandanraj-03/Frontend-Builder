@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CheckCircle, Clock, XCircle } from "lucide-react";
 import { useAuth } from "../../context/authcontext";
 import { useTask } from "../../context/taskcontext";
@@ -43,9 +43,8 @@ function logLevelClass(level) {
 }
 
 const BuildLog = () => {
-    const { user, logout } = useAuth();
+    const { user } = useAuth();
     const { currentProject, buildLogs, buildStatus, isBuilding, cancelBuild } = useTask();
-    const navigate = useNavigate();
     const terminalRef = useRef(null);
 
     // Auto-scroll terminal to bottom on new logs

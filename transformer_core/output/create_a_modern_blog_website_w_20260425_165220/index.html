@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='4' fill='%23f7dc6f'/%3E%3C/svg%3E">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+        :root {
+            --blue: #4567b7;
+            --light-blue: #6495ed;
+            --yellow: #f7dc6f;
+            --white: #ffffff;
+            --black: #000000;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--blue);
+            color: var(--white);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--yellow);
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--light-blue);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--blue);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            width: calc(100% - 3rem);
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: var(--white);
+        }
+
+        .search-bar button {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: var(--blue);
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1920/1080');
+            background-size: cover;
+            color: var(--white);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .featured-posts {
+            display: grid;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .featured-post {
+            background-color: var(--white);
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .featured-post:hover {
+            transform: scale(1.05);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .categories, .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .author-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .author-profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to our blog!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="featured-posts"></section>
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul class="categories"></ul>
+            <h2>Tags</h2>
+            <ul class="tags"></ul>
+            <h2>Author Profile</h2>
+            <div class="author-profile">
+                <img src="https://picsum.photos/200" alt="Author's profile picture">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2023 Our Blog</p>
+    </footer>
+</body>
+</html>

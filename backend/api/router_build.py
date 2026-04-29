@@ -105,64 +105,12 @@ def _run_pipeline(project_id: str, project: dict, user_id: str):
             raw_model = project.get("ollama_model") or OLLAMA_MODEL
             # Map UI tier keys (fast/balanced/advanced/creative) to real model names
             model = MODEL_TIER_MAP.get(raw_model, raw_model) or OLLAMA_MODEL
-            
-            # Validate that the model exists in AVAILABLE_MODELS, otherwise fall back to default
-            if model not in AVAILABLE_MODELS:
-                emit("warn", f"Model '{model}' not found in available models. Using default: {OLLAMA_MODEL}")
-                model = OLLAMA_MODEL
-            
             emit("info", f"🚀 Starting build — model: {model} (tier: {raw_model})")
             prompt   = project["prompt"]
             theme    = project.get("color_theme", "default")
             out_base = OUTPUT_DIR
 
             import functools
-
-            turbo_mode = project.get("turbo_mode", False)
-            if turbo_mode:
-                from transformer_core.agents.turbo_mode import REFINE_SYSTEM, GENERATE_SYSTEM, ollama_chat, extract_html
-                
-                emit("stage", "Turbo Mode — Refining idea...")
-                if cancel_evt.is_set(): raise RuntimeError("Build cancelled by user.")
-                refined_prompt = await asyncio.get_event_loop().run_in_executor(
-                    None, functools.partial(ollama_chat, system=REFINE_SYSTEM, prompt=prompt, model=model)
-                )
-                emit("info", "Refined prompt ready.")
-                
-                emit("stage", "Turbo Mode — Generating UI...")
-                if cancel_evt.is_set(): raise RuntimeError("Build cancelled by user.")
-                raw_html = await asyncio.get_event_loop().run_in_executor(
-                    None, functools.partial(ollama_chat, system=GENERATE_SYSTEM, prompt=refined_prompt, model=model)
-                )
-                
-                emit("info", "Extracting HTML...")
-                html_content = extract_html(raw_html)
-                
-                import re, datetime as dt
-                safe_title = re.sub(r"[^a-z0-9_]", "_", project.get("title", "project").lower())[:30]
-                stamp      = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
-                proj_dir   = os.path.join(out_base, f"{safe_title}_{stamp}")
-                os.makedirs(proj_dir, exist_ok=True)
-                
-                with open(os.path.join(proj_dir, "index.html"), "w", encoding="utf-8") as f:
-                    f.write(html_content)
-                
-                project_repo.add_page(project_id, "index")
-                
-                artifact_repo.upsert(
-                    project_id = project_id,
-                    user_id    = user_id,
-                    filename   = "index.html",
-                    content    = html_content,
-                    file_type  = "html",
-                    agent      = "turbo_mode",
-                )
-                
-                project_repo.update(project_id, {"output_dir": proj_dir})
-                project_repo.set_status(project_id, "completed")
-                emit("success", "✅ Turbo build completed successfully!")
-                await _manager.broadcast(project_id, {"type": "status", "status": "completed"})
-                return
 
             # ── Stage 1 — Conversation / clarification ────────────────────
             emit("stage", "Stage 1/6 — Analysing prompt...")
@@ -262,15 +210,11 @@ def _run_pipeline(project_id: str, project: dict, user_id: str):
         except RuntimeError as cancel_err:
             project_repo.set_status(project_id, "failed", str(cancel_err))
             emit("warning", f"⚠️ {cancel_err}")
-            print(f"[BUILD ERROR] {cancel_err}", flush=True)
             await _manager.broadcast(project_id, {"type": "status", "status": "cancelled"})
 
         except Exception as exc:
             project_repo.set_status(project_id, "failed", str(exc))
             emit("error", f"❌ Build failed: {exc}")
-            print(f"[BUILD ERROR] {exc}", flush=True)
-            import traceback
-            traceback.print_exc()
             await _manager.broadcast(project_id, {"type": "status", "status": "failed"})
 
         finally:

@@ -45,8 +45,7 @@ const COMPLEXITY_STYLE = {
     High:   { bg: "rgba(239,68,68,0.12)",   text: "#dc2626", border: "rgba(239,68,68,0.35)"  },
 };
 
-const TEMPLATES_PER_PAGE = 8;
-
+const TEMPLATES_PER_PAGE =9;
 const Project = () => {
     const { logout } = useAuth();
     const { createProject, startBuild } = useTask();
@@ -189,7 +188,7 @@ const Project = () => {
                     <a href="#overview" className="navbar-link">
                         <img src="/logo.png" alt="Logo" className="navbar-logo-icon" />
                     </a>
-                    <span className="navbar-title">Frontend AI Builder</span>
+                    <span className="navbar-title">Prototype Builder</span>
                 </div>
                 <ul className="sidebar-menu">
                     <li><Link to="/overview"><LayoutDashboard size={20} /> Overview</Link></li>
@@ -353,17 +352,6 @@ const Project = () => {
                                         {/* Metadata chips */}
                                         <div className="detail-chips-row">
                                             <span className="detail-chip cat-chip">📁 {detailTemplate.category}</span>
-                                            <span
-                                                className="detail-chip"
-                                                style={{
-                                                    background: cxStyle(detailTemplate.complexity).bg,
-                                                    color:      cxStyle(detailTemplate.complexity).text,
-                                                    border:    `1px solid ${cxStyle(detailTemplate.complexity).border}`,
-                                                }}
-                                            >
-                                                ⚡ {detailTemplate.complexity}
-                                            </span>
-                                            <span className="detail-chip time-chip">⏱️ {detailTemplate.estimated_time}</span>
                                             <span className="detail-chip feat-chip">✨ {detailTemplate.features ?? 0} features</span>
                                         </div>
 
@@ -421,25 +409,12 @@ const Project = () => {
                                                 className="template-card"
                                                 onClick={() => setDetailTemplate(tmpl)}
                                             >
-                                                <div className="template-img-container">
-                                                    <div
-                                                        className="template-placeholder-img"
-                                                        style={{ background: tmpl.gradient || "linear-gradient(135deg,#667eea,#764ba2)" }}
-                                                    />
-                                                </div>
                                                 <div className="template-content">
                                                     <h3>{tmpl.name}</h3>
                                                     <p>{tmpl.description}</p>
 
                                                     <div className="tmpl-meta-row">
                                                         <span className="tmpl-meta-item">📁 {tmpl.category}</span>
-                                                        <span
-                                                            className="tmpl-meta-item"
-                                                            style={{ color: cxStyle(tmpl.complexity).text }}
-                                                        >
-                                                            ⚡ {tmpl.complexity}
-                                                        </span>
-                                                        <span className="tmpl-meta-item">⏱️ {tmpl.estimated_time}</span>
                                                         <span className="tmpl-meta-item">✨ {tmpl.features ?? 0} features</span>
                                                     </div>
 
@@ -491,14 +466,14 @@ const Project = () => {
                     {error && !showBrowser && <p className="project-error">{error}</p>}
 
                     <div className="turbo-mode-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: '1rem' }}>
-                        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '0.5rem', color: '#e2e8f0' }}>
+                        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '0.5rem', color: 'red' }}>
                             <input 
                                 type="checkbox" 
                                 checked={isTurboMode} 
                                 onChange={(e) => setIsTurboMode(e.target.checked)} 
                                 style={{ width: '1.2rem', height: '1.2rem', cursor: 'pointer', accentColor: '#818cf8' }}
                             />
-                            <strong>⚡ Turbo Mode</strong> (Directly generate UI with AI)
+                            <strong>⚡ Turbo Mode</strong>(Use for quick iterations and prototyping..)
                         </label>
                     </div>
 

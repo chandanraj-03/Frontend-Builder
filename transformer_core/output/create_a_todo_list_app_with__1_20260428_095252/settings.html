@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - TodoMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <h1>TodoMaster</h1>
+                <p>Customize Your Experience</p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Todo Dashboard</a></li>
+                    <li><a href="task-detail.html">Task Detail View</a></li>
+                    <li><a href="settings.html" class="active">Settings Page</a></li>
+                    <li><a href="help.html">Help & Tutorial</a></li>
+                    <li><a href="stats.html">Statistics & Analytics</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search settings..." aria-label="Search settings">
+                    <button type="submit">🔍</button>
+                </div>
+                <div class="cart-icon">
+                    <span class="cart-count">1</span>
+                    <span class="cart-label">Item</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="settings-page">
+            <div class="settings-header">
+                <h2>Application Settings</h2>
+                <p>Customize TodoMaster to match your workflow preferences</p>
+            </div>
+
+            <form class="settings-form">
+                <div class="settings-section">
+                    <h3>Appearance</h3>
+                    <div class="form-group">
+                        <label for="theme-selector">Theme Preference</label>
+                        <select id="theme-selector" class="theme-selector" aria-label="Select application theme">
+                            <option value="light">Light Theme</option>
+                            <option value="dark" selected>Dark Theme</option>
+                            <option value="auto">Auto (System Default)</option>
+                            <option value="high-contrast">High Contrast</option>
+                            <option value="blue-light">Blue Light Filter</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="font-size">Font Size</label>
+                        <select id="font-size" aria-label="Select font size">
+                            <option value="small">Small</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="large">Large</option>
+                            <option value="x-large">Extra Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Notifications</h3>
+                    <div class="notification-settings">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="email-notifications" checked>
+                            <label for="email-notifications">Email notifications for due tasks</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="browser-notifications" checked>
+                            <label for="browser-notifications">Browser notifications</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="mobile-notifications">
+                            <label for="mobile-notifications">Mobile push notifications</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="reminder-sound" checked>
+                            <label for="reminder-sound">Play sound for reminders</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="reminder-time">Reminder Time Before Due</label>
+                            <select id="reminder-time" aria-label="Reminder time before due date">
+                                <option value="15">15 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="60" selected>1 hour</option>
+                                <option value="1440">1 day</option>
+                                <option value="10080">1 week</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Data Management</h3>
+                    <div class="data-backup-options">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="auto-backup" checked>
+                            <label for="auto-backup">Automatic daily backup</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="cloud-sync">
+                            <label for="cloud-sync">Sync with cloud storage</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="backup-retention">Backup Retention Period</label>
+                            <select id="backup-retention" aria-label="Backup retention period">
+                                <option value="7">7 days</option>
+                                <option value="30" selected>30 days</option>
+                                <option value="90">90 days</option>
+                                <option value="365">1 year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="export-import-feature">
+                        <h4>Export/Import Data</h4>
+                        <div class="action-buttons">
+                            <button type="button" class="export-btn">Export All Data (JSON)</button>
+                            <button type="button" class="export-btn">Export as CSV</button>
+                            <button type="button" class="import-btn">Import Data</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Accessibility</h3>
+                    <div class="accessibility-settings">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="keyboard-shortcuts" checked>
+                            <label for="keyboard-shortcuts">Enable keyboard shortcuts</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="screen-reader">
+                            <label for="screen-reader">Screen reader optimized mode</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="reduced-motion">
+                            <label for="reduced-motion">Reduce animations and motion</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="high-contrast-mode">
+                            <label for="high-contrast-mode">High contrast mode</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="tab-index">Tab Navigation Order</label>
+                            <select id="tab-index" aria-label="Tab navigation order">
+                                <option value="sequential">Sequential</option>
+                                <option value="custom" selected>Custom Order</option>
+                                <option value="priority">Priority-based</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="save-settings-button">Save All Settings</button>
+                    <button type="button" class="reset-btn">Reset to Defaults</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TodoMaster. Your personalized productivity platform.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

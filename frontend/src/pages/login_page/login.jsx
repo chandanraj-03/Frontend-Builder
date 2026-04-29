@@ -54,14 +54,14 @@ const Login = () => {
       <Link to="/" style={{ textDecoration: "none" }}>
         <div className="logo">
           <img src="/logo.png" alt="Logo" />
-          <span className="logo-text">Frontend AI Builder</span>
+          <span className="logo-text">Prototype Builder</span>
         </div>
       </Link>
 
       <div className="text-container">
         <h1>Build your frontend with AI</h1>
         <p>
-          👉Frontend AI Builder is a platform that allows you to create beautiful interfaces using
+          👉Prototype Builder is a platform that allows you to create beautiful interfaces using
           artificial intelligence.<br />
           👉No need to write code, just describe your idea and we generate the frontend.<br />
           👉50+ Ready-Made Templates — don't need to describe logical terms.<br />
@@ -83,21 +83,21 @@ const Login = () => {
         <form className="auth-form" onSubmit={handleAuth}>
           {mode === "signup" && (
             <div className="form-group">
-              <label>Full Name</label>
+              <label style={{color: "#f8f8fa"}}>Full Name</label>
               <input type="text" placeholder="Enter your name" value={name}
                 onChange={(e) => setName(e.target.value)} required />
             </div>
           )}
 
           <div className="form-group">
-            <label>Email</label>
+            <label style={{color: "#f8f8fa"}}>Email</label>
             <input type="email" placeholder="Enter your email" value={email}
               onChange={(e) => setEmail(e.target.value)} required />
           </div>
 
           {mode !== "reset" && (
             <div className="form-group">
-              <label>Password</label>
+              <label style={{color: "#f8f8fa"}}>Password</label>
               <input type="password" placeholder="Enter your password" value={password}
                 onChange={(e) => setPassword(e.target.value)} required />
             </div>
@@ -105,7 +105,7 @@ const Login = () => {
 
           {mode === "signup" && (
             <div className="form-group">
-              <label>Confirm Password</label>
+              <label style={{color: "#f8f8fa"}}>Confirm Password</label>
               <input type="password" placeholder="Confirm your password" value={confirm}
                 onChange={(e) => setConfirm(e.target.value)} required />
             </div>

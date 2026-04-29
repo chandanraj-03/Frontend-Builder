@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Category - Community Forum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo">CommunityForum</a>
+                <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Category View</a></li>
+                    <li><a href="thread.html">Thread Detail</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="messages.html">Messaging</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="admin.html">Admin Dashboard</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                    <li><a href="new-thread.html">New Thread</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                </ul>
+                <div class="user-nav">
+                    <a href="notifications.html" class="notification-bell" aria-label="Notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-count">2</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-toggle" aria-expanded="false">Welcome, User</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Technology</li>
+            </ol>
+        </nav>
+
+        <section class="category-header">
+            <h1>Technology Discussions</h1>
+            <p>Explore the latest in software development, hardware innovations, and tech industry trends</p>
+            <a href="new-thread.html" class="new-thread-button">Start New Discussion</a>
+        </section>
+
+        <section class="controls-section">
+            <div class="sorting-options">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="most-comments">Most Comments</option>
+                    <option value="most-views">Most Views</option>
+                </select>
+            </div>
+            <div class="filter-controls">
+                <label for="filter-status">Status:</label>
+                <select id="filter-status">
+                    <option value="all">All Threads</option>
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                </select>
+                <label for="filter-tags">Tags:</label>
+                <select id="filter-tags">
+                    <option value="">All Tags</option>
+                    <option value="programming">Programming</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="hardware">Hardware</option>
+                    <option value="security">Security</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="thread-list" aria-labelledby="threads-heading">
+            <h2 id="threads-heading" class="visually-hidden">Threads in Technology Category</h2>
+            
+            <div class="pinned-threads">
+                <h3 class="pinned-indicator">📌 Pinned Discussions</h3>
+                <article class="thread-item pinned">
+                    <div class="thread-content">
+                        <h4><a href="thread.html?id=201">Community Guidelines & Tech Discussion Rules</a></h4>
+                        <p>Please read and follow our community guidelines for productive technical discussions...</p>
+                        <div class="thread-meta">
+                            <span class="author">By Admin Team</span>
+                            <span class="comments">45 comments</span>
+                            <span class="views">1.2k views</span>
+                            <span class="date">Last updated: 3 days ago</span>
+                        </div>
+                    </div>
+                    <div class="thread-stats">
+                        <span class="reply-count">45</span>
+                        <span class="view-count">1.2k</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="regular-threads">
+                <article class="thread-item">
+                    <div class="thread-content">
+                        <h4><a href="thread.html?id=202">Best Practices for React Performance Optimization</a></h4>
+                        <p>Sharing techniques and tools to optimize React applications for better performance...</p>
+                        <div class="thread-meta">
+                            <span class="author">By Sarah Chen</span>
+                            <span class="comments">87 comments</span>
+                            <span class="views">2.4k views</span>
+                            <span class="date">Posted: 2 hours ago</span>
+                            <span class="tags"><span class="tag">programming</span> <span class="tag">react</span></span>
+                        </div>
+                    </div>
+                    <div class="thread-stats">
+                        <span class="reply-count">87</span>
+                        <span class="view-count">2.4k</span>
+                    </div>
+                </article>
+
+                <article class="thread-item">
+                    <div class="thread-content">
+                        <h4><a href="thread.html?id=203">GPU Market Trends 2024: What to Expect</a></h4>
+                        <p>Analysis of upcoming GPU releases, pricing trends, and market predictions for this year...</p>
+                        <div class="thread-meta">
+                            <span class="author">By Mike Rodriguez</span>
+                            <span class="comments">34 comments</span>
+                            <span class="views">1.8k views</span>
+                            <span class="date">Posted: 5 hours ago</span>
+                            <span class="tags"><span class="tag">hardware</span> <span class="tag">gpu</span></span>
+                        </div>
+                    </div>
+                    <div class="thread-stats">
+                        <span class="reply-count">34</span>
+                        <span class="view-count">1.8k</span>
+                    </div>
+                </article>
+
+                <article class="thread-item">
+                    <div class="thread-content">
+                        <h4><a href="thread.html?id=204">Cybersecurity Threats: Latest Vulnerabilities</a></h4>
+                        <p>Discussion about recent security vulnerabilities and best practices for protection...</p>
+                        <div class="thread-meta">
+                            <span class="author">By Dr. Emily Wong</span>
+                            <span class="comments">156 comments</span>
+                            <span class="views">3.7k views</span>
+                            <span class="date">Posted: 1 day ago</span>
+                            <span class="tags"><span class="tag">security</span> <span class="tag">cybersecurity</span></span>
+                        </div>
+                    </div>
+                    <div class="thread-stats">
+                        <span class="reply-count">156</span>
+                        <span class="view-count">3.7k</span>
+                    </div>
+                </article>
+
+                <article class="thread-item">
+                    <div class="thread-content">
+                        <h4><a href="thread.html?id=205">Machine Learning Model Deployment Strategies</a></h4>
+                        <p>Comparing different approaches to deploy ML models in production environments...</p>
+                        <div class="thread-meta">
+                            <span class="author">By Alex Thompson</span>
+                            <span class="comments">72 comments</span>
+                            <span class="views">2.1k views</span>
+                            <span class="date">Posted: 2 days ago</span>
+                            <span class="tags"><span class="tag">ai</span> <span class="tag">machine-learning</span></span>
+                        </div>
+                    </div>
+                    <div class="thread-stats">
+                        <span class="reply-count">72</span>
+                        <span class="view-count">2.1k</span>
+                    </div>
+                </article>
+
+                <article class="thread-item">
+                    <div class="thread-content">
+                        <h4><a href="thread.html?id=206">Web3 Development: Current State and Future</a></h4>
+                        <p>Exploring the current landscape of Web3 technologies and development practices...</p>
+                        <div class="thread-meta">
+                            <span class="author">By James Wilson</span>
+                            <span class="comments">29 comments</span>
+                            <span class="views">1.5k views</span>
+                            <span class="date">Posted: 3 days ago</span>
+                            <span class="tags"><span class="tag">web3</span> <span class="tag">blockchain</span></span>
+                        </div>
+                    </div>
+                    <div class="thread-stats">
+                        <span class="reply-count">29</span>
+                        <span class="view-count">1.5k</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <nav class="pagination" aria-label="Thread pagination">
+            <span class="page-info">Showing 1-6 of 1,245 threads</span>
+            <div class="page-controls">
+                <button disabled>Previous</button>
+                <button aria-current="page">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <span>...</span>
+                <button>208</button>
+                <button>Next</button>
+            </div>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Community Forum</h3>
+                <p>Connecting minds through meaningful discussions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="new-thread.html">Start Discussion</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Contact Moderators</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

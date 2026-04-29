@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - PixelCraft Studio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<nav aria-label="Main navigation">
+<div class="logo">
+<a href="index.html">PixelCraft Studio</a>
+</div>
+<button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html" aria-current="page">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section aria-label="Contact form">
+<form id="contactForm" aria-label="Contact form">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="subject">Subject</label>
+<select id="subject" name="subject" required>
+<option value="">Select a subject</option>
+<option value="project">Project Inquiry</option>
+<option value="collab">Collaboration</option>
+<option value="support">Support</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" required></textarea>
+</div>
+<button type="submit">Send Message</button>
+</form>
+</section>
+<section aria-label="Contact information">
+<h2>Contact Details</h2>
+<address>
+<p>PixelCraft Studio</p>
+<p>123 Design Avenue, Suite 456</p>
+<p>San Francisco, CA 94107</p>
+<p>Phone: (415) 555-0123</p>
+<p>Email: <a href="mailto:hello@pixelcraftstudio.com">hello@pixelcraftstudio.com</a></p>
+</address>
+</section>
+<section aria-label="Office location map">
+<h2>Find Us</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.321388520623!2d-122.4191199246955!3d37.77492997523401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807c1b8d0c6d%3A0x5a5d7b1e4e1e1e1e!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1679342345678!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+</main>
+<footer>
+<p>&copy; 2023 PixelCraft Studio. All rights reserved.</p>
+<nav aria-label="Social media links">
+<a href="https://twitter.com/pixelcraft" aria-label="Twitter">Twitter</a>
+<a href="https://linkedin.com/in/pixelcraft" aria-label="LinkedIn">LinkedIn</a>
+<a href="https://github.com/pixelcraft" aria-label="GitHub">GitHub</a>
+</nav>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

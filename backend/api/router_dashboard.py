@@ -65,10 +65,12 @@ def dashboard(user_id: str = Depends(get_current_user_id)):
     m, s   = divmod(rem, 60)
     uptime_str = f"{h}h {m}m {s}s"
 
-    # Ping Ollama for LLM engine status
+    # Ping Ollama for LLM engine status (short timeout to avoid proxy ECONNRESET)
     try:
-        import ollama as _ollama
-        _models = _ollama.list().get("models", [])
+        import requests as _req
+        resp = _req.get("http://localhost:11434/api/tags", timeout=3)
+        resp.raise_for_status()
+        _models = resp.json().get("models", [])
         ollama_status = "Online"
         ollama_models = [m["model"] for m in _models]
     except Exception:

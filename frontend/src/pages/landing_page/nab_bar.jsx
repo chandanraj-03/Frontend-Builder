@@ -13,7 +13,7 @@ const NavBar = () => {
           <a href="#about" className="navbar-link">
             <img src={logo} alt="Logo" className="navbar-logo-icon" onMouseOver={(e) => e.target.style.transform = "scale(1.1)"} onMouseOut={(e) => e.target.style.transform = "scale(1)"} />
           </a>
-          <span className="navbar-title">Frontend Builder</span>
+          <span className="navbar-title">Prototype Builder</span>
 
         </div>
 

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging - Community Forum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="极速飞艇开奖结果官网" class="logo">CommunityForum</a>
+                <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="极速飞艇开奖结果官网">Home</a></li>
+                    <极速飞艇开奖结果官网 href="category.html">Category View</a></li>
+                    <li><a href="thread.html">Thread Detail</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="messages.html">Messaging</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="admin.html">Admin Dashboard</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                    <li><a href="new-thread.html">New Thread</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                </ul>
+                <div class="user-nav">
+                    <a href="notifications.html" class="notification-bell" aria-label="Notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-count">5</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-toggle" aria-expanded="false">Sarah Chen</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="messaging-container">
+        <header class="messages-header">
+            <h1>Private Messages</h1>
+            <div class="message-search">
+                <form class="search-form" role="search">
+                    <input type="search" placeholder="Search messages..." aria-label="Search messages">
+                    <select aria-label="Filter messages">
+                        <option value="all">All Messages</option>
+                        <option value="unread">Unread Only</option>
+                        <option value="sent">Sent Items</option>
+                        <option value="from">From Specific User</option>
+                    </select>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </header>
+
+        <div class="messaging-layout">
+            <aside class="message-folders">
+                <nav class="folder-nav">
+                    <button class="folder-active">Inbox <span class="badge">12</span></button>
+                    <button>Sent Items</button>
+                    <button>Drafts</button>
+                    <button>Archived</button>
+                </nav>
+
+                <div class="inbox-list">
+                    <div class="conversation active">
+                        <img src="images/avatar-mike.jpg" alt="Mike Rodriguez" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <h3>Mike Rodriguez</h3>
+                            <p>Thanks for the React performance tips! I implemented...</p>
+                            <span class="conversation-time">2 hours ago</span>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+
+                    <div class="conversation">
+                        <img src="images/avatar-emily.jpg" alt="Emily Wong" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <h3>Emily Wong</h3>
+                            <p>Are you attending the React Conference next month?</p>
+                            <span class="conversation-time">5 hours ago</span>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+
+                    <div class="conversation">
+                        <img src="images/avatar-alex.jpg" alt="Alex Thompson" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <h3>Alex Thompson</h3>
+                            <p>I'd love to collaborate on that open source project...</p>
+                            <span class="conversation-time">1 day ago</span>
+                        </div>
+                    </div>
+
+                    <div class="conversation">
+                        <img src="images/avatar-james.jpg" alt="James Wilson" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <h3>James Wilson</h3>
+                            <p>Regarding the Web3 development discussion...</p>
+                            <span class="conversation-time">2 days ago</span>
+                        </div>
+                    </div>
+
+                    <div class="conversation">
+                        <img src="images/avatar-lisa.jpg" alt="Lisa Zhang" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <h3>Lisa Zhang</h3>
+                            <p>Could you review my portfolio website?</p>
+                            <span class="conversation-time">3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="message-thread">
+                <header class="thread-header">
+                    <div class="thread-participant">
+                        <img src="images/avatar-mike.jpg" alt="Mike Rodriguez" class="participant-avatar">
+                        <div>
+                            <h2>Mike Rodriguez</h2>
+                            <span class="participant-status">Online</span>
+                        </div>
+                    </div>
+                    <div class="thread-actions">
+                        <button class="action-button" aria-label="Archive conversation">📁</button>
+                        <button class="action-button" aria-label="Delete conversation">🗑️</button>
+                        <button class="action-button" aria-label="Block user">🚫</button>
+                    </div>
+                </header>
+
+                <div class="messages-container">
+                    <div class="message received">
+                        <img src="images/avatar-mike.jpg" alt="Mike Rodriguez" class="message-avatar">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Mike Rodriguez</span>
+                                <span class="message-time">2 hours ago</span>
+                            </div>
+                            <div class="message-body">
+                                <p>Hey Sarah! Thanks for the detailed React performance tips in your latest thread. I implemented the useMemo optimization you suggested and it reduced our component re-renders by 40%!</p>
+                                <p>Do you have any recommendations for handling large data sets in React tables? We're dealing with thousands of rows and performance is becoming an issue.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message sent">
+                        <img src="images/avatar-sarah.jpg" alt="Sarah Chen" class="message-avatar">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">You</span>
+                                <span class="message-time">1 hour ago</span>
+                            </div>
+                            <div class="message-body">
+                                <p>That's great to hear about the performance improvement! For large data sets in tables, I'd recommend:</p>
+                                <p>1. Virtualization - Only render visible rows using react-window or react-virtualized</p>
+                                <p>2. Pagination - Break data into manageable chunks</p>
+                                <p>3. Memoize row components to prevent unnecessary re-renders</p>
+                                <p>4. Consider using Web Workers for heavy data processing</p>
+                                <p>Would you like me to share some code examples?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message received">
+                        <img src="images/avatar-mike.jpg" alt="Mike Rodriguez" class="message-avatar">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Mike Rodriguez</span>
+                                <span class="message-time">30 minutes ago</span>
+                            </div>
+                            <div class="message-body">
+                                <p>Code examples would be fantastic! We're currently using react-table but struggling with performance when users apply multiple filters.</p>
+                                <p>Also, have you worked with React Query for server state management? I'm considering it for our API data fetching.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compose-interface">
+                    <form class="message-form">
+                        <textarea placeholder="Type your message..." rows="4"></textarea>
+                        <div class="compose-actions">
+                            <button type="button" class="format-button" aria-label="Bold">B</button>
+                            <button type="button" class="format-button" aria-label="Italic">I</button>
+                            <button type="button" class="format-button" aria-label="Code">{"<>"}</button>
+                            <button type="button" class="attach-button" aria-label="Attach file">📎</button>
+                            <button type="submit" class="send-button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <section class="notification-preferences">
+            <h2>Message Notifications</h2>
+            <form class="notifications-form">
+                <label class="checkbox-label">
+                    <input type="checkbox" checked> Email notifications for new messages
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" checked> Push notifications for urgent messages
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox"> Notify when messages are read
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" checked> Sound alerts for new messages
+                </label>
+                <button type="submit" class="save-preferences">Save Preferences</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Community Forum</h3>
+                <p>Connecting minds through meaningful discussions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="极速飞艇开奖结果官网">Home</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="new-thread.html">Start Discussion</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h极速飞艇开奖结果官网>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Contact Moderators</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

@@ -46,7 +46,6 @@ class ProjectRepository:
         prompt: str,
         color_theme: str = "default",
         ollama_model: str = "qwen3-vl:8b",
-        turbo_mode: bool = False,
     ) -> dict:
         now = datetime.utcnow()
         doc = {
@@ -57,7 +56,6 @@ class ProjectRepository:
             "pages": [],
             "color_theme": color_theme,
             "ollama_model": ollama_model,
-            "turbo_mode": turbo_mode,
             "output_dir": None,
             "created_at": now,
             "updated_at": now,

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tech Store | Premium Wireless Headphones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --primary-dark: #2a6cde;
+            --secondary: #f8f9fa;
+            --accent: #ff6b6b;
+            --dark: #1a1a1a;
+            --light: #f0f0f0;
+            --success: #00d285;
+            --warning: #ffc107;
+            --text: #2d2d2d;
+            --text-light: #555555;
+            --border: #e0e0e0;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f5f7fa;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.9) 100%);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            background: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .cart-icon .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--accent);
+            color: white;
+            font-size: 0.8rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a192f 0%, #112d4e 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .product-image {
+            flex: 0 0 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+            transition: var(--transition);
+        }
+        
+        .main-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-text {
+            flex: 0 0 50%;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        .product-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .product-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .product-price span {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .product-features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .feature-badge i {
+            font-size: 0.8rem;
+        }
+        
+        .product-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 550px;
+            color: #e0e0e0;
+            margin: 20px 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Product Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            background: var(--secondary);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image-container {
+            height: 220px;
+            position: relative;
+        }
+        
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .product-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin: 5px 0;
+        }
+        
+        .product-price-card {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .action-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .action-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Feature Highlights Section */
+        .features-section {
+            padding: 80px 0;
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .feature-desc {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Review Section */
+        .reviews-section {
+            padding: 80px 0;
+            background: linear-gradient(to right, #0a192f 0%, #112d4e 100%);
+        }
+        
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .reviewer-info {
+            flex: 1;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .reviewer-rating {
+            color: var(--success);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .review-content {
+            color: #e0e0e0;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .review-image {
+            height: 100px;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            background: #1a1a1a;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .review-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .comment-btn {
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .comment-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .review-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .stat-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        /* Footer Section */
+        .footer {
+            background: var(--primary);
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 20px 0;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            color: #aaa;
+            margin-top: 20px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .product-features {
+                flex-wrap: wrap;
+            }
+            
+            .product-card {
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-price {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .product-description {
+                font-size: 1rem;
+            }
+            
+            .features-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .product-price {
+                font-size: 1.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-card {
+                min-height: 300px;
+            }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="header-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@example.com</span>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="logo">
+                    <h1>AudioTech Pro</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="product-name">Wireless Bluetooth Headphones Pro</h1>
+                <div class="product-price">
+                    <span>$99.99</span>
+                    <span>or $9.99/month</span>
+                </div>
+                <div class="product-features">
+                    <span class="feature-badge"><i class="fas fa-battery-three-quarters"></i> 120h Battery</span>
+                    <span class="feature-badge"><i class="fas fa-wifi"></i> Bluetooth 5.3</span>
+                    <span class="feature-badge"><i class="fas fa-shield-alt"></i> Noise Cancellation</span>
+                </div>
+                <div class="product-desc">
+                    Experience the ultimate audio with our premium wireless headphones. Featuring advanced noise cancellation, crystal-clear sound quality, and up to 120 hours of battery life.
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-outline">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Related Products</h2>
+                <p class="section-subtitle">Explore our full range of wireless audio devices</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Product+1" alt="Product 1">
+                        <div class="product-image-overlay">
+                            <h3 class="product-name">Wireless Earbuds</h3>
+                            <p class="product-price-card">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=Product+2" alt="Product 2">
+                        <div class="product-image-overlay">
+                            <h3 class="product-name">Over-Ear Headphones</h3>
+                            <p class="product-price-card">$199.99</p>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/400x300/8e44ad/ffffff?text=Product+3" alt="Product 3">
+                        <div class="product-image-overlay">
+                            <h3 class="product-name">Noise Cancelling Headset</h3>
+                            <p class="product-price-card">$249.99</p>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Key Features</h2>
+                <p class="section-subtitle">Why choose our wireless headphones?</p>
+            </div>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Ultra-High Speed Charging</h3>
+                    <p class="feature-desc">Quickly charge your headphones with a 10-minute charge giving you 2 hours of playtime. Recharge in 10 minutes to get 2 hours of playback time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3 class="feature-title">Advanced Thermal Control</h3>
+                    <p class="feature-desc">Advanced thermal management system that prevents overheating and maintains the ideal operating temperature during extended use.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3 classวย" class="feature-title">Crystal Clear Audio</h3>
+                    <p class="feature-desc">Experience audiophile-grade sound quality with our custom-designed 40mm drivers, delivering rich and detailed sound across the entire frequency spectrum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">User Reviews</h2>
+                <p class="section-subtitle">What our customers say about our products</p>
+            </div>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Alex Johnson</span>
+                            <span class="reviewer-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="review-star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>These headphones are amazing! The sound quality is outstanding and the battery life is incredible. I've been using them for a month and they still perform perfectly.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Sarah Chen</span>
+                            <span class="reviewer-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="review-star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>I love the comfort of these headphones. They fit perfectly and are so lightweight. The noise cancellation is also excellent, making them perfect for commuting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">Products</a>
+                    <a href="#" class="footer-link">Features</a>
+                    <a href="#" class="footer-link">Support</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <p class="copyright">© 2023 AudioTech Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Back to top button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            
+            // Scroll event
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            });
+            
+            // Click event
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+## Key Features of This Product Page
+
+1. **Modern Responsive Design** - Works well on mobile, tablet, and desktop devices
+2. **Professional Product Display** - Showcase the main product with pricing and key features
+3. **Interactive Elements** - Add to cart button with visual feedback
+4. **Clear Navigation** - Easy to find related products and information
+5. **Performance Optimization** - Minimal JavaScript for smooth interactions
+6. **Visual Appeal** - Clean layout with subtle animations and modern aesthetics
+7. **User-Centric Experience** - Features like back-to-top button for better UX
+
+The page is built with semantic HTML and includes all the necessary components for a professional product page that would work well for a Shopify store.

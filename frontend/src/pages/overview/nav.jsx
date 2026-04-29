@@ -53,7 +53,7 @@ const Nav = () => {
     // ── ChatBot ──────────────────────────────────────────────────────
     const [chatOpen, setChatOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { role: "assistant", content: "Hi! I'm your AI assistant. Ask me anything about web development or your projects 🚀" }
+        { role: "assistant", content: "Hi! I'm your AI assistant. Ask me anything about web development..." }
     ]);
     const [chatInput, setChatInput] = useState("");
     const [chatLoading, setChatLoading] = useState(false);

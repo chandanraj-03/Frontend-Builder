@@ -9,7 +9,6 @@ GET   /api/auth/me              — current user
 PATCH /api/auth/me              — update name / email
 POST  /api/auth/change-password — change password
 POST  /api/auth/forgot-password — request reset (stub)
-DELETE /api/auth/me             — delete account + all data
 """
 
 from __future__ import annotations
@@ -19,7 +18,7 @@ from typing import Optional
 from fastapi import APIRouter, HTTPException, Depends, status
 from pydantic import BaseModel, Field
 
-from backend.database.repositories import UserRepository, ProjectRepository, ArtifactRepository
+from backend.database.repositories import UserRepository
 from backend.auth import (
     hash_password,
     verify_password,
@@ -29,8 +28,6 @@ from backend.auth import (
 
 router = APIRouter(prefix="/api/auth", tags=["Auth"])
 user_repo = UserRepository()
-project_repo = ProjectRepository()
-artifact_repo = ArtifactRepository()
 
 
 # ── Schemas ──────────────────────────────────────────────────────────
@@ -124,28 +121,4 @@ def forgot_password(body: ForgotPasswordBody):
     # Production: generate a token, email it to the user
     # Here we just confirm the email exists without revealing info
     return {"message": "If that email exists, a reset link has been sent."}
-
-
-@router.delete("/me", status_code=204, summary="Delete account and all data")
-def delete_account(user_id: str = Depends(get_current_user_id)):
-    """
-    Permanently delete user account, all projects, and all artifacts.
-    Returns 204 No Content on success.
-    """
-    # Get all projects for this user
-    projects = project_repo.get_by_user(user_id, skip=0, limit=1000)
-    
-    # Delete all artifacts for each project
-    for project in projects:
-        artifact_repo.delete_by_project(project["id"])
-    
-    # Delete all projects for this user
-    for project in projects:
-        project_repo.delete(project["id"])
-    
-    # Delete the user
-    user_repo.delete(user_id)
-    
-    # Return 204 (no content) on success
-    return
 

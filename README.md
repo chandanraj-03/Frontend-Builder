@@ -1,6 +1,6 @@
-# 🤖 Frontend AI Builder
+# 🚀 Prototype Builder
 
-> A **Multi-Agent Web Application Builder** powered by local LLMs via Ollama. Describe your web app in plain English and let an orchestrated pipeline of AI agents design, plan, and generate the full HTML/CSS/JS codebase — all from your browser.
+> A **Multi-Agent Prototype Builder** powered by local LLMs via Ollama. Describe your web app in plain English and let an orchestrated pipeline of AI agents design, plan, and generate the full HTML/CSS/JS codebase — all from your browser.
 
 ---
 

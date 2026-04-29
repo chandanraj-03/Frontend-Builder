@@ -26,21 +26,20 @@ const Sidebar = () => {
                 <Link to="/overview" className="navbar-link">
                     <img src="/logo.png" alt="Logo" className="navbar-logo-icon" />
                 </Link>
-                <span className="navbar-title">Frontend AI Builder</span>
+                <span className="navbar-title">Prototype Builder</span>
             </div>
 
             <ul className="sidebar-menu">
                 {NAV_LINKS.map(({ to, icon: Icon, label }) => (
                     <li key={to} className={pathname === to ? 'active' : ''}>
                         <Link to={to}>
-                            <Icon size={20} />
                             {label}
                         </Link>
                     </li>
                 ))}
                 <li className="logout">
                     <button onClick={logout} className="nav-logout-btn">
-                        <LogOut size={20} /> Logout
+                        Logout
                     </button>
                 </li>
             </ul>

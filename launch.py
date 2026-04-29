@@ -15,29 +15,9 @@ import subprocess
 import sys
 import os
 import signal
-import time
-import urllib.request
-import urllib.error
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 FRONTEND = os.path.join(ROOT, "frontend")
-
-def wait_for_backend(max_retries=30):
-    """Wait for backend to be ready before starting frontend."""
-    for attempt in range(max_retries):
-        try:
-            response = urllib.request.urlopen("http://localhost:8000/api/health", timeout=2)
-            if response.status == 200:
-                print("✅ Backend is ready!")
-                return True
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError):
-            pass
-        
-        if attempt < max_retries - 1:
-            print(f"⏳ Waiting for backend... ({attempt + 1}/{max_retries})")
-            time.sleep(1)
-    
-    return False
 
 def main():
     procs = []
@@ -50,12 +30,6 @@ def main():
             cwd=ROOT,
         )
         procs.append(backend)
-
-        # ── Wait for backend to be ready ──────────────────────────────
-        if not wait_for_backend():
-            print("❌ Backend failed to start. Check terminal output above.")
-            backend.terminate()
-            return
 
         # ── Frontend ─────────────────────────────────────────────────
         print("🚀 Starting frontend (vite)...")

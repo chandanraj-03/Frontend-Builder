@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Chen - User Profile - Community Forum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo">CommunityForum</a>
+                <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Category View</a></li>
+                    <li><a href="thread.html">Thread Detail</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="messages.html">Messaging</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="admin.html">Admin Dashboard</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                    <li><a href="new-thread.html">New Thread</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                </ul>
+                <div class="user-nav">
+                    <a href="notifications.html" class="notification-bell" aria-label="Notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-count">3</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-toggle" aria-expanded="false">Sarah Chen</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+</nav>
+    </header>
+
+    <main>
+        <section class="profile-header">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <img src="images/avatar-sarah.jpg" alt="Sarah Chen's profile picture" class="profile-avatar">
+                    <form class="avatar-upload">
+                        <label for="avatar-file" class="upload-label">Change Avatar</label>
+                        <input type="file" id="avatar-file" accept="image/*" style="display: none;">
+                        <button type="submit" class="save-avatar">Save</button>
+                    </form>
+                </div>
+                <div class="profile-info">
+                    <h1>Sarah Chen</h1>
+                    <p class="member-since">Member since: January 15, 2022</p>
+                    <p class="user-title">Senior Frontend Developer</p>
+                    <p class="user-bio">Passionate about React, TypeScript, and building scalable web applications. Open source contributor and tech community advocate.</p>
+                </div>
+            </div>
+            
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-number">1,245</span>
+                    <span class="stat-label">Reputation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">87</span>
+                    <span class="stat-label">Threads</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">542</span>
+                    <span class="stat-label">Replies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">Solutions</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="reputation-score">
+            <h2>Reputation Breakdown</h2>
+            <div class="reputation-details">
+                <div class="reputation-item">
+                    <span class="rep-points">+500</span>
+                    <span class="rep-reason">Accepted Solutions</span>
+                </div>
+                <div class="reputation-item">
+                    <span class="rep-points">+420</span>
+                    <span class="rep-reason">Upvoted Posts</span>
+                </div>
+                <div class="reputation-item">
+                    <span class="rep-points">+225</span>
+                    <span class="rep-reason">Helpful Replies</span>
+                </div>
+                <div class="reputation-item">
+                    <span class="rep-points">+100</span>
+                    <span class="rep-reason">Quality Threads</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="activity-history">
+            <h2>Recent Activity</h2>
+            <div class="activity-timeline">
+                <div class="activity-item">
+                    <span class="activity-icon">📝</span>
+                    <div class="activity-content">
+                        <h3>Posted new thread</h3>
+                        <p><a href="thread.html?id=202">Best Practices for React Performance Optimization</a></p>
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">💬</span>
+                    <div class="activity-content">
+                        <h3>Replied to thread</h3>
+                        <p><a href="thread.html?id=156#comment-789">State Management in Large React Applications</a></p>
+                        <span class="activity-time">5 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">✅</span>
+                    <div class="activity-content">
+                        <h3>Solution accepted</h3>
+                        <p>Your answer was marked as solution in <a href="thread.html?id=189">TypeScript Best Practices</a></p>
+                        <span class="activity-time">1 day ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">📝</span>
+                    <div class="activity-content">
+                        <h3>Posted new thread</h3>
+                        <p><a href="thread.html?id=201">Webpack vs Vite: Performance Comparison</a></p>
+                        <span class="activity-time">2 days ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🏆</span>
+                    <div class="activity-content">
+                        <h3>Earned badge</h3>
+                        <p>Received "Helpful Contributor" badge</p>
+                        <span class="activity-time">3 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preference-settings">
+            <h2>Account Preferences</h2>
+            <form class="preferences-form">
+                <div class="preference-group">
+                    <h3>Notification Settings</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked> Email notifications for replies
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked> Push notifications for mentions
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Newsletter subscription
+                    </label>
+                </div>
+                
+                <div class="preference-group">
+                    <h3>Privacy Settings</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked> Show online status
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Show activity status
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked> Allow direct messages
+                    </label>
+                </div>
+                
+                <div class="preference-group">
+                    <h3>Content Preferences</h3>
+                    <label>
+                        <span>Default theme:</span>
+                        <select>
+                            <option selected>Light</option>
+                            <option>Dark</option>
+                            <option>Auto</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Posts per page:</span>
+                        <select>
+                            <option>10</option>
+                            <option selected>20</option>
+                            <option>50</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <button type="submit" class="save-preferences">Save Preferences</button>
+            </form>
+        </section>
+
+        <section class="blocking-controls">
+            <h2>Blocked Users</h2>
+            <div class="blocked-users-list">
+                <div class="blocked-user">
+                    <span class="blocked-name">JohnDoe123</span>
+                    <span class="block-date">Blocked: October 12, 2023</span>
+                    <button class="unblock-button">Unblock</button>
+                </div>
+                <div class="blocked-user">
+                    <span class="blocked-name">SpamBot2024</span>
+                    <span class="block-date">Blocked: January 5, 2024</span>
+                    <button class="unblock-button">Unblock</button>
+                </div>
+            </div>
+            
+            <form class="block-user-form">
+                <h3>Block New User</h3>
+                <div class="form-group">
+                    <label for="block-username">Username:</label>
+                    <input type="text" id="block-username" placeholder="Enter username to block">
+                </div>
+                <button type="submit" class="block-button">Block User</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Community Forum</h3>
+                <p>Connecting minds through meaningful discussions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="new-thread.html">Start Discussion</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Contact Moderators</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

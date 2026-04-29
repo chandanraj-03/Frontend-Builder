@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo">CommunityForum</a>
+                <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Category View</a></li>
+                    <li><a href="thread.html">Thread Detail</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="messages.html">Messaging</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="admin.html">Admin Dashboard</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                    <li><a href="new-thread.html">New Thread</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                </ul>
+                <div class="user-nav">
+                    <a href="notifications.html" class="notification-bell" aria-label="Notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-count">3</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-toggle" aria-expanded="false">Welcome, User</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Our Community Forum</h1>
+            <p>Join discussions, share knowledge, and connect with like-minded people</p>
+            <form class="search-bar" role="search">
+                <input type="search" placeholder="Search discussions..." aria-label="Search forum">
+                <select aria-label="Filter by category">
+                    <option value="">All Categories</option>
+                    <option value="technology">Technology</option>
+                    <option value="sports">Sports</option>
+                    <option value="arts">Arts & Culture</option>
+                    <option value="science">Science</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="category-hierarchy" aria-labelledby="categories-heading">
+            <h2 id="categories-heading">Browse Categories</h2>
+            <div class="category-grid">
+                <article class="category-card">
+                    <h3><a href="category.html?cat=technology">Technology</a></h3>
+                    <p>Discussions about software, hardware, and tech trends</p>
+                    <span class="thread-count">1,245 threads</span>
+                </article>
+                <article class="category-card">
+                    <h3><a href="category.html?cat=sports">Sports</a></h3>
+                    <p>Talk about games, teams, and athletic events</p>
+                    <span class="thread-count">892 threads</span>
+                </article>
+                <article class="category-card">
+                    <h3><a href="category.html?cat=arts">Arts & Culture</a></h3>
+                    <p>Share art, music, literature, and cultural discussions</p>
+                    <span class="thread-count">567 threads</span>
+                </article>
+                <article class="category-card">
+                    <h3><a href="category.html?cat=science">Science</a></h3>
+                    <p>Explore scientific discoveries and debates</p>
+                    <span class="thread-count">423 threads</span>
+                </article>
+                <article class="category-card">
+                    <h3><a href="category.html?cat=gaming">Gaming</a></h3>
+                    <p>Video games, board games, and gaming culture</p>
+                    <span class="thread-count">1,089 threads</span>
+                </article>
+                <article class="category-card">
+                    <h3><a href="category.html?cat=health">Health & Wellness</a></h3>
+                    <p>Fitness, nutrition, and mental health discussions</p>
+                    <span class="thread-count">678 threads</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured-threads" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Discussions</h2>
+            <div class="threads-grid">
+                <article class="thread-card">
+                    <h3><a href="thread.html?id=123">The Future of Artificial Intelligence in Healthcare</a></h3>
+                    <p>Exploring how AI is transforming medical diagnosis and treatment...</p>
+                    <div class="thread-meta">
+                        <span class="author">By Dr. Emily Chen</span>
+                        <span class="comments">142 comments</span>
+                        <span class="date">2 days ago</span>
+                    </div>
+                </article>
+                <article class="thread-card">
+                    <h3><a href="thread.html?id=456">Sustainable Energy Solutions for Urban Development</a></h3>
+                    <p>Discussing renewable energy integration in modern cities...</p>
+                    <div class="thread-meta">
+                        <span class="author">By Michael Rodriguez</span>
+                        <span class="comments">89 comments</span>
+                        <span class="date">3 days ago</span>
+                    </div>
+                </article>
+                <article class="thread-card">
+                    <h3><a href="thread.html?id=789">Digital Art Revolution: NFTs and Beyond</a></h3>
+                    <p>How digital technology is changing the art world landscape...</p>
+                    <div class="thread-meta">
+                        <span class="author">By Sarah Johnson</span>
+                        <span class="comments">204 comments</span>
+                        <span class="date">5 days ago</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="recent-activity" aria-labelledby="recent-heading">
+            <h2 id="recent-heading">Recent Activity</h2>
+            <ul class="activity-list">
+                <li>
+                    <span class="activity-type">New Thread</span>
+                    <a href="thread.html?id=101">Climate Change Policy Discussion</a>
+                    <span class="activity-user">by Alex Thompson</span>
+                    <span class="activity-time">1 hour ago</span>
+                </li>
+                <li>
+                    <span class="activity-type">Reply</span>
+                    <a href="thread.html?id=123#comment-456">Re: The Future of Artificial Intelligence</a>
+                    <span class="activity-user">by Maria Gonzalez</span>
+                    <span class="activity-time">2 hours ago</span>
+                </li>
+                <li>
+                    <span class="activity-type">New Thread</span>
+                    <a href="thread.html?id=102">Quantum Computing Breakthrough</a>
+                    <span class="activity-user">by Dr. Robert Kim</span>
+                    <span class="activity-time">3 hours ago</span>
+                </li>
+                <li>
+                    <span class="activity-type">Reply</span>
+                    <a href="thread.html?id=789#comment-123">Re: Digital Art Revolution</a>
+                    <span class="activity-user">by James Wilson</span>
+                    <span class="activity-time">4 hours ago</span>
+                </li>
+                <li>
+                    <span class="activity-type">New Thread</span>
+                    <a href="thread.html?id=103">Urban Gardening Techniques</a>
+                    <span class="activity-user">by Lisa Zhang</span>
+                    <span class="activity-time">5 hours ago</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Community Forum</h3>
+                <p>Connecting minds through meaningful discussions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="new-thread.html">Start Discussion</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Contact Moderators</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

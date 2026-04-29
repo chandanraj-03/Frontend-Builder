@@ -266,12 +266,12 @@ const History = () => {
                                 <p>
                                     {searchQuery || statusFilter !== "all"
                                         ? "Try adjusting your search or filter."
-                                        : "You haven't generated any frontend applications yet."}
+                                        : "You haven't generated any prototypes yet."}
                                 </p>
                                 {(!searchQuery && statusFilter === "all") && (
                                     <Link to="/project" className="create-btn">
                                         <Plus size={18} />
-                                        Create Your First Project
+                                        Create Your First Prototype
                                     </Link>
                                 )}
                             </div>

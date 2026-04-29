@@ -150,6 +150,5 @@ export const chatAPI = {
 
 export const dashboardAPI = {
   get: () => get("/api/dashboard"),
-  activity: () => get("/api/dashboard/activity"),
   stats: () => get("/api/dashboard/stats"),
 };

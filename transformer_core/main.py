@@ -5,8 +5,6 @@ import time
 import webbrowser
 import zipfile
 import json
-import threading
-import functools
 from datetime import datetime
 from colorama import init, Fore, Style
 

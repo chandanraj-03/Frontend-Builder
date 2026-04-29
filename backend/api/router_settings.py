@@ -114,17 +114,10 @@ def update_llm_config(body: LLMConfigBody, user_id: str = Depends(get_current_us
         prefs["ollama_host"]  = body.ollama_host
     if body.ollama_model is not None:
         prefs["ollama_model"] = body.ollama_model
-    if body.api_key is not None and body.api_key:
+    if body.api_key is not None:
         # Only overwrite if a real (non-masked) key is submitted
-        # Masked keys are all asterisks or contain consecutive asterisks (masked pattern)
-        is_masked = body.api_key.replace("*", "") == "" or ("*" * 3) in body.api_key
-        if not is_masked:
+        if body.api_key and not body.api_key.startswith("***"):
             prefs["api_key"] = body.api_key
-        # If masked, keep existing key unchanged
-    elif body.api_key == "":
-        # User explicitly cleared the key
-        if "api_key" in prefs:
-            del prefs["api_key"]
     safe_prefs = {k: v for k, v in prefs.items() if k != "api_key"}
     safe_prefs["api_key"] = "****" if prefs.get("api_key") else ""
     user_repo.update(user_id, {"llm_config": prefs})

@@ -29,7 +29,7 @@ const Architecture = () => {
           <div className="architecture-card">
             <div className="architecture-card-header">
               <h4 className="architecture-card-title-cyan">
-                1️⃣ Frontend Layer
+                 Frontend Layer
               </h4>
             </div>
 
@@ -61,7 +61,7 @@ const Architecture = () => {
           <div className="architecture-card">
             <div className="architecture-card-header">
               <h4 className="architecture-card-title-purple">
-                2️⃣ Backend Orchestration Layer
+                Backend Orchestration Layer
               </h4>
             </div>
 
@@ -93,7 +93,7 @@ const Architecture = () => {
           <div className="architecture-card">
             <div className="architecture-card-header">
               <h4 className="architecture-card-title-purple">
-                3️⃣ Transformer Intelligence Layer
+              Transformer Intelligence Layer
               </h4>
             </div>
 
@@ -125,7 +125,7 @@ const Architecture = () => {
           <div className="architecture-card">
             <div className="architecture-card-header">
               <h4 className="architecture-card-title-green">
-                4️⃣ Data & Persistence Layer
+                Data & Persistence Layer
               </h4>
             </div>
 

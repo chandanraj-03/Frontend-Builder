@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - PixelCraft Studio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<nav aria-label="Main navigation">
+<div class="logo">
+<a href="index.html">PixelCraft Studio</a>
+</div>
+<button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html" aria-current="page">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section aria-label="Project filters">
+<div class="filters">
+<button data-filter="all" aria-label="Show all projects">All</button>
+<button data-filter="ecommerce" aria-label="Show e-commerce projects">E-commerce</button>
+<button data-filter="mobile" aria-label="Show mobile app projects">Mobile Apps</button>
+<button data-filter="web" aria-label="Show web applications">Web Applications</button>
+</div>
+</section>
+<section aria-label="Project gallery" class="project-grid">
+<article class="project-card" data-category="ecommerce">
+<img src="https://via.placeholder.com/300x200" alt="EcoStore e-commerce platform screenshot showing product listings">
+<h3>EcoStore</h3>
+<p>Full e-commerce platform for sustainable products with payment processing and inventory management</p>
+<button aria-controls="modal-ecostore" aria-label="View details for EcoStore">View Details</button>
+</article>
+<article class="project-card" data-category="mobile">
+<img src="https://via.placeholder.com/300x200" alt="HealthTrack mobile app interface showing fitness tracking">
+<h3>HealthTrack</h3>
+<p>Fitness and nutrition app with personalized workout plans and meal suggestions</p>
+<button aria-controls="modal-healthtrack" aria-label="View details for HealthTrack">View Details</button>
+</article>
+<article class="project-card" data-category="web">
+<img src="https://via.placeholder.com/300x200" alt="NewsSphere web app interface displaying AI-curated news articles">
+<h3>NewsSphere</h3>
+<p>AI-powered news aggregator that filters content based on user preferences and trending topics</p>
+<button aria-controls="modal-newsphere" aria-label="View details for NewsSphere">View Details</button>
+</article>
+</section>
+<div class="modal" id="modal-ecostore" role="dialog" aria-labelledby="modal-title-ecostore" aria-hidden="true">
+<div class="modal-content">
+<button class="close-modal" aria-label="Close modal">&times;</button>
+<h2 id="modal-title-ecostore">EcoStore</h2>
+<img src="https://via.placeholder.com/600x400" alt="EcoStore project screenshot showing product listings and checkout process">
+<p>EcoStore is a comprehensive e-commerce platform designed for sustainable products. It features a responsive design, secure payment processing via Stripe, and an intuitive inventory management system. The platform was built with React for the frontend, Node.js and Express for the backend, and MongoDB for data storage.</p>
+<div class="technologies">
+<h3>Technologies Used:</h3>
+<ul>
+<li>React</li>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>Stripe API</li>
+<li>Redux for state management</li>
+</ul>
+</div>
+<div class="project-links">
+<a href="https://ecostore.example.com" target="_blank" rel="noopener">Live Site</a>
+<a href="https://github.com/pixelcraft/ecostore" target="_blank" rel="noopener">Source Code</a>
+</div>
+</div>
+</div>
+<div class="modal" id="modal-healthtrack" role="dialog" aria-labelledby="modal-title-healthtrack" aria-hidden="true">
+<div class="modal-content">
+<button class="close-modal" aria-label="Close modal">&times;</button>
+<h2 id="modal-title-healthtrack">HealthTrack</h2>
+<img src="https://via.placeholder.com/600x400" alt="HealthTrack app interface showing workout plans and nutrition tracking">
+<p>HealthTrack is a mobile application that helps users track their fitness goals and nutrition. It offers personalized workout plans based on user preferences and provides meal suggestions tailored to dietary needs. The app uses Firebase for authentication and data storage, and Redux for state management.</p>
+<div class="technologies">
+<h3>Technologies Used:</h3>
+<ul>
+<li>React Native</li>
+<li>Firebase</li>
+<li>Redux</li>
+<li>Expo for cross-platform development</li>
+</ul>
+</div>
+<div class="project-links">
+<a href="https://healthtrack.example.com" target="_blank" rel="noopener">Live Site</a>
+<a href="https://github.com/pixelcraft/healthtrack" target="_blank" rel="noopener">Source Code</a>
+</div>
+</div>
+</div>
+<div class="modal" id="modal-newsphere" role="dialog" aria-labelledby="modal-title-newsphere" aria-hidden="true">
+<div class="modal-content">
+<button class="close-modal" aria-label="Close modal">&times;</button>
+<h2 id="modal-title-newsphere">NewsSphere</h2>
+<img src="https://via.placeholder.com/600x400" alt="NewsSphere web app displaying AI-curated news articles">
+<p>NewsSphere is an AI-powered news aggregator that curates articles based on user interests and trending topics. It uses natural language processing to filter content and provide personalized news feeds. The backend is built with Express and MongoDB, and the frontend uses JavaScript with a responsive design.</p>
+<div class="technologies">
+<h3>Technologies Used:</h3>
+<ul>
+<li>JavaScript (ES6+)</li>
+<li>Express</li>
+<li>MongoDB</li>
+<li>Natural Language Processing (NLP)</li>
+<li>Web Scraping APIs</li>
+</ul>
+</div>
+<div class="project-links">
+<a href="https://newsphere.example.com" target="_blank" rel="noopener">Live Site</a>
+<a href="https://github.com/pixelcraft/newsphere" target="_blank" rel="noopener">Source Code</a>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<p>&copy; 2023 PixelCraft Studio. All rights reserved.</p>
+<nav aria-label="Social media links">
+<a href="https://twitter.com/pixelcraft" aria-label="Twitter">Twitter</a>
+<a href="https://linkedin.com/in/pixelcraft" aria-label="LinkedIn">LinkedIn</a>
+<a href="https://github.com/pixelcraft" aria-label="GitHub">GitHub</a>
+</nav>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

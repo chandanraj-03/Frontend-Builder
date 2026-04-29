@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header aria-label="Main navigation header">
+        <div class="header-container">
+            <h1 aria-label="TechStore logo">TechStore</h1>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="product-detail.html">Product Detail</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-container">
+            <aside class="filter-sidebar" aria-label="Product filters">
+                <h2>Filter Products</h2>
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category" aria-label="Select category filter">
+                        <option value="all">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="clothing">Clothing</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Price Range:</label>
+                    <div class="price-range">
+                        <input type="number" id="min-price" min="0" value="0" placeholder="Min $">
+                        <span>to</span>
+                        <input type="number" id="max-price" min="0" value="1000" placeholder="Max $">
+                    </div>
+                    <button type="button" class="apply-filter">Apply Filter</button>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort" aria-label="Select sorting option">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="best-selling">Best Selling</option>
+                    </select>
+                </div>
+            </aside>
+
+            <div class="product-grid" aria-label="Product listings">
+                <h2>Shop All Products</h2>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Wireless Bluetooth Headphones" data-src="img/headphones.jpg">
+                    <h3>Wireless Bluetooth Headphones</h3>
+                    <p class="price">$99.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(12 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Smartwatch with Heart Rate Monitor" data-src="img/smartwatch.jpg">
+                    <h3>Smartwatch with Heart Rate Monitor</h3>
+                    <p class="price">$149.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(8 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Wireless Charging Cable" data-src="img/cable.jpg">
+                    <h3>Wireless Charging Cable</h3>
+                    <p class="price">$24.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(50 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Stainless Steel Water Bottle" data-src="img/water-bottle.jpg">
+                    <h3>Stainless Steel Water Bottle</h3>
+                    <p class="price">$29.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(25 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Bluetooth Speaker" data-src="img/speaker.jpg">
+                    <h3>Bluetooth Speaker</h3>
+                    <p class="price">$79.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(15 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Wireless Mouse" data-src="img/mouse.jpg">
+                    <h3>Wireless Mouse</h3>
+                    <p class="price">$39.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(30 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Smart Home Hub" data-src="img/hub.jpg">
+                    <h3>Smart Home Hub</h3>
+                    <p class="price">$129.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(10 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23666'/><text x='50' y='60' font-size='18' fill='%23fff' text-anchor='middle'>I</text></svg>" alt="Rechargeable Power Bank" data-src="img/power-bank.jpg">
+                    <h3>Rechargeable Power Bank</h3>
+                    <p class="price">$24.99</p>
+                    <div class="stock-status">In Stock <span aria-hidden="true">(40 items)</span></div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="pagination" aria-label="Product pagination">
+                <button type="button" class="prev">Previous</button>
+                <span>Page 1 of 3</span>
+                <button type="button" class="next">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer aria-label="Website footer">
+        <div class="footer-container">
+            <p>&copy; 2023 TechStore. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

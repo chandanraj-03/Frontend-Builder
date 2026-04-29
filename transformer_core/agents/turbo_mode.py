@@ -2,7 +2,9 @@
 """
 UI Generator - Convert vague ideas into polished HTML interfaces using Ollama
 All fixes applied:
-  1. num_predict = -1 (unlimited tokens)
+  1. num_predict = -1 (unlimited tokens for local models only)
+     Cloud models (name ends with '-cloud') omit num_predict to avoid a 400 error
+     from their OpenAI-compatible endpoint which rejects negative values.
   2. num_ctx = 16384 (large context window)
   3. Completeness check after extraction
   4. Two-pass generation (structure+CSS first, then JS)
@@ -120,10 +122,89 @@ class ProgressIndicator:
 # Ollama / OpenRouter API calls
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _ollama_stream_with_watchdog(model_to_use, messages, options, timeout_secs=120):
+    """
+    Run ollama.chat(stream=True) in a daemon thread with a per-chunk watchdog.
+    If no new chunk arrives within `timeout_secs`, raises RuntimeError.
+    Returns the full concatenated response string.
+    """
+    import threading
+
+    result_holder = {"output": None, "error": None}
+    chunk_event   = threading.Event()
+    output_parts  = []
+
+    def _stream_worker():
+        try:
+            response = ollama.chat(
+                model=model_to_use,
+                messages=messages,
+                options=options,
+                stream=True,
+            )
+            for chunk in response:
+                content = chunk.get("message", {}).get("content", "")
+                if content:
+                    output_parts.append(content)
+                chunk_event.set()   # signal watchdog: still alive
+                chunk_event.clear()
+            result_holder["output"] = "".join(output_parts).strip()
+        except Exception as exc:
+            result_holder["error"] = exc
+            chunk_event.set()
+
+    thread = threading.Thread(target=_stream_worker, daemon=True)
+    thread.start()
+
+    # Watchdog loop: wait for each chunk; if none arrives within timeout, abort
+    while thread.is_alive():
+        got_chunk = chunk_event.wait(timeout=timeout_secs)
+        if not got_chunk and thread.is_alive():
+            raise RuntimeError(
+                f"Ollama stream timed out after {timeout_secs}s with no response "
+                f"from model '{model_to_use}'. The model may be overloaded or unreachable."
+            )
+
+    if result_holder["error"]:
+        raise result_holder["error"]
+    return result_holder["output"] or ""
+
+
+def _ollama_cloud_post(model_to_use, messages, timeout_secs=120):
+    """
+    For cloud-hosted models: bypass the ollama Python streaming client entirely
+    and call the Ollama REST endpoint directly (non-streaming, hard timeout).
+    This avoids the indefinite hang that occurs when the cloud proxy stalls.
+    """
+    url = f"{OLLAMA_BASE.rstrip('/')}/api/chat"
+    payload = {
+        "model":    model_to_use,
+        "messages": messages,
+        "stream":   False,
+        "options":  {"temperature": 0.7},
+    }
+    try:
+        resp = requests.post(url, json=payload, timeout=timeout_secs)
+        resp.raise_for_status()
+        data = resp.json()
+        # Ollama non-stream response: {"message": {"role": "assistant", "content": "..."}}
+        return data.get("message", {}).get("content", "").strip()
+    except requests.Timeout:
+        raise RuntimeError(
+            f"Cloud model '{model_to_use}' did not respond within {timeout_secs}s. "
+            "Try a faster model or check your Ollama cloud connection."
+        )
+    except requests.RequestException as exc:
+        raise RuntimeError(f"Ollama REST request failed for model '{model_to_use}': {exc}") from exc
+
+
 def ollama_chat(system, prompt, progress=None, model=None):
     """
-    Call Ollama with streaming. Uses unlimited token generation and a large
-    context window to prevent truncated output.
+    Call Ollama with timeout protection.
+
+    - Cloud models (name ends with '-cloud'): non-streaming HTTP POST, 120 s hard timeout.
+    - Local models: streaming with a 120 s per-chunk watchdog so a stalled model
+      doesn't block the build thread forever.
 
     Args:
         system   : System prompt string
@@ -143,31 +224,32 @@ def ollama_chat(system, prompt, progress=None, model=None):
         {"role": "user",   "content": prompt},
     ]
 
+    is_cloud_model = model_to_use.endswith("-cloud")
+
     try:
-        response = ollama.chat(
-            model=model_to_use,
-            messages=messages,
-            options={
+        if is_cloud_model:
+            # Cloud models: skip all Ollama-specific options (num_ctx, num_predict),
+            # use a direct non-streaming POST with a hard 120-second timeout.
+            full_output = _ollama_cloud_post(model_to_use, messages, timeout_secs=120)
+        else:
+            # Local models: stream with per-chunk watchdog (120 s between chunks).
+            options = {
                 "temperature": 0.7,
-                "num_predict": -1,      # FIX 1: unlimited — never truncate
-                "num_ctx":     16384,   # FIX 2: large context window
-            },
-            stream=True,
-        )
+                "num_predict": -1,      # unlimited for local models
+                "num_ctx":     16384,
+            }
+            full_output = _ollama_stream_with_watchdog(model_to_use, messages, options, timeout_secs=120)
 
-        output = []
-        for chunk in response:
-            content = chunk.get("message", {}).get("content", "")
-            if content:
-                output.append(content)
-                if progress:
-                    progress.update(content)
+        if progress and full_output:
+            progress.update(full_output)
 
-        full_output = "".join(output).strip()
         return full_output
 
+    except RuntimeError:
+        raise
     except Exception as e:
         raise RuntimeError(f"Ollama request failed for model '{model_to_use}': {e}") from e
+
 
 
 def openrouter_chat(system, prompt, api_key, model="openai/gpt-4o", progress=None):

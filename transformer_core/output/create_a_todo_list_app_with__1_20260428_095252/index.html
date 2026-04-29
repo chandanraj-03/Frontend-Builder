@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoMaster - Your Personal Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <h1>TodoMaster</h1>
+                <p>Your productivity companion</p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Main Todo Dashboard</a></li>
+                    <li><a href="task-detail.html">Task Detail View</a></li>
+                    <li><a href="settings.html">Settings Page</a></li>
+                    <li><a href="help.html">Help & Tutorial</a></li>
+                    <li><a href="stats.html">Statistics & Analytics</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search tasks..." aria-label="Search tasks">
+                    <button type="submit">🔍</button>
+                </div>
+                <div class="cart-icon">
+                    <span class="cart-count">3</span>
+                    <span class="cart-label">Shopping Items</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="todo-dashboard">
+            <div class="dashboard-header">
+                <h2>Your Todo List</h2>
+                <p>Stay organized and boost your productivity</p>
+            </div>
+
+            <div class="task-input-field">
+                <form id="add-task-form">
+                    <input type="text" placeholder="What needs to be done?" aria-label="Add new task" required>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="priority">Priority</button>
+            </div>
+
+            <div class="task-list">
+                <div class="task-item completed">
+                    <input type="checkbox" checked aria-label="Mark task as incomplete">
+                    <span class="task-text">Complete project proposal for client meeting</span>
+                    <span class="task-priority high">High Priority</span>
+                    <button class="edit-btn" aria-label="Edit task">✏️</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑️</button>
+                </div>
+                
+                <div class="task-item active">
+                    <input type="checkbox" aria-label="Mark task as complete">
+                    <span class="task-text">Schedule team sync-up for Friday</span>
+                    <span class="task-priority medium">Medium Priority</span>
+                    <button class="edit-btn" aria-label="Edit task">✏️</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑️</button>
+                </div>
+                
+                <div class="task-item active">
+                    <input type="checkbox" aria-label="Mark task as complete">
+                    <span class="task-text">Review quarterly budget reports</span>
+                    <span class="task-priority high">High Priority</span>
+                    <button class="edit-btn" aria-label="Edit task">✏️</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑️</button>
+                </div>
+                
+                <div class="task-item completed">
+                    <input type="checkbox" checked aria-label="Mark task as incomplete">
+                    <span class="task-text">Send follow-up emails to new leads</span>
+                    <span class="task-priority low">Low Priority</span>
+                    <button class="edit-btn" aria-label="Edit task">✏️</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑️</button>
+                </div>
+            </div>
+
+            <div class="dashboard-footer">
+                <div class="task-count-display">
+                    <span>5 tasks total</span>
+                    <span>2 completed</span>
+                    <span>3 remaining</span>
+                </div>
+                
+                <button class="clear-completed-button">
+                    Clear Completed Tasks
+                </button>
+            </div>
+
+            <div class="empty-state-illustration" style="display: none;">
+                <div class="empty-state-content">
+                    <img src="images/empty-tasks.svg" alt="No tasks to display" width="200" height="200">
+                    <h3>All caught up!</h3>
+                    <p>You don't have any tasks right now. Add a new task to get started.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TodoMaster. Helping you stay productive since day one.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

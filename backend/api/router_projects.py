@@ -32,7 +32,6 @@ class ProjectCreateBody(BaseModel):
     prompt:       str           = Field(..., min_length=5)
     color_theme:  str           = "default"
     ollama_model: str           = "qwen3-vl:8b"
-    turbo_mode:   bool          = False
 
 class ProjectUpdateBody(BaseModel):
     title:         Optional[str]       = Field(None, min_length=1, max_length=200)
@@ -75,7 +74,6 @@ def create_project(body: ProjectCreateBody, user_id: str = Depends(get_current_u
         prompt       = body.prompt,
         color_theme  = body.color_theme,
         ollama_model = body.ollama_model,
-        turbo_mode   = body.turbo_mode,
     )
     return project
 

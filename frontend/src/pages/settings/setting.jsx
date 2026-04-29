@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-    User, Bell, Shield, Terminal, LogOut, Cpu, AlertTriangle, Image as ImageIcon, Search, Save, Eye, Plus
+    User, Bell, Shield, Cpu, AlertTriangle, Search, Save, Eye, Plus
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useAuth } from '../../context/authcontext';

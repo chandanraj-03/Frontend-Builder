@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results for "React Performance" - Community Forum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="极速飞艇开奖结果官网 navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo">CommunityForum</a>
+                <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Category View</a></li>
+                    <li><a href="thread.html">Thread Detail</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="messages.html">Messaging极速飞艇开奖结果官网</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="admin.html">Admin Dashboard</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                    <li><a href="new-thread.html">New Thread</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                </ul>
+                <div class="user-nav">
+                    <a href="notifications.html" class="notification-bell" aria-label="Notifications">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-count">3</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="user-toggle" aria-expanded="false">Sarah Chen</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="search-results-page">
+        <header class="search-header">
+            <h1>Search Results</h1>
+            <div class="search-query-info">
+                <p>Showing results for: <strong>"React Performance"</strong></p>
+                <span class="results-count">247 results found</span>
+            </div>
+        </header>
+
+        <section class="search-filters">
+            <form class="search-form" role="search">
+                <input type="search" value="React Performance" placeholder="Search discussions..." aria-label="Search forum">
+                <select aria-label="Search category">
+                    <option value="all">All Categories</option>
+                    <option value="technology" selected>Technology</option>
+                    <option value="programming">Programming</option>
+                    <option value="web-development">Web Development</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="search-suggestions">
+                <h3>Related searches:</h3>
+                <div class="suggestion-tags">
+                    <a href="search.html?q=React+optimization" class="suggestion-tag">React optimization</a>
+                    <a href="search.html?q=React+rendering+performance" class="suggestion-tag">React rendering performance</a>
+                    <a href="search.html?q=useMemo+useCallback" class="suggestion-tag">useMemo useCallback</a>
+                    <a href="search.html?q=React+virtualization" class="suggestion-tag">React virtualization</a>
+                    <a href="search.html?q=React+bundle+optimization" class="suggestion-tag">React bundle optimization</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="search-layout">
+            <aside class="advanced-search-options">
+                <h2>Advanced Filters</h2>
+                <form class="advanced-filters-form">
+                    <div class="filter-group">
+                        <label for="filter-category">Category:</label>
+                        <select id="filter-category">
+                            <option value="">All Categories</option>
+                            <option value="technology" selected>Technology</option>
+                            <option value="programming">Programming</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="frontend">Frontend Development</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-date">Date Range:</label>
+                        <select id="filter-date">
+                            <option value="">Any Time</option>
+                            <option value="day">Past 24 Hours</option>
+                            <option value="week">Past Week</option>
+                            <option value="month">Past Month</option>
+                            <option value="year">Past Year</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-type">Content Type:</label>
+                        <select id="filter-type">
+                            <option value="">All Types</option>
+                            <option value="threads">Threads</option>
+                            <option value="replies">Replies</option>
+                            <option value="solutions">Solutions</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-author">Author:</label>
+                        <input type="text" id="filter-author" placeholder="Filter by author">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-tags">Tags:</label>
+                        <select id="filter-tags">
+                            <option value="">All Tags</option>
+                            <option value="react">React</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="performance">Performance</option>
+                            <option value="optimization">Optimization</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>
+                            <input type="checkbox" checked> Include replies in search
+                        </label>
+                        <label>
+                            <input type="checkbox"> Solved threads only
+                        </label>
+                        <label>
+                            <input type="checkbox"> Highly rated content only
+                        </label>
+                    </div>
+
+                    <button type="submit" class="apply-filters">Apply Filters</button>
+                    <button type="reset" class="reset-filters">Reset Filters</button>
+                </form>
+            </aside>
+
+            <section class="results-section">
+                <div class="sort-controls">
+                    <label for="sort-results">Sort by:</label>
+                    <select id="sort-results">
+                        <option value="relevance">Relevance</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="most-comments">Most Comments</option>
+                        <option value="highest-rated">Highest Rated</option>
+                        <option value="most-views">Most Views</option>
+                    </select>
+                    <span class="results-showing">Showing 1-10 of 247 results</span>
+                </div>
+
+                <div class="results-list">
+                    <article class="result-item">
+                        <div class="result-content">
+                            <h3><a href="thread.html?id=202">Best Practices for React Performance Optimization</a></h3>
+                            <p class="result-excerpt">Comprehensive guide covering useMemo, useCallback, code splitting, and virtualization techniques for optimal React application performance. Includes practical examples and real-world use cases.</p>
+                            <div class="result-meta">
+                                <span class="result-category">Technology</span>
+                                <span class="result-author">By Sarah Chen</span>
+                                <span class="result-date">2 hours ago</span>
+                                <span class="result-stats">87 comments • 2.4k views</span>
+                                <span class="result-tags">
+                                    <span class="tag">react</span>
+                                    <span class="tag">performance</span>
+                                    <span class="tag">optimization</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="result-preview">
+                            <span class="relevance-score">98% match</span>
+                        </div>
+                    </article>
+
+                    <article class="result-item">
+                        <div class="result-content">
+                            <h3><a href="thread.html?id=156">React Rendering Performance: Deep Dive</a></h3>
+                            <p class="result-excerpt">Detailed analysis of React's rendering mechanism and how to optimize component re-renders. Covers shouldComponentUpdate, PureComponent, and React.memo with performance benchmarks.</p>
+                            <div class="result-meta">
+                                <span class="result-category">Programming</span>
+                                <span class="result-author">By Mike Rodriguez</span>
+                                <span class="result-date">3 days ago</span>
+                                <span class="result-stats">45 comments • 1.8k views</span>
+                                <span class="result-tags">
+                                    <span class="tag">react</span>
+                                    <span class="tag">rendering</span>
+                                    <span class="tag">performance</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="result-preview">
+                            <span class="relevance-score">92% match</span>
+                        </div>
+                    </article>
+
+                    <article class="result-item">
+                        <div class="result-content">
+                            <h3><a href="thread.html?id=189">Virtualization Techniques for Large React Lists</a></h3>
+                            <p class="result-excerpt">Comparison of react-window, react-virtualized, and custom virtualization solutions for handling large datasets in React applications. Performance metrics and implementation guide included.</p>
+                            <div class="result-meta">
+                                <span class="result-category">Web Development</span>
+                                <span class="result-author">By Emily Wong</span>
+                                <span class="result-date">1 week ago</span>
+                                <span class="result-stats">67 comments • 2.1k views</span>
+                                <span class="result-tags">
+                                    <span class="tag">react</span>
+                                    <span class="tag">virtualization</span>
+                                    <span class="tag">performance</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="极速飞艇开奖结果官网-preview">
+                            <span class="relevance-score">89% match</span>
+                        </div>
+                    </article>
+
+                    <article class="result-item">
+                        <div class="result-content">
+                            <h3><a href="thread.html?id=201">React Bundle Size Optimization Strategies</a></h3>
+                            <p class="result-excerpt">Practical approaches to reduce React bundle size including code splitting, tree shaking, and lazy loading. Tools and techniques for analyzing and optimizing bundle performance.</p>
+                            <div class="result-meta">
+                                <span class="result-category">Frontend Development</span>
+                                <span class="result-author">By Alex Thompson</span>
+                                <span class="result-date">2 weeks ago</span>
+                                <span class="result-stats">34 comments • 1.5k views</span>
+                                <span class="result-tags">
+                                    <span class="tag">react</span>
+                                    <span class="tag">webpack</span>
+                                    <span class="tag">optimization</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="result-preview">
+                            <span class="relevance-score">85% match</span>
+                        </div>
+                    </article>
+
+                    <article class="result-item">
+                        <div class="result-content">
+                            <h3><a href="thread.html?id=178">Memory Leak Prevention in React Applications</a></h3>
+                            <p class="result-excerpt">Common causes of memory leaks in React and how to prevent them. Covers event listener management, subscription cleanup, and proper useEffect usage patterns.</p>
+                            <div class="result-meta">
+                                <span class="result-category">Technology</span>
+                                <span class="result-author">By James Wilson</span>
+                                <span class="result-date">3 weeks ago</span>
+                                <span class="result-stats">29 comments • 1.2k views</span>
+                                <span class="result-tags">
+                                    <span class="tag">react</span>
+                                    <span class="tag">memory</span>
+                                    <span class="tag">performance</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="result-preview">
+                            <span class="relevance-score">82% match</span>
+                        </div>
+                    </article>
+                </div>
+
+                <nav class="pagination" aria-label="Search results pagination">
+                    <span class="page-info">Page 1 of 25</span>
+                    <div class="page-controls">
+                        <button disabled>Previous</button>
+                        <button aria-current="page">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <span>...</span>
+                        <button>25</button>
+                        <button>Next</button>
+                    </div>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Community Forum</h3>
+                <p>Connecting minds through meaningful discussions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="new-thread.html">Start Discussion</a></li>
+                    <li><a href="auth.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Guidelines</a></极速飞艇开奖结果官网>
+                    <li><a href="#">Contact Moderators</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Community Forum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts/main.js"></script>
+</body>
+</html>

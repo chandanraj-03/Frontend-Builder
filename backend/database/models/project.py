@@ -34,7 +34,7 @@ class ProjectCreate(BaseModel):
     prompt: str = Field(..., min_length=5)
     color_theme: str = "default"
     ollama_model: str = "qwen3-vl:8b"
-    turbo_mode: bool = False
+
 
 class ProjectUpdate(BaseModel):
     """Payload for PATCH /api/projects/{id}."""

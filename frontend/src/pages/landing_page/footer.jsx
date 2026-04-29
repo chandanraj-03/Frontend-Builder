@@ -11,7 +11,7 @@ const Footer = () => {
 
                     <div className="footer-brand">
                         <img src="/logo.png" alt="Logo" />
-                        <h3>Frontend AI Builder</h3>
+                        <h3>Prototype Builder</h3>
                     </div>
 
                     <div className="footer-cta">
@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>Frontend Builder. <br />Built with love by Team Transformer.</p>
+                    <p>Prototype Builder. <br />Built with love by Team Transformer.</p>
                 </div>
 
             </div>

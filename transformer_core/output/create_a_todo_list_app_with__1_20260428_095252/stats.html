@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics & Analytics - TodoMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <h1>TodoMaster</h1>
+                <p>Data-Driven Productivity</p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Todo Dashboard</a></li>
+                    <li><a href="task-detail.html">Task Detail View</a></li>
+                    <li><a href="settings.html">Settings Page</a></li>
+                    <li><a href="help.html">Help & Tutorial</a></li>
+                    <li><a href="stats.html" class="active">Statistics & Analytics</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search analytics..." aria-label="Search analytics">
+                    <button type="submit">🔍</button>
+                </div>
+                <div class="cart-icon">
+                    <span class="cart-count">4</span>
+                    <span class="cart-label">Items</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="statistics-analytics">
+            <div class="stats-header">
+                <h2>Productivity Analytics</h2>
+                <p>Track your performance and optimize your workflow with detailed insights</p>
+            </div>
+
+            <div class="completion-charts">
+                <h3>Task Completion Overview</h3>
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h4>Weekly Completion Rate</h4>
+                        <div class="chart-visual">
+                            <div class="chart-bar" style="height: 75%;" aria-label="75% completion rate"></div>
+                        </div>
+                        <p>75% of tasks completed this week</p>
+                    </div>
+                    <div class="chart-card">
+                        <h4>Monthly Progress</h4>
+                        <div class="chart-visual">
+                            <div class="chart-bar" style="height: 82%;" aria-label="82% completion rate"></div>
+                        </div>
+                        <p>82% monthly completion rate</p>
+                    </div>
+                    <div class="chart-card">
+                        <h4>On-Time Performance</h4>
+                        <div class="chart-visual">
+                            <div class="chart-bar" style="height: 68%;" aria-label="68% on-time rate"></div>
+                        </div>
+                        <p>68% tasks completed on time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productivity-trends">
+                <h3>Productivity Store</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image" data-src="images/productivity-planner.jpg" aria-label="Productivity Planner"></div>
+                        <h4>Premium Planner Set</h4>
+                        <p class="price">$24.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <span class="stock-status">In Stock</span>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" data-src="images/time-tracking-watch.jpg" aria-label="Time Tracking Watch"></div>
+                        <h4>Smart Time Tracker</h4>
+                        <p class="price">$89.95</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <span class="stock-status">Low Stock</span>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" data-src="images/focus-timer.jpg" aria-label="Focus Timer"></div>
+                        <h4>Digital Focus Timer</h4>
+                        <p class="price">$19.50</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <span class="stock-status">In Stock</span>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" data-src="images/ergonomic-chair.jpg" aria-label="Ergonomic Chair"></div>
+                        <h4>Ergonomic Office Chair</h4>
+                        <p class="price">$249.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <span class="stock-status">Pre-order</span>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" data-src="images/desk-organizer.jpg" aria-label="Desk Organizer"></div>
+                        <h4>Premium Desk Organizer</h4>
+                        <p class="price">$34.75</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <span class="stock-status">In Stock</span>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" data-src="images/blue-light-glasses.jpg" aria-label="Blue Light Glasses"></div>
+                        <h4>Blue Light Glasses</h4>
+                        <p class="price">$45.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <span class="stock-status">Out of Stock</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-category-breakdown">
+                <h3>Task Categories</h3>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <h4>Work & Career</h4>
+                        <span class="item-count">42 tasks</span>
+                        <a href="#" class="category-link">View Details</a>
+                    </div>
+                    <div class="category-card">
+                        <h4>Personal Development</h4>
+                        <span class="item-count">28 tasks</span>
+                        <a href="#" class="category-link">View Details</a>
+                    </div>
+                    <div class="category-card">
+                        <h4>Health & Fitness</h4>
+                        <span class="item-count">19 tasks</span>
+                        <a href="#" class="category-link">View Details</a>
+                    </div>
+                    <div class="category-card">
+                        <h4>Home & Family</h4>
+                        <span class="item-count">35 tasks</span>
+                        <a href="#" class="category-link">View Details</a>
+                    </div>
+                    <div class="category-card">
+                        <h4>Financial Planning</h4>
+                        <span class="item-count">16 tasks</span>
+                        <a href="#" class="category-link">View Details</a>
+                    </div>
+                    <div class="category-card">
+                        <h4>Creative Projects</h4>
+                        <span class="item-count">23 tasks</span>
+                        <a href="#" class="category-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievement-badges">
+                <h3>Your Achievements</h3>
+                <div class="badges-grid">
+                    <div class="badge-card earned">
+                        <div class="badge-icon">⭐</div>
+                        <h4>Task Master</h4>
+                        <p>Completed 100 tasks</p>
+                    </div>
+                    <div class="badge-card earned">
+                        <div class="badge-icon">🔥</div>
+                        <h4>Streak Champion</h4>
+                        <p>7-day completion streak</p>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-icon">🚀</div>
+                        <h4>Early Bird</h4>
+                        <p>Complete tasks before deadline</p>
+                    </div>
+                    <div class="badge-card earned">
+                        <div class="badge-icon">🎯</div>
+                        <h4>Priority Pro</h4>
+                        <p>Mastered priority management</p>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-icon">📊</div>
+                        <h4>Analytics Expert</h4>
+                        <p>Used all analytics features</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weekly-monthly-stats">
+                <h3>Time-Based Statistics</h3>
+                <div class="time-stats-grid">
+                    <div class="time-stat-card">
+                        <h4>This Week</h4>
+                        <p class="stat-number">18</p>
+                        <p class="stat-label">Tasks Completed</p>
+                        <p class="stat-trend">↑ 25% from last week</p>
+                    </div>
+                    <div class="time-stat-card">
+                        <h4>This Month</h4>
+                        <p class="stat-number">67</p>
+                        <p class="stat-label">Tasks Completed</p>
+                        <p class="stat-trend">↑ 15% from last month</p>
+                    </div>
+                    <div class="time-stat-card">
+                        <h4>Average Daily</h4>
+                        <p class="stat-number">3.2</p>
+                        <p class="stat-label">Tasks Completed</p>
+                        <p class="stat-trend">Consistent performance</p>
+                    </div>
+                    <div class="time-stat-card">
+                        <h4>Peak Hours</h4>
+                        <p class="stat-number">9-11 AM</p>
+                        <p class="stat-label">Most productive time</p>
+                        <p class="stat-trend">82% completion rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TodoMaster. Transforming data into productivity gains.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

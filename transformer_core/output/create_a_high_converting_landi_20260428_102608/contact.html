@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CloudFlow: Get in Touch with Our Team</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="sticky-navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="CloudFlow Home">
+                    <img src="images/logo.svg" alt="CloudFlow Logo" width="150" height="40">
+                </a>
+                <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="contact-heading">
+            <div class="container">
+                <h1 id="contact-heading">Get in Touch</h1>
+                <p>Have questions about CloudFlow? Our team is here to help you get the most out of our automation platform.</p>
+            </div>
+        </section>
+
+        <section class="progressive-profiling-form" aria-labelledby="form-heading">
+            <div class="container">
+                <div class="form-intro">
+                    <h2 id="form-heading">Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours. For immediate assistance, try our live chat.</p>
+                </div>
+                <form class="contact-form" aria-label="Contact form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first_name" required aria-required="true" autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last_name" required aria-required="true" autocomplete="family-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required aria-required="true" autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry-type">What can we help you with?</label>
+                        <select id="inquiry-type" name="inquiry_type" required aria-required="true">
+                            <option value="">Select an option</option>
+                            <option value="sales">Sales Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-information" aria-labelledby="contact-info-heading">
+            <div class="container">
+                <h2 id="contact-info-heading">Other Ways to Reach Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <img src="images/icon-email.svg" alt="Email icon" width="50" height="50">
+                        <h3>Email</h3>
+                        <p>General Inquiries: <a href="mailto:hello@cloudflow.com">hello@cloudflow.com</a></p>
+                        <p>Support: <a href="mailto:support@cloudflow.com">support@cloudflow.com</a></p>
+                        <p>Sales: <a href="mailto:sales@cloudflow.com">sales@cloudflow.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <img src="images/icon-phone.svg" alt="Phone icon" width="50" height="50">
+                        <h3>Phone</h3>
+                        <p>Sales: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                        <p>Support: <a href="tel:+15559876543">+1 (555) 987-6543</a></p>
+                        <p>Emergency: <a href="tel:+15551111111">+1 (555) 111-1111</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <img src="images/icon-location.svg" alt="Location icon" width="50" height="50">
+                        <h3>Office</h3>
+                        <p>CloudFlow Inc.<br>
+                        123 Tech Street<br>
+                        San Francisco, CA 94103<br>
+                        United States</p>
+                    </div>
+                    <div class="contact-card">
+                        <img src="images/icon-hours.svg" alt="Business hours icon" width="50" height="50">
+                        <h3>Business Hours</h3>
+                        <p>Monday-Friday: 9:00 AM - 6:00 PM PST</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM PST</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="live-chat-widget" aria-label="Live chat support">
+            <div class="container">
+                <div class="chat-widget">
+                    <h2>Instant Support via Live Chat</h2>
+                    <p>Get immediate answers to your questions from our support team. Average response time: under 2 minutes.</p>
+                    <button class="chat-button" aria-label="Start live chat">
+                        <img src="images/icon-chat.svg" alt="Chat icon" width="24" height="24">
+                        Start Live Chat
+                    </button>
+                    <div class="chat-status">
+                        <span class="status-indicator online"></span>
+                        <span>Support team is online</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scheduling-calendar" aria-labelledby="scheduling-heading">
+            <div class="container">
+                <h2 id="scheduling-heading">Schedule a Demo</h2>
+                <p>Book a personalized demo with our product experts to see how CloudFlow can transform your workflow automation.</p>
+                <div class="calendar-widget">
+                    <form class="demo-form" aria-label="Schedule demo form">
+                        <div class="form-group">
+                            <label for="demo-name">Your Name</label>
+                            <input type="text" id="demo-name" name="demo_name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-email">Email Address</label>
+                            <input type="email" id="demo-email" name="demo_email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-company">Company</label>
+                            <input type="text" id="demo-company" name="demo_company" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-date">Preferred Date</label>
+                            <input type="date" id="demo-date" name="demo_date" required aria-required="true" min="2024-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-time">Preferred Time</label>
+                            <select id="demo-time" name="demo_time" required aria-required="true">
+                                <option value="">Select time</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-topics">Topics of Interest</label>
+                            <textarea id="demo-topics" name="demo_topics" rows="3" placeholder="What specific features would you like to see?"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Schedule Demo</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-map" aria-labelledby="map-heading">
+            <div class="container">
+                <h2 id="map-heading">Visit Our Office</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <img src="images/map-placeholder.jpg" alt="Map showing CloudFlow office location at 123 Tech Street, San Francisco" width="800" height="400">
+                        <div class="map-overlay">
+                            <h3>CloudFlow Headquarters</h3>
+                            <p>123 Tech Street<br>
+                            San Francisco, CA 94103<br>
+                            United States</p>
+                            <a href="https://maps.google.com" class="directions-button">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-media-links" aria-labelledby="social-heading">
+            <div class="container">
+                <h2 id="social-heading">Follow Us on Social Media</h2>
+                <p>Stay updated with the latest news, product updates, and automation tips from CloudFlow.</p>
+                <div class="social-grid">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="images/icon-twitter.svg" alt="Twitter" width="40" height="40">
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="images/icon-linkedin.svg" alt="LinkedIn" width="40" height="40">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="images/icon-facebook.svg" alt="Facebook" width="40" height="40">
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="images/icon-instagram.svg" alt="Instagram" width="40" height="40">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <img src="images/icon-youtube.svg" alt="YouTube" width="40" height="40">
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <img src="images/icon-github.svg" alt="GitHub" width="40" height="40">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CloudFlow</h3>
+                <p>CloudFlow helps teams automate repetitive tasks and streamline workflows, allowing you to focus on what matters most - growing your business.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: hello@cloudflow.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Tech Street, San Francisco, CA 94103</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><img src="images/icon-twitter.svg" alt="Twitter" width="24" height="24"></a>
+                    <a href="#" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt="LinkedIn" width="24" height="24"></a>
+                    <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt="Facebook" width="24" height="24"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/icon-instagram.svg" alt="Instagram" width="24" height="24"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CloudFlow. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
